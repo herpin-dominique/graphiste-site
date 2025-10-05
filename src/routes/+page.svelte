@@ -26,7 +26,7 @@
 
     <!-- Bloc rouge -->
     <section class="mt-8 text-center px-4">
-      <p class="text-md text-gray-500 italic mb-4">
+      <p class="text-md text-gray-300 italic mb-4">
         Créativité, impact et émotion au service de votre image.
       </p>
       <div class="bg-red-500 text-white p-4 rounded-lg shadow-lg">

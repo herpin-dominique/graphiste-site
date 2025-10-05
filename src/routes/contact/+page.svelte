@@ -1,3 +1,10 @@
+<a
+  href="/"
+  class="inline-block mb-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition duration-300"
+>
+  Retour à l'accueil
+</a>
+
 <main
   class="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-6 py-12"
 >

@@ -4,6 +4,13 @@
 </script>
 
 # Services
+<a
+  href="/"
+  class="inline-block mb-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition duration-300"
+>
+  Retour à l'accueil
+</a>
+
 <div class="bg-gray-900 text-white min-h-screen flex flex-col">
   <Header />
 

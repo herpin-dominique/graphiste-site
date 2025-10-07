@@ -1,31 +1,43 @@
 <script lang="ts">
-  import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte";
+  import Layout from "$lib/components/Layout.svelte";
 </script>
 
-# Services
-<a
-  href="/"
-  class="inline-block mb-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition duration-300"
->
-  Retour à l'accueil
-</a>
+<svelte:head>
+  <title>Services - Graphiste</title>
+</svelte:head>
 
-<div class="bg-gray-900 text-white min-h-screen flex flex-col">
-  <Header />
+<Layout pageTitle="Services" bannerImage="/penhaligons/1.jpg">
+  <h2 class="text-2xl md:text-3xl font-bold mb-8">Mes services</h2>
 
-  <main class="flex-grow container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-6 text-center">Services proposés</h1>
-    <ul
-      class="max-w-3xl mx-auto space-y-4 list-disc list-inside text-gray-300 text-lg"
-    >
-      <li>Design graphique : logos, brochures, affiches</li>
-      <li>Motion design : animations courtes, vidéos explicatives</li>
-      <li>Identité visuelle et branding complet</li>
-      <li>Création d’illustrations originales</li>
-      <li>Conseil en communication visuelle</li>
-    </ul>
-  </main>
+  <div class="grid gap-8 md:grid-cols-2">
+    <div class="p-6 rounded-lg shadow bg-white">
+      <h3 class="text-xl font-semibold mb-2">Identité visuelle</h3>
+      <p class="text-gray-600">
+        Création de logos, chartes graphiques et déclinaisons visuelles adaptées
+        à vos besoins.
+      </p>
+    </div>
 
-  <Footer />
-</div>
+    <div class="p-6 rounded-lg shadow bg-white">
+      <h3 class="text-xl font-semibold mb-2">Supports de communication</h3>
+      <p class="text-gray-600">
+        Affiches, brochures, flyers, cartes de visite, présentations
+        professionnelles…
+      </p>
+    </div>
+
+    <div class="p-6 rounded-lg shadow bg-white">
+      <h3 class="text-xl font-semibold mb-2">Web & digital</h3>
+      <p class="text-gray-600">
+        Bannières, visuels pour réseaux sociaux, maquettes UI/UX, newsletters.
+      </p>
+    </div>
+
+    <div class="p-6 rounded-lg shadow bg-white">
+      <h3 class="text-xl font-semibold mb-2">Illustration</h3>
+      <p class="text-gray-600">
+        Illustrations sur mesure pour vos projets éditoriaux ou numériques.
+      </p>
+    </div>
+  </div>
+</Layout>

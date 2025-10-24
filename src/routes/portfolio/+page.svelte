@@ -1,11 +1,27 @@
 <script lang="ts">
-  import Layout from "$lib/components/Layout.svelte"; // chemin vers ton layout
-
   import { tick } from "svelte";
+  import { fade, scale } from "svelte/transition";
+  import ProjectCard from "$lib/components/ProjectCard.svelte";
+  import { ImageSquare, Palette, Sparkle, Leaf } from "phosphor-svelte";
+
+  // Typage strict des titres
+  type ProjectTitle =
+    | "Les Agapes"
+    | "Mode et Travaux"
+    | "Penhaligons"
+    | "Alvelo";
 
   type Project = {
-    title: string;
+    title: ProjectTitle;
     photos: string[];
+  };
+
+  // Association titre → icône (typeof utilisé pour éviter TS2322)
+  const iconMap: Record<ProjectTitle, typeof ImageSquare> = {
+    "Les Agapes": ImageSquare,
+    "Mode et Travaux": Palette,
+    Penhaligons: Sparkle,
+    Alvelo: Leaf,
   };
 
   let projects: Project[] = [
@@ -16,6 +32,7 @@
         "/Les-agapes/Agapes_page-0002.jpg",
         "/Les-agapes/Agapes_page-0003.jpg",
         "/Les-agapes/Agapes_page-0004.jpg",
+        "/Les-agapes/Agapes_page-0005.jpg",
         "/Les-agapes/Agapes_page-0006.jpg",
         "/Les-agapes/Agapes_page-0007.jpg",
         "/Les-agapes/Agapes_page-0008.jpg",
@@ -83,27 +100,6 @@
       title: "Alvelo",
       photos: [
         "/Alvelo/ALVELO pfe dossier_compressed_page-0010.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0011.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0012.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0013.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0014.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0015.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0016.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0017.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0018.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0019.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0020.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0021.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0022.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0023.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0024.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0025.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0026.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0027.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0028.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0029.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0030.jpg",
-        "/Alvelo/ALVELO pfe dossier_compressed_page-0031.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0032.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0033.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0034.jpg",
@@ -143,9 +139,9 @@
   ];
 
   let selectedPhoto: string | null = null;
-  let selectedProjectTitle: string = "";
+  let selectedProjectTitle: ProjectTitle | "" = "";
 
-  async function openModal(projectTitle: string, photo: string) {
+  async function openModal(projectTitle: ProjectTitle, photo: string) {
     selectedProjectTitle = projectTitle;
     selectedPhoto = photo;
     await tick();
@@ -159,9 +155,26 @@
   }
 
   function handleBackdropKeyDown(event: KeyboardEvent) {
-    if (event.key === "Escape") {
-      closeModal();
-    }
+    if (event.key === "Escape") closeModal();
+    else if (event.key === "ArrowRight") nextPhoto();
+    else if (event.key === "ArrowLeft") prevPhoto();
+  }
+
+  function nextPhoto() {
+    const project = projects.find((p) => p.title === selectedProjectTitle);
+    if (!project || !selectedPhoto) return;
+    const index = project.photos.indexOf(selectedPhoto);
+    selectedPhoto = project.photos[(index + 1) % project.photos.length];
+  }
+
+  function prevPhoto() {
+    const project = projects.find((p) => p.title === selectedProjectTitle);
+    if (!project || !selectedPhoto) return;
+    const index = project.photos.indexOf(selectedPhoto);
+    selectedPhoto =
+      project.photos[
+        (index - 1 + project.photos.length) % project.photos.length
+      ];
   }
 </script>
 
@@ -169,86 +182,88 @@
   <title>Portfolio - Graphiste</title>
 </svelte:head>
 
-<Layout
-  pageTitle="Portfolio"
-  bannerImage="/Mode-et-travaux/PDF fond perdu_page-0001.jpg"
+<h2
+  class="text-3xl md:text-4xl font-display font-bold mb-12 text-center text-violet-100 animate-fade-in"
 >
-  <h2 class="text-2xl md:text-3xl font-bold mb-8">Mes projets</h2>
+  Mes projets
+</h2>
 
-  {#each projects as project}
-    <section class="mb-16">
-      <h3
-        class="text-3xl font-semibold mb-6 border-b-4 border-blue-600 inline-block pb-2 text-gray-800"
-      >
-        {project.title}
-      </h3>
-      <div
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-      >
-        {#each project.photos as photo}
-          <button
-            aria-label={`Ouvrir l'image ${project.title}`}
-            class="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer p-0 border-0 bg-transparent"
-            on:click={() => openModal(project.title, photo)}
-            on:keydown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                openModal(project.title, photo);
-              }
-            }}
-          >
-            <img
-              src={photo}
-              alt={`Projet ${project.title} - photo`}
-              class="w-full rounded-lg object-cover h-40 sm:h-48 md:h-52 transition transform hover:scale-105 hover:shadow-2xl"
-            />
-          </button>
-        {/each}
-      </div>
-    </section>
-  {/each}
-
-  {#if selectedPhoto}
+{#each projects as project}
+  <section class="mb-16">
     <div
-      id="modal-container"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Image en grand format"
-      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
-      tabindex="0"
-      on:keydown={handleBackdropKeyDown}
+      class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
     >
-      <!-- backdrop -->
-      <div
-        class="absolute inset-0 cursor-pointer"
-        role="button"
-        tabindex="0"
-        aria-label="Fermer la fenêtre"
-        on:click={closeModal}
-        on:keydown={(e) =>
-          e.key === "Enter" || e.key === " " ? closeModal() : null}
-      ></div>
-
-      <!-- modal content -->
-      <div
-        class="relative max-w-5xl max-h-full overflow-auto rounded-lg shadow-xl bg-white p-4"
-      >
-        <h4 class="text-gray-900 text-xl font-semibold mb-4">
-          {selectedProjectTitle}
-        </h4>
-        <img
-          src={selectedPhoto}
-          alt={selectedProjectTitle}
-          class="max-w-full rounded"
+      {#each project.photos as photo}
+        <ProjectCard
+          title={project.title}
+          {photo}
+          icon={iconMap[project.title]}
+          onClick={() => openModal(project.title, photo)}
         />
+      {/each}
+    </div>
+  </section>
+{/each}
+
+{#if selectedPhoto}
+  <div
+    id="modal-container"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image en grand format"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+    tabindex="0"
+    on:keydown={handleBackdropKeyDown}
+    transition:fade={{ duration: 200 }}
+  >
+    <div
+      class="absolute inset-0 cursor-pointer"
+      role="button"
+      tabindex="0"
+      aria-label="Fermer la fenêtre"
+      on:click={closeModal}
+      on:keydown={(e) =>
+        e.key === "Enter" || e.key === " " ? closeModal() : null}
+    ></div>
+
+    <div
+      class="relative max-w-5xl max-h-full overflow-auto rounded-lg shadow-xl bg-violet-950 text-white p-6"
+      transition:scale={{ duration: 200, start: 0.9 }}
+    >
+      <h4 class="text-violet-100 text-xl font-semibold mb-4">
+        {selectedProjectTitle}
+      </h4>
+      <img
+        src={selectedPhoto}
+        alt={selectedProjectTitle}
+        class="max-w-full rounded mx-auto"
+      />
+
+      <div class="flex justify-between items-center mt-6">
         <button
           type="button"
-          class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+          class="bg-violet-700 text-white px-4 py-2 rounded hover:bg-violet-600 transition"
+          on:click={prevPhoto}
+        >
+          ⬅ Précédent
+        </button>
+
+        <button
+          type="button"
+          class="bg-violet-600 text-white px-6 py-2 rounded hover:bg-violet-700 transition"
           on:click={closeModal}
         >
           Fermer
         </button>
+
+        <button
+          type="button"
+          class="bg-violet-700 text-white px-4 py-2 rounded hover:bg-violet-600 transition"
+          on:click={nextPhoto}
+        >
+          Suivant ➡
+        </button>
       </div>
     </div>
-  {/if}
-</Layout>
+  </div>
+{/if}

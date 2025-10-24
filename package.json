@@ -28,6 +28,7 @@
     "@stripe/stripe-js": "^2.4.0",
     "@types/react-dom": "^19.1.9",
     "esbuild": "^0.25.10",
+    "phosphor-svelte": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.50.2"

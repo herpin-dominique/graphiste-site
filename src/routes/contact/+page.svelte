@@ -7,7 +7,7 @@
 
 <a
   href="/"
-  class="inline-block mb-6 bg-white text-violet-600 font-semibold px-6 py-3 rounded hover:bg-violet-100 transition duration-300"
+  class="inline-block mt-24 mb-6 bg-white text-violet-600 font-semibold px-6 py-3 rounded hover:bg-violet-100 transition duration-300"
 >
   ← Retour à l'accueil
 </a>
@@ -16,14 +16,20 @@
   class="min-h-screen bg-gradient-to-br from-violet-900 to-violet-700 flex items-center justify-center px-6 py-12 text-white"
 >
   <section
-    class="max-w-lg w-full bg-violet-950 p-8 rounded-xl shadow-xl animate-fade-in"
+    class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 bg-violet-950 p-12 rounded-xl shadow-xl animate-fade-in"
   >
-    <h1
-      class="text-3xl font-display font-bold text-violet-100 mb-6 text-center"
-    >
-      Contactez-moi
-    </h1>
+    <!-- Colonne gauche : titre + texte -->
+    <div class="flex flex-col justify-center">
+      <h1 class="text-4xl font-display font-bold text-violet-100 mb-6">
+        Contactez-moi
+      </h1>
+      <p class="text-violet-300 leading-relaxed">
+        Vous avez un projet créatif, une idée ou une collaboration en tête ?
+        N’hésitez pas à m’envoyer un message, je vous répondrai rapidement.
+      </p>
+    </div>
 
+    <!-- Colonne droite : formulaire -->
     <form
       action="https://formspree.io/f/xgvlgeqb"
       method="POST"

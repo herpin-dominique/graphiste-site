@@ -2,12 +2,22 @@
   import Header from "$lib/components/Header.svelte";
   import { onMount } from "svelte";
   import "../app.css";
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+
+  onMount(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  });
 
   const navLinks = [
     { href: "/", label: "Accueil" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
+    { href: "/tarifs", label: "Tarifs" },
   ];
 
   let scrolled = false;
@@ -23,16 +33,17 @@
   });
 </script>
 
-<!-- Header -->
+<!-- Header style magazine -->
 <Header links={navLinks} transparent={!scrolled} />
 
 <!-- Contenu principal -->
-<main class="pt-20">
+<main class="pt-40">
   <slot />
-  <!-- indispensable pour afficher les pages enfants -->
 </main>
 
 <!-- Footer -->
-<footer class="bg-violet-900 text-violet-200 py-6 text-center">
+<footer
+  class="bg-violet-900 text-violet-200 py-10 text-center text-lg tracking-wide uppercase"
+>
   © 2025 Lola Herpin. Tous droits réservés.
 </footer>

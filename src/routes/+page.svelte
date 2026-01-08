@@ -1,102 +1,128 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+
+  onMount(() => {
+    AOS.init({ duration: 800, once: true });
+
+    const banner = document.getElementById("banniere");
+    const onScroll = () => {
+      if (banner) {
+        const offset = window.scrollY;
+        banner.style.backgroundPositionY = `${offset * 0.5}px`;
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
 </script>
 
-<!-- Bannière -->
-<img
-  src="/BANNIERE.png"
-  alt="Bannière Lola Herpin"
-  class="w-full object-cover max-h-96"
-/>
-<!--
-<section class="relative w-full min-h-screen overflow-hidden animate-fade-in">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute top-0 left-0 w-full h-full object-cover z-0"
-  >
-    <source
-      src="src/videos/Motion - manuel d'utilisation alvelo.mp4"
-      type="video/mp4"
-    />
-    Votre navigateur ne supporte pas la lecture vidéo.
-  </video>
-
-  <div class="absolute top-0 left-0 w-full h-full bg-black/40 z-0"></div>
-
+<!-- Bannière avec parallaxe -->
+<section id="banniere" class="relative w-full h-[80vh] overflow-hidden">
+  <img
+    src="/BANNIERE.png"
+    alt="Bannière"
+    class="absolute inset-0 w-full h-full object-cover md:object-center"
+  />
+  <!-- Overlay violet transparent pour un look premium -->
   <div
-    class="relative z-10 flex items-center justify-center h-full text-white text-center px-6"
+    class="absolute inset-0 bg-gradient-to-b from-purple-900/60 to-purple-900/80 flex items-center justify-center"
   >
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
-        Lola HERPIN - Graphiste & Illustratrice
-      </h1>
-      <p class="text-xl md:text-2xl">
-        Design graphique, illustrations, et identités de marque.
-      </p>
-    </div>
+    <h1
+      class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg font-poppins text-center leading-tight"
+    >
+      “Faites décoller votre image”
+    </h1>
   </div>
 </section>
--->
 
 <!-- Portfolio -->
 <section
   id="portfolio"
-  class="w-full min-h-screen flex flex-col items-center justify-center px-4"
+  class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 bg-gradient-to-b from-purple-950 via-purple-900 to-purple-800 text-white"
 >
-  <h2 class="text-3xl font-bold mb-8 text-center">Mes projets</h2>
+  <!-- Intro -->
+  <div class="max-w-3xl text-center mb-12" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Mes projets</h2>
+    <p class="text-lg text-purple-200">
+      Une sélection de mes réalisations en design graphique, illustration et
+      motion. Chaque projet reflète une approche créative, immersive et
+      accessible.
+    </p>
+  </div>
 
+  <!-- Grille responsive pleine largeur -->
   <div
-    class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full max-w-7xl"
+    class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-4"
   >
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <!-- Projet 1 -->
+    <div
+      class="relative overflow-hidden rounded-xl shadow-xl group"
+      data-aos="zoom-in"
+      data-aos-delay="100"
+    >
       <img
         src="/src/projets/Emballage parfumé et couleurs vibrantes.png"
         alt="Projet de branding"
-        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
       <div
-        class="absolute bottom-0 left-0 w-full bg-black/60 text-white text-sm p-2"
+        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-sm p-3 transition-all duration-300 group-hover:translate-y-[-10px]"
       >
         Identité visuelle – LOLA HERPIN
       </div>
     </div>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <!-- Projet 2 -->
+    <div
+      class="relative overflow-hidden rounded-xl shadow-xl group"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+    >
       <img
         src="/src/projets/inspicopilotlolachat.png"
         alt="Illustration éditoriale"
-        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
       <div
-        class="absolute bottom-0 left-0 w-full bg-black/60 text-white text-sm p-2"
+        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-sm p-3 transition-all duration-300 group-hover:translate-y-[-10px]"
       >
         Illustration – Mode & Travaux
       </div>
     </div>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <!-- Projet 3 -->
+    <div
+      class="relative overflow-hidden rounded-xl shadow-xl group"
+      data-aos="zoom-in"
+      data-aos-delay="300"
+    >
       <img
         src="/src/projets/Cookies.png"
         alt="Packaging design"
-        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
       <div
-        class="absolute bottom-0 left-0 w-full bg-black/60 text-white text-sm p-2"
+        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-sm p-3 transition-all duration-300 group-hover:translate-y-[-10px]"
       >
         Packaging – Penhaligons
       </div>
     </div>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <!-- Projet 4 -->
+    <div
+      class="relative overflow-hidden rounded-xl shadow-xl group"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+    >
       <img
         src="/src/projets/Manuel velo.png"
         alt="Motion design"
-        class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+        class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
       <div
-        class="absolute bottom-0 left-0 w-full bg-black/60 text-white text-sm p-2"
+        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-sm p-3 transition-all duration-300 group-hover:translate-y-[-10px]"
       >
         Motion – Manuel Alvelo
       </div>
@@ -106,42 +132,43 @@
 
 <!-- Appel à l'action -->
 <section
-  class="w-full min-h-screen flex flex-col items-center justify-center px-4"
+  class="w-full min-h-screen flex flex-col justify-center px-8 py-32 bg-gradient-to-br from-violet-900 to-violet-800 text-white"
 >
-  <h2 class="text-5xl md:text-5xl font-bold mb-6 text-center">
+  <h2
+    class="text-5xl md:text-6xl font-extrabold mb-16 text-center max-w-5xl mx-auto leading-tight"
+  >
     Créons ensemble votre identité visuelle
   </h2>
-  <div class="flex flex-wrap justify-center gap-4">
+
+  <!-- Boutons en grille pleine largeur -->
+  <div
+    class="grid gap-6 sm:grid-cols-1 md:grid-cols-3 w-full max-w-6xl mx-auto"
+  >
+    <!-- Bouton 1 -->
     <a
       href="/contact"
-      class="bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition"
-      >Me contacter</a
+      class="bg-gradient-to-r from-violet-600 to-violet-500 text-white font-semibold px-8 py-6 rounded-xl text-center shadow-lg hover:from-violet-700 hover:to-violet-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-300"
+      aria-label="Me contacter"
     >
+      📩 Me contacter
+    </a>
+
+    <!-- Bouton 2 -->
     <a
       href="/portfolio"
-      class="bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition"
-      >Portfolio</a
+      class="bg-violet-950 border border-violet-700 text-violet-200 font-semibold px-8 py-6 rounded-xl text-center shadow-lg hover:bg-violet-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-300"
+      aria-label="Voir le portfolio"
     >
+      🎨 Portfolio
+    </a>
+
+    <!-- Bouton 3 -->
     <a
       href="/services"
-      class="bg-white text-blue-600 font-semibold px-6 py-3 rounded hover:bg-blue-100 transition"
-      >Services</a
+      class="bg-white text-violet-700 font-semibold px-8 py-6 rounded-xl text-center shadow-lg hover:bg-violet-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-violet-300"
+      aria-label="Découvrir les services"
     >
+      💡 Services
+    </a>
   </div>
 </section>
-
-<style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out;
-  }
-</style>

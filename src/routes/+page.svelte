@@ -42,6 +42,29 @@
   id="portfolio"
   class="w-full min-h-screen flex flex-col items-center justify-center px-4 py-24 bg-gradient-to-b from-purple-950 via-purple-900 to-purple-800 text-white"
 >
+  <!-- Présentation -->
+  <div class="max-w-3xl text-center mb-12" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Qui suis-je ?</h2>
+    <p class="text-lg text-purple-200">
+      TEXTE POUR ME DEFINIR Hello, moi c’est Lola ! En tant que chef
+      d'entreprise, ma principale motivation est de mettre mes compétences en
+      graphisme et motion design au service des entreprises qui souhaitent se
+      démarquer visuellement. J'ai choisi de fonder mon propre studio afin de
+      gagner en liberté créative et pouvoir apporter des solutions sur mesure à
+      mes clients. C'est un projet personnel et professionnel qui allie ma
+      passion, mon ambition et mon envie d'indépendance en aidant les
+      entreprises de la Région Caennaise dans un premier temps puis bien au-delà
+      par la suite. JUSTIFICATION PRIX Dans un contexte où la concurrence est
+      forte et où l’image de marque joue un rôle essentiel, Vous avez besoin de
+      contenus graphiques et animés de qualité pour vous démarquer et attirer
+      votre audience. C’est pourquoi je propose mes services à travers HERPIN
+      CREATIVE STUDIO : La création et la refonte d’identités visuelles fortes
+      et cohérentes aussi bien digitale et print. La réalisation de contenus en
+      motion design adaptés aux réseaux sociaux. Afin de rester spécialisé et de
+      garantir un haut niveau de qualité, je ne propose pas la création de sites
+      web ni de prestations de community management.
+    </p>
+  </div>
   <!-- Intro -->
   <div class="max-w-3xl text-center mb-12" data-aos="fade-up">
     <h2 class="text-4xl md:text-5xl font-bold mb-4">Mes projets</h2>
@@ -63,7 +86,7 @@
       data-aos-delay="100"
     >
       <img
-        src="/src/projets/Emballage parfumé et couleurs vibrantes.png"
+        src="/projets/Emballage parfumé et couleurs vibrantes.png"
         alt="Projet de branding"
         class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
@@ -81,7 +104,7 @@
       data-aos-delay="200"
     >
       <img
-        src="/src/projets/inspicopilotlolachat.png"
+        src="/projets/inspicopilotlolachat.png"
         alt="Illustration éditoriale"
         class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
@@ -99,7 +122,7 @@
       data-aos-delay="300"
     >
       <img
-        src="/src/projets/Cookies.png"
+        src="/projets/Cookies.png"
         alt="Packaging design"
         class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />
@@ -117,7 +140,7 @@
       data-aos-delay="400"
     >
       <img
-        src="/src/projets/Manuel velo.png"
+        src="/projets/Manuel velo.png"
         alt="Motion design"
         class="w-full h-72 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
       />

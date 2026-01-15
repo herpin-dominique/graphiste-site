@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^2.4.0",
+    "@sveltejs/adapter-vercel": "^6.3.0",
     "@types/react-dom": "^19.1.9",
     "aos": "^2.3.4",
     "esbuild": "^0.25.10",

@@ -23,7 +23,6 @@
     {
       title: "Les Agapes",
       photos: [
-        "/Les-agapes/PORTFOLIO.png",
         "/Les-agapes/Agapes_page-0001.jpg",
         "/Les-agapes/Agapes_page-0002.jpg",
         "/Les-agapes/Agapes_page-0003.jpg",
@@ -248,8 +247,8 @@
     transition:fadeZoom
   >
     <img
-      src={getHero(projects[0])}
-      alt="Couverture"
+      src="/Les-agapes/PORTFOLIO.png"
+      alt="Couverture Portfolio"
       class="absolute inset-0 w-full h-full object-cover brightness-90"
     />
     <div

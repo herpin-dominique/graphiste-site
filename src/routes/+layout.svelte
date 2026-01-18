@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from "$lib/components/Header.svelte";
   import { onMount } from "svelte";
+  import { afterNavigate } from "$app/navigation";
   import "../app.css";
   import AOS from "aos";
   import "aos/dist/aos.css";
@@ -8,8 +9,20 @@
   onMount(() => {
     AOS.init({
       duration: 800,
-      once: true,
+      once: false,
+      offset: -200, // Déclencher les animations plus tôt (même pour les éléments juste en dessous du viewport)
     });
+  });
+
+  // Réinitialiser AOS après chaque navigation pour que les animations fonctionnent
+  afterNavigate(() => {
+    // Scroller en haut de page
+    window.scrollTo(0, 0);
+
+    // Réinitialiser AOS
+    setTimeout(() => {
+      AOS.refreshHard();
+    }, 100);
   });
 
   const navLinks = [

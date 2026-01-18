@@ -230,7 +230,7 @@
   <title>Portfolio - Herpin Creative Studio</title>
 </svelte:head>
 
-<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 py-12">
+<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-12 lg:px-20 xl:px-32 py-12">
   <!-- Header -->
   <div class="text-center mb-12" data-aos="fade-up">
     <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -242,7 +242,7 @@
   </div>
 
   <!-- Grille des projets -->
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+  <div class="w-full max-w-[1600px] mx-auto grid md:grid-cols-2 gap-8">
     {#each projects as project, i}
       <div
         class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10 overflow-hidden"

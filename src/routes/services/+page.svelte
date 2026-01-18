@@ -1,5 +1,5 @@
 <main
-  class="min-h-screen bg-gradient-to-br from-violet-900 to-violet-700 px-6 py-10 text-white"
+  class="min-h-screen bg-gradient-to-br from-violet-900 to-violet-700 px-6 md:px-12 lg:px-20 xl:px-32 py-10 text-white"
 >
   <h2
     class="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-12 text-center text-violet-100 animate-fade-in"
@@ -9,7 +9,7 @@
 
   <!-- Grille responsive -->
   <div
-    class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:h-[calc(100vh-12rem)] auto-rows-auto animate-fade-in"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1600px] mx-auto md:h-[calc(100vh-12rem)] auto-rows-auto animate-fade-in"
   >
     <!-- Carte 1 -->
     <div

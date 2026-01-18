@@ -15,23 +15,23 @@
 <header
   class="fixed top-0 left-0 w-full z-50 transition-all duration-500 {transparent ? 'bg-transparent' : 'bg-violet-950/95 backdrop-blur-lg shadow-lg'}"
 >
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 md:px-10 md:py-5">
+  <div class="w-full flex justify-between items-center px-6 py-5 md:px-12 lg:px-16 xl:px-24 md:py-8">
     <!-- Logo -->
     <a href="/" class="relative z-10 group">
       <img
         src="/LOGO HERPIN CREATIVE STUDIOb_4.svg"
         alt="Herpin Creative Studio"
-        class="w-[140px] md:w-[180px] h-auto transition-transform duration-300 group-hover:scale-105"
+        class="w-[160px] md:w-[280px] lg:w-[340px] xl:w-[400px] h-auto transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />
     </a>
 
     <!-- Menu desktop -->
-    <nav class="hidden md:flex items-center gap-2">
+    <nav class="hidden md:flex items-center gap-4 lg:gap-6">
       {#each links as link}
         <a
           href={link.href}
-          class="relative px-4 py-2 text-sm font-medium uppercase tracking-wider transition-all duration-300 rounded-full {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
+          class="relative px-6 py-3 text-lg lg:text-xl xl:text-2xl font-bold uppercase tracking-wider transition-all duration-300 rounded-full {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
         >
           {link.label}
         </a>

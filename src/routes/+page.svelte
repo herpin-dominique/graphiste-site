@@ -60,8 +60,8 @@
 </section>
 
 <!-- Section Qui suis-je -->
-<section class="w-full py-24 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
+<section class="w-full py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-white">
+  <div class="w-full max-w-[1600px] mx-auto">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <!-- Photo/Illustration -->
       <div class="relative" data-aos="fade-right">
@@ -115,8 +115,8 @@
 </section>
 
 <!-- Section Projets -->
-<section class="w-full py-24 px-6 bg-gray-50">
-  <div class="max-w-7xl mx-auto">
+<section class="w-full py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+  <div class="w-full max-w-[1600px] mx-auto">
     <div class="text-center mb-16" data-aos="fade-up">
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Mes projets</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -227,14 +227,14 @@
 </section>
 
 <!-- Section CTA -->
-<section class="w-full py-32 px-6 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600 relative overflow-hidden">
+<section class="w-full py-32 px-6 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600 relative overflow-hidden">
   <!-- Formes décoratives -->
   <div class="absolute inset-0">
     <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
   </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto text-center">
+  <div class="relative z-10 w-full max-w-[1200px] mx-auto text-center">
     <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6" data-aos="fade-up">
       Prêt à créer ensemble ?
     </h2>

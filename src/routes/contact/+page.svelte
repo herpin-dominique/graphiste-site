@@ -11,7 +11,7 @@
   <title>Contact - Herpin Creative Studio</title>
 </svelte:head>
 
-<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 py-12">
+<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-12 lg:px-20 xl:px-32 py-12">
   <!-- Header -->
   <div class="text-center mb-12" data-aos="fade-up">
     <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -22,7 +22,7 @@
     </p>
   </div>
 
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+  <div class="w-full max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8">
 
     <!-- Colonne gauche : Informations -->
     <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">

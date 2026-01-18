@@ -1,6 +1,11 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { cubicOut } from "svelte/easing";
-  import { ImageSquare, Palette, Sparkle, Leaf } from "phosphor-svelte";
+  import AOS from "aos";
+
+  onMount(() => {
+    AOS.init({ duration: 600, once: true });
+  });
 
   // Types
   type ProjectTitle =
@@ -8,20 +13,15 @@
     | "Mode et Travaux"
     | "Penhaligons"
     | "Alvelo";
-  type Project = { title: ProjectTitle; photos: string[] };
+  type Project = { title: ProjectTitle; photos: string[]; tag: string; tagColor: string; description: string };
 
-  // Icônes
-  const iconMap: Record<ProjectTitle, typeof ImageSquare> = {
-    "Les Agapes": ImageSquare,
-    "Mode et Travaux": Palette,
-    Penhaligons: Sparkle,
-    Alvelo: Leaf,
-  };
-
-  // Données : toutes tes photos
+  // Données des projets
   let projects: Project[] = [
     {
       title: "Les Agapes",
+      tag: "Editorial",
+      tagColor: "from-pink-500 to-violet-500",
+      description: "Un projet editorial autour de la gastronomie, mettant en valeur les saveurs et l'art culinaire.",
       photos: [
         "/Les-agapes/Agapes_page-0001.jpg",
         "/Les-agapes/Agapes_page-0002.jpg",
@@ -37,6 +37,9 @@
     },
     {
       title: "Mode et Travaux",
+      tag: "Magazine",
+      tagColor: "from-amber-500 to-orange-500",
+      description: "Reportage visuel et mise en page d'articles pour un magazine lifestyle.",
       photos: [
         "/Mode-et-travaux/Dossier présentation Mode et travaux Lola Herpin_page-0001.jpg",
         "/Mode-et-travaux/Dossier présentation Mode et travaux Lola Herpin_page-0002.jpg",
@@ -60,6 +63,9 @@
     },
     {
       title: "Penhaligons",
+      tag: "Branding",
+      tagColor: "from-emerald-500 to-teal-500",
+      description: "Univers parfume et esthetique classique pour une marque de luxe.",
       photos: [
         "/penhaligons/1.jpg",
         "/penhaligons/2.jpg",
@@ -93,6 +99,9 @@
     },
     {
       title: "Alvelo",
+      tag: "Projet de fin d'etudes",
+      tagColor: "from-blue-500 to-indigo-500",
+      description: "Dossier de design structure pour un projet de mobilite urbaine.",
       photos: [
         "/Alvelo/ALVELO pfe dossier_compressed_page-0010.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0032.jpg",
@@ -132,23 +141,6 @@
       ],
     },
   ];
-
-  // Intros par projet
-  const projectIntro: Record<ProjectTitle, string> = {
-    "Les Agapes": "Un projet éditorial autour de la gastronomie.",
-    "Mode et Travaux": "Reportage visuel et mise en page d’articles.",
-    Penhaligons: "Univers parfumé et esthétique classique.",
-    Alvelo: "Dossier de design structuré.",
-  };
-
-  // Utilitaires
-  const getHero = (p: Project) => p.photos[0];
-  const getMosaic = (p: Project) => p.photos.slice(1);
-  function mosaicSpan(i: number) {
-    if (i % 9 === 0) return "col-span-2 row-span-2";
-    if (i % 5 === 0) return "col-span-2";
-    return "col-span-1";
-  }
 
   // État modal & interactions
   let selectedPhoto: string | null = null;
@@ -193,13 +185,12 @@
     if (touchStartX === null) return;
     const touchEndX = event.changedTouches[0].clientX;
     const deltaX = touchEndX - touchStartX;
-    if (deltaX > 50)
-      prevPhoto(); // swipe droite → précédent
-    else if (deltaX < -50) nextPhoto(); // swipe gauche → suivant
+    if (deltaX > 50) prevPhoto();
+    else if (deltaX < -50) nextPhoto();
     touchStartX = null;
   }
 
-  // Transition glissement horizontal (pour changement d’image)
+  // Transition glissement horizontal
   function slideHorizontal(
     node: Element,
     { direction }: { direction: "left" | "right" }
@@ -215,7 +206,7 @@
     };
   }
 
-  // Transition fondu + zoom (pour ouverture de la lightbox et rendu cinéma)
+  // Transition fondu + zoom
   function fadeZoom(node: Element, { duration = 400 } = {}) {
     return {
       duration,
@@ -227,7 +218,7 @@
     };
   }
 
-  // Pagination – index courant
+  // Pagination
   function currentIndex(): number {
     const project = projects.find((p) => p.title === selectedProjectTitle);
     if (!project || !selectedPhoto) return 0;
@@ -236,268 +227,226 @@
 </script>
 
 <svelte:head>
-  <title>Portfolio – Magazine</title>
+  <title>Portfolio - Herpin Creative Studio</title>
 </svelte:head>
 
-<!-- Conteneur global pleine largeur -->
-<div class="w-full bg-stone-50 text-slate-800 selection:bg-violet-200">
-  <!-- Couverture immersive -->
-  <section
-    class="relative h-[60vh] md:h-[80vh] overflow-hidden"
-    transition:fadeZoom
-  >
-    <img
-      src="/Les-agapes/PORTFOLIO.png"
-      alt="Couverture Portfolio"
-      class="absolute inset-0 w-full h-full object-cover brightness-90"
-    />
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"
-    ></div>
-    <div
-      class="relative z-10 h-full flex flex-col items-center justify-end pb-8 md:pb-12 text-stone-100"
-    >
-      <h1 class="text-3xl md:text-6xl font-serif tracking-wide">
-        Portfolio – Lola Herpin
-      </h1>
-      <p class="mt-2 text-base md:text-xl opacity-90">
-        Graphisme, identité visuelle & édition
-      </p>
-    </div>
-  </section>
+<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 py-12">
+  <!-- Header -->
+  <div class="text-center mb-12" data-aos="fade-up">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+      Mon Portfolio
+    </h1>
+    <p class="text-violet-200 text-lg max-w-2xl mx-auto">
+      Decouvrez mes realisations en design graphique, identite visuelle et edition.
+    </p>
+  </div>
 
-  <!-- Sommaire pleine largeur -->
-  <section class="w-full px-4 md:px-8 py-8 md:py-16">
-    <h2 class="text-2xl md:text-3xl font-serif mb-6">Sommaire</h2>
-    <div
-      class="grid gap-4 md:gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6"
-    >
-      {#each projects as p}
-        <a
-          href={`#${p.title.replace(/\s+/g, "-").toLowerCase()}`}
-          class="group block bg-white rounded-lg shadow-sm border border-stone-200 p-4 hover:shadow-md transition"
-        >
-          {#if iconMap[p.title]}
-            {@const Icon = iconMap[p.title]}
-            <Icon class="w-6 h-6 text-violet-700 mb-2" aria-hidden="true" />
-          {/if}
-          <div class="flex items-baseline justify-between">
-            <h3 class="text-lg md:text-xl font-serif">{p.title}</h3>
-            <span class="text-xs md:text-sm text-stone-500"
-              >{p.photos.length} pages</span
-            >
-          </div>
-          <p class="mt-2 text-sm text-stone-600 leading-relaxed">
-            {projectIntro[p.title]}
-          </p>
-        </a>
-      {/each}
-    </div>
-  </section>
-
-  <!-- Chapitres pleine largeur -->
-  {#each projects as project, i}
-    <section
-      id={project.title.replace(/\s+/g, "-").toLowerCase()}
-      class="w-full px-4 md:px-8 py-12 md:py-20"
-    >
-      <!-- En-tête alterné -->
-      <div class="grid grid-cols-12 gap-6 md:gap-8 items-center">
-        {#if i % 2 === 0}
-          <div class="col-span-12 md:col-span-7">
-            <img
-              src={getHero(project)}
-              alt={project.title}
-              class="w-full rounded-xl shadow-lg"
-            />
-          </div>
-          <div class="col-span-12 md:col-span-5">
-            <h2 class="text-2xl md:text-4xl font-serif mb-3 md:mb-4">
-              {project.title}
-            </h2>
-            <p class="text-base md:text-lg leading-relaxed text-stone-700">
-              {projectIntro[project.title]}
-            </p>
-            <div class="mt-4 md:mt-6 h-px w-24 bg-stone-300"></div>
-            <p class="mt-3 md:mt-4 text-xs md:text-sm text-stone-500">
-              Chapitre {i + 1}
-            </p>
-          </div>
-        {:else}
-          <div class="col-span-12 md:col-span-5">
-            <h2 class="text-2xl md:text-4xl font-serif mb-3 md:mb-4">
-              {project.title}
-            </h2>
-            <p class="text-base md:text-lg leading-relaxed text-stone-700">
-              {projectIntro[project.title]}
-            </p>
-            <div class="mt-4 md:mt-6 h-px w-24 bg-stone-300"></div>
-            <p class="mt-3 md:mt-4 text-xs md:text-sm text-stone-500">
-              Chapitre {i + 1}
-            </p>
-          </div>
-          <div class="col-span-12 md:col-span-7">
-            <img
-              src={getHero(project)}
-              alt={project.title}
-              class="w-full rounded-xl shadow-lg"
-            />
-          </div>
-        {/if}
-      </div>
-
-      <p class="mt-6 text-xs md:text-sm text-stone-500">
-        Toutes les images du projet sont présentées ci-dessous dans une mise en
-        page magazine.
-      </p>
-
-      <!-- Mosaïque éditoriale pleine largeur -->
+  <!-- Grille des projets -->
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    {#each projects as project, i}
       <div
-        class="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[8rem] md:auto-rows-[12rem] gap-4 md:gap-6 [grid-auto-flow:dense]"
+        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10 overflow-hidden"
+        data-aos="fade-up"
+        data-aos-delay={i * 100}
       >
-        {#each getMosaic(project) as photo, j}
+        <!-- Tag -->
+        <div class="absolute -top-3 left-6 z-10">
+          <span class="bg-gradient-to-r {project.tagColor} text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+            {project.tag}
+          </span>
+        </div>
+
+        <!-- Image principale -->
+        <button
+          type="button"
+          class="w-full aspect-[4/3] overflow-hidden cursor-pointer"
+          on:click={() => openModal(project.title, project.photos[0])}
+        >
+          <img
+            src={project.photos[0]}
+            alt={project.title}
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            loading="lazy"
+          />
+        </button>
+
+        <!-- Contenu -->
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-2xl font-bold text-white">{project.title}</h2>
+            <span class="text-violet-300 text-sm">{project.photos.length} images</span>
+          </div>
+          <p class="text-violet-200 text-sm mb-4">{project.description}</p>
+
+          <!-- Miniatures -->
+          <div class="flex gap-2 mb-4 overflow-x-auto pb-2">
+            {#each project.photos.slice(1, 5) as photo, j}
+              <button
+                type="button"
+                class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-violet-600/50 hover:border-pink-500 transition-colors cursor-pointer"
+                on:click={() => openModal(project.title, photo)}
+              >
+                <img
+                  src={photo}
+                  alt="{project.title} - {j + 2}"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            {/each}
+            {#if project.photos.length > 5}
+              <button
+                type="button"
+                class="flex-shrink-0 w-16 h-16 rounded-lg bg-violet-800/50 border-2 border-violet-600/50 hover:border-pink-500 transition-colors flex items-center justify-center cursor-pointer"
+                on:click={() => openModal(project.title, project.photos[5])}
+              >
+                <span class="text-white font-bold text-sm">+{project.photos.length - 5}</span>
+              </button>
+            {/if}
+          </div>
+
+          <!-- Bouton voir tout -->
           <button
             type="button"
-            class={`relative ${mosaicSpan(j)} group cursor-pointer rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-stone-50`}
-            on:click={() => openModal(project.title, photo)}
-            aria-label={`Ouvrir ${project.title} – page ${j + 2} en plein écran`}
+            class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-2"
+            on:click={() => openModal(project.title, project.photos[0])}
           >
-            <img
-              src={photo}
-              alt={`${project.title} – page ${j + 2}`}
-              class="w-full h-full object-cover rounded-lg shadow-md"
-              loading="lazy"
-            />
-            <span
-              class="absolute bottom-2 left-2 bg-stone-900/60 text-stone-100 text-[10px] md:text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
-            >
-              {project.title} · {j + 2}
-            </span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            Voir le projet
           </button>
-        {/each}
+        </div>
       </div>
+    {/each}
+  </div>
 
-      <!-- Fin de chapitre -->
-      <div class="mt-12 md:mt-16 flex items-center gap-2 text-stone-400">
-        <span class="h-px flex-1 bg-stone-300"></span>
-        <span class="text-[10px] md:text-xs tracking-widest uppercase"
-          >Fin du chapitre</span
-        >
-        <span class="h-px flex-1 bg-stone-300"></span>
-      </div>
-    </section>
-  {/each}
+  <!-- CTA -->
+  <div class="text-center mt-16" data-aos="fade-up">
+    <p class="text-violet-200 mb-6">
+      Un projet vous interesse ? Discutons-en ensemble !
+    </p>
+    <a
+      href="/contact"
+      class="inline-flex items-center gap-2 px-8 py-4 bg-white text-violet-700 font-bold rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105 shadow-lg"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      Me contacter
+    </a>
+  </div>
+</main>
 
-  <!-- Page finale -->
-  <section
-    class="w-full px-4 md:px-8 py-16 md:py-24 bg-white border-t border-stone-200"
-  >
-    <div class="text-center">
-      <h2 class="text-2xl md:text-4xl font-serif">Merci de la lecture</h2>
-      <p class="mt-2 md:mt-3 text-stone-600">
-        Portfolio magazine numérique – Lola Herpin
-      </p>
-      <div class="mt-6 md:mt-8 flex justify-center">
-        <div class="h-px w-24 md:w-32 bg-stone-300"></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- Lightbox plein écran cinéma -->
+<!-- Lightbox plein ecran -->
 {#if selectedPhoto}
   <div
     id="modal-container"
     role="dialog"
     aria-modal="true"
     aria-label="Image en grand format"
-    class="fixed inset-0 w-screen h-screen bg-black flex flex-col items-center justify-center z-50"
+    class="fixed inset-0 w-screen h-screen bg-black/95 z-50"
     tabindex="0"
     on:keydown={handleKey}
     on:touchstart={handleTouchStart}
     on:touchend={handleTouchEnd}
     transition:fadeZoom
   >
-    <!-- Fond cliquable (bouton accessible) -->
+    <!-- Bouton fermer -->
     <button
       type="button"
-      class="absolute inset-0 cursor-pointer"
-      aria-label="Fermer la fenêtre"
+      class="absolute top-3 right-3 md:top-4 md:right-4 z-20 bg-white/10 hover:bg-white/20 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition"
+      aria-label="Fermer"
       on:click={closeModal}
-    ></button>
-
-    <!-- Contenu -->
-    <div
-      class="relative w-full h-full flex flex-col items-center justify-center p-4 md:p-6"
     >
-      <h4 class="text-lg md:text-xl font-serif mb-4 text-white z-10">
-        {selectedProjectTitle}
-      </h4>
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
 
-      <!-- Image – glissement horizontal entre photos -->
+    <!-- Titre -->
+    <div class="absolute top-3 left-3 md:top-4 md:left-4 z-20">
+      <span class="text-sm md:text-lg font-bold text-white bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-2 rounded-full">
+        {selectedProjectTitle} - {currentIndex() + 1}/{projects.find((p) => p.title === selectedProjectTitle)?.photos.length}
+      </span>
+    </div>
+
+    <!-- Image -->
+    <div class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16">
       <img
         src={selectedPhoto}
         alt={selectedProjectTitle}
-        class="w-full h-full object-contain rounded-lg shadow-lg z-10"
+        class="max-w-full max-h-full object-contain rounded-lg"
         transition:slideHorizontal={{ direction }}
       />
+    </div>
 
-      <!-- Pagination visuelle -->
-      {#if selectedProjectTitle}
-        <div
-          class="absolute bottom-20 flex flex-wrap justify-center items-center gap-2 z-10"
-        >
-          {#each projects.find((p) => p.title === selectedProjectTitle)?.photos as _, i}
-            <button
-              type="button"
-              class={`w-3 h-3 md:w-4 md:h-4 rounded-full transition ${
-                i === currentIndex()
-                  ? "bg-violet-600"
-                  : "bg-stone-500/70 hover:bg-stone-400"
-              }`}
-              on:click={() => {
-                const project = projects.find(
-                  (p) => p.title === selectedProjectTitle
-                );
-                if (project) {
-                  direction = i > currentIndex() ? "right" : "left";
-                  selectedPhoto = project.photos[i];
-                }
-              }}
-              aria-label={`Aller à la page ${i + 1}`}
-              title={`Page ${i + 1}`}
-            ></button>
-          {/each}
-        </div>
-      {/if}
+    <!-- Navigation desktop -->
+    <button
+      type="button"
+      class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full items-center justify-center transition"
+      aria-label="Precedent"
+      on:click={prevPhoto}
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button
+      type="button"
+      class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full items-center justify-center transition"
+      aria-label="Suivant"
+      on:click={nextPhoto}
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
 
-      <!-- Boutons de navigation -->
-      <div
-        class="absolute bottom-6 flex justify-between items-center gap-4 z-10"
+    <!-- Navigation mobile -->
+    <div class="md:hidden absolute bottom-4 left-0 right-0 flex justify-center items-center gap-6 z-20">
+      <button
+        type="button"
+        class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
+        aria-label="Precedent"
+        on:click={prevPhoto}
       >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
+        aria-label="Suivant"
+        on:click={nextPhoto}
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Indicateur swipe mobile -->
+    <div class="md:hidden absolute bottom-20 left-0 right-0 flex justify-center z-20 pointer-events-none">
+      <p class="text-white/50 text-xs">Swipez pour naviguer</p>
+    </div>
+
+    <!-- Miniatures en bas (desktop) -->
+    <div class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 z-20 gap-2 bg-black/50 p-2 rounded-xl max-w-[80vw] overflow-x-auto">
+      {#each projects.find((p) => p.title === selectedProjectTitle)?.photos || [] as photo, idx}
         <button
-          class="bg-stone-700 px-4 py-2 rounded hover:bg-stone-600"
-          on:click={prevPhoto}>⬅ Précédent</button
+          type="button"
+          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all {selectedPhoto === photo ? 'border-pink-500 scale-110' : 'border-transparent hover:border-violet-400'}"
+          on:click={() => { selectedPhoto = photo; direction = idx > currentIndex() ? 'right' : 'left'; }}
         >
-        <button
-          class="bg-violet-600 px-6 py-2 rounded hover:bg-violet-700"
-          on:click={closeModal}>Fermer</button
-        >
-        <button
-          class="bg-stone-700 px-4 py-2 rounded hover:bg-stone-600"
-          on:click={nextPhoto}>Suivant ➡</button
-        >
-      </div>
+          <img
+            src={photo}
+            alt="Miniature {idx + 1}"
+            class="w-full h-full object-cover"
+          />
+        </button>
+      {/each}
     </div>
   </div>
 {/if}
-
-<style>
-  :global(html) {
-    scroll-behavior: smooth;
-  }
-  /* Optionnel: styles fins pour lisibilité et focus */
-  :global(button:focus-visible) {
-    outline: none;
-  }
-</style>

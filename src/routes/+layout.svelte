@@ -50,7 +50,7 @@
 <Header links={navLinks} transparent={!scrolled} />
 
 <!-- Contenu principal -->
-<main class="pt-40">
+<main class="pt-20 md:pt-24">
   <slot />
 </main>
 

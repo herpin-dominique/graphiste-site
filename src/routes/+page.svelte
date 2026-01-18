@@ -14,7 +14,7 @@
   <img
     src="/BANNIERE.png"
     alt="Bannière"
-    class="absolute inset-0 w-full h-full object-cover"
+    class="absolute inset-0 w-full h-full object-cover object-[60%_20%] md:object-center"
   />
   <!-- Overlay pour la lisibilité -->
   <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
@@ -252,7 +252,7 @@
         href="/tarifs"
         class="px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-violet-700 transition-all duration-300 hover:scale-105"
       >
-        Voir les tarifs
+        Voir les forfaits
       </a>
     </div>
   </div>

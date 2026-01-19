@@ -230,28 +230,28 @@
   <title>Portfolio - Herpin Creative Studio</title>
 </svelte:head>
 
-<main class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-12 lg:px-20 xl:px-32 py-12">
+<main class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20">
   <!-- Header -->
-  <div class="text-center mb-12" data-aos="fade-up">
-    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8">
       Mon Portfolio
     </h1>
-    <p class="text-violet-200 text-lg max-w-2xl mx-auto">
+    <p class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed">
       Decouvrez mes realisations en design graphique, identite visuelle et edition.
     </p>
   </div>
 
   <!-- Grille des projets -->
-  <div class="w-full max-w-[1600px] mx-auto grid md:grid-cols-2 gap-8">
+  <div class="w-full max-w-[1800px] mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
     {#each projects as project, i}
       <div
-        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10 overflow-hidden"
+        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 overflow-hidden"
         data-aos="fade-up"
         data-aos-delay={i * 100}
       >
         <!-- Tag -->
-        <div class="absolute -top-3 left-6 z-10">
-          <span class="bg-gradient-to-r {project.tagColor} text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+        <div class="absolute top-4 left-6 lg:left-8 z-10">
+          <span class="bg-gradient-to-r {project.tagColor} text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider">
             {project.tag}
           </span>
         </div>
@@ -271,19 +271,19 @@
         </button>
 
         <!-- Contenu -->
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-3">
-            <h2 class="text-2xl font-bold text-white">{project.title}</h2>
-            <span class="text-violet-300 text-sm">{project.photos.length} images</span>
+        <div class="p-8 lg:p-10">
+          <div class="flex items-center justify-between mb-4 lg:mb-6">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{project.title}</h2>
+            <span class="text-violet-200 text-lg lg:text-xl">{project.photos.length} images</span>
           </div>
-          <p class="text-violet-200 text-sm mb-4">{project.description}</p>
+          <p class="text-violet-100 text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed">{project.description}</p>
 
           <!-- Miniatures -->
-          <div class="flex gap-2 mb-4 overflow-x-auto pb-2">
+          <div class="flex gap-3 mb-6 lg:mb-8 overflow-x-auto pb-2">
             {#each project.photos.slice(1, 5) as photo, j}
               <button
                 type="button"
-                class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-violet-600/50 hover:border-pink-500 transition-colors cursor-pointer"
+                class="flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-xl overflow-hidden border-2 border-violet-600/50 hover:border-pink-500 transition-colors cursor-pointer"
                 on:click={() => openModal(project.title, photo)}
               >
                 <img
@@ -297,10 +297,10 @@
             {#if project.photos.length > 5}
               <button
                 type="button"
-                class="flex-shrink-0 w-16 h-16 rounded-lg bg-violet-800/50 border-2 border-violet-600/50 hover:border-pink-500 transition-colors flex items-center justify-center cursor-pointer"
+                class="flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-xl bg-violet-800/50 border-2 border-violet-600/50 hover:border-pink-500 transition-colors flex items-center justify-center cursor-pointer"
                 on:click={() => openModal(project.title, project.photos[5])}
               >
-                <span class="text-white font-bold text-sm">+{project.photos.length - 5}</span>
+                <span class="text-white font-bold text-lg lg:text-xl">+{project.photos.length - 5}</span>
               </button>
             {/if}
           </div>
@@ -308,10 +308,10 @@
           <!-- Bouton voir tout -->
           <button
             type="button"
-            class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-2"
+            class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-4 lg:py-5 px-8 rounded-2xl text-xl lg:text-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-3"
             on:click={() => openModal(project.title, project.photos[0])}
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
             Voir le projet
@@ -322,15 +322,15 @@
   </div>
 
   <!-- CTA -->
-  <div class="text-center mt-16" data-aos="fade-up">
-    <p class="text-violet-200 mb-6">
+  <div class="text-center mt-16 lg:mt-20" data-aos="fade-up">
+    <p class="text-violet-100 text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed">
       Un projet vous interesse ? Discutons-en ensemble !
     </p>
     <a
       href="/contact"
-      class="inline-flex items-center gap-2 px-8 py-4 bg-white text-violet-700 font-bold rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105 shadow-lg"
+      class="inline-flex items-center gap-3 px-10 py-5 lg:px-12 lg:py-6 bg-white text-violet-700 font-bold text-xl lg:text-2xl rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105 shadow-xl"
     >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
       </svg>
       Me contacter

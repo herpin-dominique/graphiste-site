@@ -73,7 +73,7 @@
   function calculateTotal() {
     formData.total = formData.items.reduce(
       (sum, item) => sum + item.quantity * item.unit_price,
-      0
+      0,
     );
   }
 
@@ -543,7 +543,7 @@
               <td class="px-6 py-4 whitespace-nowrap">
                 <span
                   class="px-3 py-1 rounded-full text-xs font-medium {getStatusColor(
-                    invoice.status
+                    invoice.status,
                   )}"
                 >
                   {getStatusLabel(invoice.status)}

@@ -24,7 +24,7 @@
     <p
       class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed"
     >
-      Des solutions adaptées a vos besoins, de l'essentiel au sur-mesure
+      Des solutions adaptées à vos besoins, de l'essentiel au sur-mesure
     </p>
   </div>
 
@@ -202,7 +202,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Identite de marque complete</span>
+          <span>identité de marque complete</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -230,7 +230,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Charte graphique complete</span>
+          <span>Charte graphique complète</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -258,7 +258,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>5 revisions incluses</span>
+          <span>5 révisions incluses</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -272,7 +272,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Deck de presentation de marque</span>
+          <span>Deck de présentation de marque</span>
         </li>
       </ul>
 
@@ -445,7 +445,7 @@
     data-aos="fade-up"
     data-aos-delay="400"
   >
-    Chaque projet est unique. Contactez-moi pour un devis personnalise adapte a
-    vos besoins specifiques.
+    Chaque projet est unique. Contactez-moi pour un devis personnalisé adapté à
+    vos besoins spécifiques.
   </p>
 </main>

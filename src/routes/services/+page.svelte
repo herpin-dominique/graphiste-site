@@ -24,7 +24,7 @@
     <p
       class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed"
     >
-      Des solutions créatives adaptées a vos besoins
+      Des solutions créatives adaptées à vos besoins
     </p>
   </div>
 
@@ -60,7 +60,7 @@
       <h2
         class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-center"
       >
-        Identite visuelle
+        identité visuelle
       </h2>
       <p
         class="text-lg md:text-xl lg:text-2xl text-violet-100 text-center max-w-xl leading-relaxed"

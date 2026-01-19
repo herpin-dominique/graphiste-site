@@ -30,7 +30,7 @@
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
-    { href: "/tarifs", label: "Tarifs" },
+    { href: "/tarifs", label: "Forfaits" },
   ];
 
   let scrolled = false;

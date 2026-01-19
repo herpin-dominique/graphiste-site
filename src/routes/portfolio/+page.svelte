@@ -13,7 +13,13 @@
     | "Mode et Travaux"
     | "Penhaligons"
     | "Alvelo";
-  type Project = { title: ProjectTitle; photos: string[]; tag: string; tagColor: string; description: string };
+  type Project = {
+    title: ProjectTitle;
+    photos: string[];
+    tag: string;
+    tagColor: string;
+    description: string;
+  };
 
   // Données des projets
   let projects: Project[] = [
@@ -21,7 +27,8 @@
       title: "Les Agapes",
       tag: "Editorial",
       tagColor: "from-pink-500 to-violet-500",
-      description: "Un projet editorial autour de la gastronomie, mettant en valeur les saveurs et l'art culinaire.",
+      description:
+        "Un projet editorial autour de la gastronomie, mettant en valeur les saveurs et l'art culinaire.",
       photos: [
         "/Les-agapes/Agapes_page-0001.jpg",
         "/Les-agapes/Agapes_page-0002.jpg",
@@ -39,7 +46,8 @@
       title: "Mode et Travaux",
       tag: "Magazine",
       tagColor: "from-amber-500 to-orange-500",
-      description: "Reportage visuel et mise en page d'articles pour un magazine lifestyle.",
+      description:
+        "Reportage visuel et mise en page d'articles pour un magazine lifestyle.",
       photos: [
         "/Mode-et-travaux/Dossier présentation Mode et travaux Lola Herpin_page-0001.jpg",
         "/Mode-et-travaux/Dossier présentation Mode et travaux Lola Herpin_page-0002.jpg",
@@ -65,7 +73,8 @@
       title: "Penhaligons",
       tag: "Branding",
       tagColor: "from-emerald-500 to-teal-500",
-      description: "Univers parfume et esthetique classique pour une marque de luxe.",
+      description:
+        "Univers parfume et esthetique classique pour une marque de luxe.",
       photos: [
         "/penhaligons/1.jpg",
         "/penhaligons/2.jpg",
@@ -101,7 +110,8 @@
       title: "Alvelo",
       tag: "Projet de fin d'etudes",
       tagColor: "from-blue-500 to-indigo-500",
-      description: "Dossier de design structure pour un projet de mobilite urbaine.",
+      description:
+        "Dossier de design structure pour un projet de mobilite urbaine.",
       photos: [
         "/Alvelo/ALVELO pfe dossier_compressed_page-0010.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0032.jpg",
@@ -193,7 +203,7 @@
   // Transition glissement horizontal
   function slideHorizontal(
     node: Element,
-    { direction }: { direction: "left" | "right" }
+    { direction }: { direction: "left" | "right" },
   ) {
     const x = direction === "left" ? -100 : 100;
     return {
@@ -230,19 +240,28 @@
   <title>Portfolio - Herpin Creative Studio</title>
 </svelte:head>
 
-<main class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20">
+<main
+  class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20"
+>
   <!-- Header -->
   <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
-    <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8">
+    <h1
+      class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8"
+    >
       Mon Portfolio
     </h1>
-    <p class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed">
-      Decouvrez mes realisations en design graphique, identite visuelle et edition.
+    <p
+      class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed"
+    >
+      Découvrez mes réalisations en design graphique, identité visuelle et
+      édition.
     </p>
   </div>
 
   <!-- Grille des projets -->
-  <div class="w-full max-w-[1800px] mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
+  <div
+    class="w-full max-w-[1800px] mx-auto grid md:grid-cols-2 gap-8 lg:gap-12"
+  >
     {#each projects as project, i}
       <div
         class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 overflow-hidden"
@@ -251,7 +270,9 @@
       >
         <!-- Tag -->
         <div class="absolute top-4 left-6 lg:left-8 z-10">
-          <span class="bg-gradient-to-r {project.tagColor} text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider">
+          <span
+            class="bg-gradient-to-r {project.tagColor} text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
+          >
             {project.tag}
           </span>
         </div>
@@ -273,10 +294,18 @@
         <!-- Contenu -->
         <div class="p-8 lg:p-10">
           <div class="flex items-center justify-between mb-4 lg:mb-6">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{project.title}</h2>
-            <span class="text-violet-200 text-lg lg:text-xl">{project.photos.length} images</span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+              {project.title}
+            </h2>
+            <span class="text-violet-200 text-lg lg:text-xl"
+              >{project.photos.length} images</span
+            >
           </div>
-          <p class="text-violet-100 text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed">{project.description}</p>
+          <p
+            class="text-violet-100 text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed"
+          >
+            {project.description}
+          </p>
 
           <!-- Miniatures -->
           <div class="flex gap-3 mb-6 lg:mb-8 overflow-x-auto pb-2">
@@ -300,7 +329,9 @@
                 class="flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-xl bg-violet-800/50 border-2 border-violet-600/50 hover:border-pink-500 transition-colors flex items-center justify-center cursor-pointer"
                 on:click={() => openModal(project.title, project.photos[5])}
               >
-                <span class="text-white font-bold text-lg lg:text-xl">+{project.photos.length - 5}</span>
+                <span class="text-white font-bold text-lg lg:text-xl"
+                  >+{project.photos.length - 5}</span
+                >
               </button>
             {/if}
           </div>
@@ -311,8 +342,18 @@
             class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-4 lg:py-5 px-8 rounded-2xl text-xl lg:text-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-3"
             on:click={() => openModal(project.title, project.photos[0])}
           >
-            <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            <svg
+              class="w-6 h-6 lg:w-7 lg:h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
             </svg>
             Voir le projet
           </button>
@@ -323,15 +364,27 @@
 
   <!-- CTA -->
   <div class="text-center mt-16 lg:mt-20" data-aos="fade-up">
-    <p class="text-violet-100 text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed">
-      Un projet vous interesse ? Discutons-en ensemble !
+    <p
+      class="text-violet-100 text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed"
+    >
+      Un projet vous intéresse ? Discutons-en ensemble !
     </p>
     <a
       href="/contact"
       class="inline-flex items-center gap-3 px-10 py-5 lg:px-12 lg:py-6 bg-white text-violet-700 font-bold text-xl lg:text-2xl rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105 shadow-xl"
     >
-      <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      <svg
+        class="w-6 h-6 lg:w-7 lg:h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        ></path>
       </svg>
       Me contacter
     </a>
@@ -359,20 +412,36 @@
       aria-label="Fermer"
       on:click={closeModal}
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
       </svg>
     </button>
 
     <!-- Titre -->
     <div class="absolute top-3 left-3 md:top-4 md:left-4 z-20">
-      <span class="text-sm md:text-lg font-bold text-white bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-2 rounded-full">
-        {selectedProjectTitle} - {currentIndex() + 1}/{projects.find((p) => p.title === selectedProjectTitle)?.photos.length}
+      <span
+        class="text-sm md:text-lg font-bold text-white bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-2 rounded-full"
+      >
+        {selectedProjectTitle} - {currentIndex() + 1}/{projects.find(
+          (p) => p.title === selectedProjectTitle,
+        )?.photos.length}
       </span>
     </div>
 
     <!-- Image -->
-    <div class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16">
+    <div
+      class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16"
+    >
       <img
         src={selectedPhoto}
         alt={selectedProjectTitle}
@@ -388,8 +457,18 @@
       aria-label="Precedent"
       on:click={prevPhoto}
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"
+        ></path>
       </svg>
     </button>
     <button
@@ -398,21 +477,43 @@
       aria-label="Suivant"
       on:click={nextPhoto}
     >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        ></path>
       </svg>
     </button>
 
     <!-- Navigation mobile -->
-    <div class="md:hidden absolute bottom-4 left-0 right-0 flex justify-center items-center gap-6 z-20">
+    <div
+      class="md:hidden absolute bottom-4 left-0 right-0 flex justify-center items-center gap-6 z-20"
+    >
       <button
         type="button"
         class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
         aria-label="Precedent"
         on:click={prevPhoto}
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
         </svg>
       </button>
       <button
@@ -421,24 +522,44 @@
         aria-label="Suivant"
         on:click={nextPhoto}
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          ></path>
         </svg>
       </button>
     </div>
 
     <!-- Indicateur swipe mobile -->
-    <div class="md:hidden absolute bottom-20 left-0 right-0 flex justify-center z-20 pointer-events-none">
+    <div
+      class="md:hidden absolute bottom-20 left-0 right-0 flex justify-center z-20 pointer-events-none"
+    >
       <p class="text-white/50 text-xs">Swipez pour naviguer</p>
     </div>
 
     <!-- Miniatures en bas (desktop) -->
-    <div class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 z-20 gap-2 bg-black/50 p-2 rounded-xl max-w-[80vw] overflow-x-auto">
+    <div
+      class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 z-20 gap-2 bg-black/50 p-2 rounded-xl max-w-[80vw] overflow-x-auto"
+    >
       {#each projects.find((p) => p.title === selectedProjectTitle)?.photos || [] as photo, idx}
         <button
           type="button"
-          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all {selectedPhoto === photo ? 'border-pink-500 scale-110' : 'border-transparent hover:border-violet-400'}"
-          on:click={() => { selectedPhoto = photo; direction = idx > currentIndex() ? 'right' : 'left'; }}
+          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all {selectedPhoto ===
+          photo
+            ? 'border-pink-500 scale-110'
+            : 'border-transparent hover:border-violet-400'}"
+          on:click={() => {
+            selectedPhoto = photo;
+            direction = idx > currentIndex() ? "right" : "left";
+          }}
         >
           <img
             src={photo}

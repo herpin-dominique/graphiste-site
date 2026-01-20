@@ -31,6 +31,7 @@
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
+    { href: "/billing", label: "Facturation" },
   ];
 
   let scrolled = false;
@@ -50,7 +51,7 @@
 <Header links={navLinks} transparent={!scrolled} />
 
 <!-- Contenu principal -->
-<main class="pt-20 md:pt-24">
+<main class="pt-24 md:pt-32 lg:pt-36">
   <slot />
 </main>
 

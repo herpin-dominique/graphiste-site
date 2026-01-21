@@ -18,7 +18,8 @@
       "mcp__plugin_playwright_playwright__browser_close",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat\\(billing\\): add complete billing system with authentication and PDF generation\n\n- Add password-protected billing page with SHA-256 authentication\n- Create billing store with localStorage persistence for invoices/quotes\n- Implement PDF generation using jsPDF for professional documents\n- Add send history tracking with timeline component\n- Include invoice filtering, statistics, and CRUD operations\n- Fix form input text color for better visibility\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(ls:*)"
     ]
   }
 }

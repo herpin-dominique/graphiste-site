@@ -21,6 +21,11 @@
     description: string;
   };
 
+  // Fonction pour détecter si un média est une vidéo
+  function isVideo(url: string): boolean {
+    return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');
+  }
+
   // Données des projets
   let projects: Project[] = [
     {
@@ -113,6 +118,7 @@
       description:
         "Dossier de design structuré pour un projet de mobilité urbaine.",
       photos: [
+        "/Alvelo/Motion - manuel d'utilisation alvelo.mp4",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0010.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0032.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0033.jpg",
@@ -277,18 +283,28 @@
           </span>
         </div>
 
-        <!-- Image principale -->
+        <!-- Image principale ou Vidéo -->
         <button
           type="button"
-          class="w-full aspect-[4/3] overflow-hidden cursor-pointer"
+          class="w-full aspect-[4/3] overflow-hidden cursor-pointer relative group"
           on:click={() => openModal(project.title, project.photos[0])}
         >
-          <img
-            src={project.photos[0]}
-            alt={project.title}
-            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-            loading="lazy"
-          />
+          {#if isVideo(project.photos[0])}
+            <div class="w-full h-full bg-gradient-to-br from-violet-800 to-violet-900 flex items-center justify-center">
+              <div class="w-20 h-20 lg:w-24 lg:h-24 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                <svg class="w-10 h-10 lg:w-12 lg:h-12 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          {:else}
+            <img
+              src={project.photos[0]}
+              alt={project.title}
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          {/if}
         </button>
 
         <!-- Contenu -->
@@ -298,7 +314,7 @@
               {project.title}
             </h2>
             <span class="text-violet-200 text-lg lg:text-xl"
-              >{project.photos.length} images</span
+              >{project.photos.length} {project.photos.some(isVideo) ? 'médias' : 'images'}</span
             >
           </div>
           <p
@@ -315,12 +331,20 @@
                 class="flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-xl overflow-hidden border-2 border-violet-600/50 hover:border-pink-500 transition-colors cursor-pointer"
                 on:click={() => openModal(project.title, photo)}
               >
-                <img
-                  src={photo}
-                  alt="{project.title} - {j + 2}"
-                  class="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                {#if isVideo(photo)}
+                  <div class="w-full h-full bg-violet-800 flex items-center justify-center">
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                {:else}
+                  <img
+                    src={photo}
+                    alt="{project.title} - {j + 2}"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                {/if}
               </button>
             {/each}
             {#if project.photos.length > 5}
@@ -438,16 +462,28 @@
       </span>
     </div>
 
-    <!-- Image -->
+    <!-- Image ou Vidéo -->
     <div
       class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16"
     >
-      <img
-        src={selectedPhoto}
-        alt={selectedProjectTitle}
-        class="max-w-full max-h-full object-contain rounded-lg"
-        transition:slideHorizontal={{ direction }}
-      />
+      {#if selectedPhoto && isVideo(selectedPhoto)}
+        <video
+          src={selectedPhoto}
+          controls
+          autoplay
+          class="max-w-full max-h-full object-contain rounded-lg"
+          transition:slideHorizontal={{ direction }}
+        >
+          <track kind="captions" />
+        </video>
+      {:else}
+        <img
+          src={selectedPhoto}
+          alt={selectedProjectTitle}
+          class="max-w-full max-h-full object-contain rounded-lg"
+          transition:slideHorizontal={{ direction }}
+        />
+      {/if}
     </div>
 
     <!-- Navigation desktop -->
@@ -552,7 +588,7 @@
       {#each projects.find((p) => p.title === selectedProjectTitle)?.photos || [] as photo, idx}
         <button
           type="button"
-          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all {selectedPhoto ===
+          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all relative {selectedPhoto ===
           photo
             ? 'border-pink-500 scale-110'
             : 'border-transparent hover:border-violet-400'}"
@@ -561,11 +597,19 @@
             direction = idx > currentIndex() ? "right" : "left";
           }}
         >
-          <img
-            src={photo}
-            alt="Miniature {idx + 1}"
-            class="w-full h-full object-cover"
-          />
+          {#if isVideo(photo)}
+            <div class="w-full h-full bg-violet-900 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          {:else}
+            <img
+              src={photo}
+              alt="Miniature {idx + 1}"
+              class="w-full h-full object-cover"
+            />
+          {/if}
         </button>
       {/each}
     </div>

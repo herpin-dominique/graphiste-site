@@ -63,7 +63,7 @@
             </svg>
           </div>
           <div>
-            <p class="text-violet-200 text-lg lg:text-xl">Ecrivez-moi a</p>
+            <p class="text-violet-200 text-lg lg:text-xl">Écrivez-moi à</p>
             <a
               href="mailto:contact@herpincreative.studio"
               class="text-white text-xl lg:text-2xl font-semibold hover:text-pink-300 transition-colors"
@@ -263,7 +263,7 @@
             name="message"
             rows="5"
             required
-            placeholder="Decrivez votre projet ou votre demande..."
+            placeholder="Décrivez votre projet ou votre demande..."
             class="w-full px-5 lg:px-6 py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-lg lg:text-xl rounded-2xl placeholder-violet-400 resize-none focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
           ></textarea>
         </div>

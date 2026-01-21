@@ -25,10 +25,10 @@
   let projects: Project[] = [
     {
       title: "Les Agapes",
-      tag: "Editorial",
+      tag: "Éditorial",
       tagColor: "from-pink-500 to-violet-500",
       description:
-        "Un projet editorial autour de la gastronomie, mettant en valeur les saveurs et l'art culinaire.",
+        "Un projet éditorial autour de la gastronomie, mettant en valeur les saveurs et l'art culinaire.",
       photos: [
         "/Les-agapes/Agapes_page-0001.jpg",
         "/Les-agapes/Agapes_page-0002.jpg",
@@ -74,7 +74,7 @@
       tag: "Branding",
       tagColor: "from-emerald-500 to-teal-500",
       description:
-        "Univers parfume et esthetique classique pour une marque de luxe.",
+        "Univers parfumé et esthétique classique pour une marque de luxe.",
       photos: [
         "/penhaligons/1.jpg",
         "/penhaligons/2.jpg",
@@ -108,10 +108,10 @@
     },
     {
       title: "Alvelo",
-      tag: "Projet de fin d'etudes",
+      tag: "Projet de fin d'études",
       tagColor: "from-blue-500 to-indigo-500",
       description:
-        "Dossier de design structure pour un projet de mobilite urbaine.",
+        "Dossier de design structuré pour un projet de mobilité urbaine.",
       photos: [
         "/Alvelo/ALVELO pfe dossier_compressed_page-0010.jpg",
         "/Alvelo/ALVELO pfe dossier_compressed_page-0032.jpg",
@@ -454,7 +454,7 @@
     <button
       type="button"
       class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full items-center justify-center transition"
-      aria-label="Precedent"
+      aria-label="Précédent"
       on:click={prevPhoto}
     >
       <svg
@@ -499,7 +499,7 @@
       <button
         type="button"
         class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
-        aria-label="Precedent"
+        aria-label="Précédent"
         on:click={prevPhoto}
       >
         <svg

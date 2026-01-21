@@ -202,7 +202,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>identité de marque complete</span>
+          <span>Identité de marque complète</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -244,7 +244,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Design papeterie (cartes, flyers, en-tete)</span>
+          <span>Design papeterie (cartes, flyers, en-tête)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg

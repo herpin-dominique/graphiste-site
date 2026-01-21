@@ -135,16 +135,16 @@
         >
           <p>
             En tant que chef d'entreprise, ma principale motivation est de
-            mettre mes competences en <strong class="text-violet-600"
+            mettre mes compétences en <strong class="text-violet-600"
               >graphisme</strong
             >
             et <strong class="text-violet-600">motion design</strong> au service
-            des entreprises qui souhaitent se demarquer visuellement.
+            des entreprises qui souhaitent se démarquer visuellement.
           </p>
           <p>
-            J'ai fonde mon propre studio pour apporter des <strong
-              >solutions creatives sur mesure</strong
-            > a mes clients, avec liberte et passion.
+            J'ai fondé mon propre studio pour apporter des <strong
+              >solutions créatives sur mesure</strong
+            > à mes clients, avec liberté et passion.
           </p>
         </div>
 
@@ -153,7 +153,7 @@
           <div class="p-6 lg:p-8 bg-violet-50 rounded-2xl">
             <div class="text-4xl mb-4">🎨</div>
             <h3 class="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
-              Identite visuelle
+              Identité visuelle
             </h3>
             <p class="text-lg lg:text-xl text-gray-600">Print & Digital</p>
           </div>
@@ -162,7 +162,7 @@
             <h3 class="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
               Motion Design
             </h3>
-            <p class="text-lg lg:text-xl text-gray-600">Reseaux sociaux</p>
+            <p class="text-lg lg:text-xl text-gray-600">Réseaux sociaux</p>
           </div>
         </div>
 
@@ -170,7 +170,7 @@
           href="/services"
           class="inline-flex items-center gap-3 mt-10 text-violet-600 font-bold text-xl lg:text-2xl hover:text-violet-800 transition-colors"
         >
-          Decouvrir tous mes services
+          Découvrir tous mes services
           <svg
             class="w-6 h-6 lg:w-7 lg:h-7"
             fill="none"
@@ -204,7 +204,7 @@
       <p
         class="text-xl md:text-2xl lg:text-3xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
       >
-        Une selection de mes realisations en design graphique, illustration et
+        Une sélection de mes réalisations en design graphique, illustration et
         motion design.
       </p>
     </div>
@@ -229,7 +229,7 @@
         >
           <div class="text-white">
             <h3 class="font-bold text-2xl lg:text-3xl mb-2">
-              Identite visuelle
+              Identité visuelle
             </h3>
             <p class="text-violet-200 text-lg lg:text-xl">
               Branding & Packaging
@@ -302,7 +302,7 @@
         >
           <div class="text-white">
             <h3 class="font-bold text-2xl lg:text-3xl mb-2">Motion Design</h3>
-            <p class="text-violet-200 text-lg lg:text-xl">Animation & Video</p>
+            <p class="text-violet-200 text-lg lg:text-xl">Animation & Vidéo</p>
           </div>
         </div>
       </div>
@@ -352,14 +352,14 @@
       class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white mb-8"
       data-aos="fade-up"
     >
-      Pret a creer ensemble ?
+      Prêt à créer ensemble ?
     </h2>
     <p
       class="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      Discutons de votre projet et donnons vie a vos idees avec une identite
+      Discutons de votre projet et donnons vie à vos idées avec une identité
       visuelle unique.
     </p>
     <div
@@ -371,7 +371,7 @@
         href="/contact"
         class="px-12 py-6 lg:px-14 lg:py-7 bg-white text-violet-700 font-bold text-xl lg:text-2xl rounded-full hover:bg-violet-50 transition-all duration-300 hover:scale-105 shadow-xl"
       >
-        Demarrer un projet
+        Démarrer un projet
       </a>
       <a
         href="/tarifs"

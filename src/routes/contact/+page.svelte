@@ -15,14 +15,14 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20"
 >
   <!-- Header -->
-  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-10 md:mb-16 lg:mb-20" data-aos="fade-up">
     <h1
-      class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8"
+      class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 lg:mb-8"
     >
       Contactez-moi
     </h1>
     <p
-      class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed"
+      class="text-violet-100 text-lg md:text-xl lg:text-2xl xl:text-3xl max-w-4xl mx-auto leading-relaxed"
     >
       Une idée, un projet ? Discutons-en ensemble !
     </p>
@@ -35,21 +35,21 @@
     <div class="space-y-6 lg:space-y-8" data-aos="fade-up" data-aos-delay="100">
       <!-- Card Email -->
       <div
-        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
+        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
       >
-        <div class="absolute -top-4 left-8 lg:left-10">
+        <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
           <span
-            class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
+            class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base lg:text-lg font-bold px-4 md:px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
           >
             Email
           </span>
         </div>
-        <div class="flex items-center gap-5 lg:gap-6 mt-6 lg:mt-8">
+        <div class="flex items-center gap-4 md:gap-5 lg:gap-6 mt-6 lg:mt-8">
           <div
-            class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-violet-500 rounded-2xl flex items-center justify-center flex-shrink-0"
+            class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-violet-500 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0"
           >
             <svg
-              class="w-8 h-8 lg:w-10 lg:h-10 text-white"
+              class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -62,11 +62,11 @@
               ></path>
             </svg>
           </div>
-          <div>
-            <p class="text-violet-200 text-lg lg:text-xl">Écrivez-moi à</p>
+          <div class="min-w-0 flex-1">
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Écrivez-moi à</p>
             <a
               href="mailto:contact@herpincreative.studio"
-              class="text-white text-xl lg:text-2xl font-semibold hover:text-pink-300 transition-colors"
+              class="text-white text-sm md:text-xl lg:text-2xl font-semibold hover:text-pink-300 transition-colors break-all"
             >
               contact@herpincreative.studio
             </a>
@@ -76,21 +76,21 @@
 
       <!-- Card Reseaux sociaux -->
       <div
-        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
+        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
       >
-        <div class="absolute -top-4 left-8 lg:left-10">
+        <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
           <span
-            class="bg-violet-600 text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
+            class="bg-violet-600 text-white text-sm md:text-base lg:text-lg font-bold px-4 md:px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
           >
             Réseaux
           </span>
         </div>
-        <div class="flex items-center gap-5 lg:gap-6 mt-6 lg:mt-8">
+        <div class="flex items-center gap-4 md:gap-5 lg:gap-6 mt-6 lg:mt-8">
           <div
-            class="w-16 h-16 lg:w-20 lg:h-20 bg-violet-600 rounded-2xl flex items-center justify-center flex-shrink-0"
+            class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-violet-600 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0"
           >
             <svg
-              class="w-8 h-8 lg:w-10 lg:h-10 text-white"
+              class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -99,13 +99,13 @@
               />
             </svg>
           </div>
-          <div>
-            <p class="text-violet-200 text-lg lg:text-xl">Suivez-moi sur</p>
+          <div class="min-w-0 flex-1">
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Suivez-moi sur</p>
             <a
               href="https://instagram.com/herpincreativestudio"
               target="_blank"
               rel="noopener"
-              class="text-white text-xl lg:text-2xl font-semibold hover:text-violet-300 transition-colors"
+              class="text-white text-base md:text-xl lg:text-2xl font-semibold hover:text-violet-300 transition-colors"
             >
               @herpincreativestudio
             </a>
@@ -115,21 +115,21 @@
 
       <!-- Card Localisation -->
       <div
-        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
+        class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
       >
-        <div class="absolute -top-4 left-8 lg:left-10">
+        <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
           <span
-            class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
+            class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm md:text-base lg:text-lg font-bold px-4 md:px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
           >
             Localisation
           </span>
         </div>
-        <div class="flex items-center gap-5 lg:gap-6 mt-6 lg:mt-8">
+        <div class="flex items-center gap-4 md:gap-5 lg:gap-6 mt-6 lg:mt-8">
           <div
-            class="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0"
+            class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0"
           >
             <svg
-              class="w-8 h-8 lg:w-10 lg:h-10 text-white"
+              class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -148,9 +148,9 @@
               ></path>
             </svg>
           </div>
-          <div>
-            <p class="text-violet-200 text-lg lg:text-xl">Basée à</p>
-            <p class="text-white text-xl lg:text-2xl font-semibold">
+          <div class="min-w-0 flex-1">
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Basée à</p>
+            <p class="text-white text-base md:text-xl lg:text-2xl font-semibold">
               Caen, Normandie
             </p>
           </div>
@@ -159,9 +159,9 @@
 
       <!-- Message d'encouragement -->
       <div
-        class="bg-violet-800/30 p-8 lg:p-10 rounded-3xl border border-violet-600/30"
+        class="bg-violet-800/30 p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-600/30"
       >
-        <p class="text-violet-100 text-lg lg:text-xl leading-relaxed">
+        <p class="text-violet-100 text-base md:text-lg lg:text-xl leading-relaxed">
           Vous avez un projet créatif, une idée ou une collaboration en tête ?
           N'hésitez pas à m'envoyer un message, je vous répondrai sous 48h.
         </p>
@@ -170,21 +170,21 @@
 
     <!-- Colonne droite : Formulaire -->
     <div
-      class="relative bg-gradient-to-b from-violet-800/90 to-violet-950/90 backdrop-blur-sm p-8 md:p-10 lg:p-12 rounded-3xl border-2 border-pink-500/50 hover:border-pink-400/70 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10"
+      class="relative bg-gradient-to-b from-violet-800/90 to-violet-950/90 backdrop-blur-sm p-6 md:p-10 lg:p-12 rounded-3xl border-2 border-pink-500/50 hover:border-pink-400/70 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10"
       data-aos="fade-up"
       data-aos-delay="200"
     >
       <!-- Tag -->
-      <div class="absolute -top-4 left-8 lg:left-10">
+      <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
         <span
-          class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base lg:text-lg font-bold px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
+          class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base lg:text-lg font-bold px-4 md:px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
         >
           Formulaire
         </span>
       </div>
 
       <h2
-        class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mt-6 lg:mt-8 mb-8 lg:mb-10"
+        class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mt-6 lg:mt-8 mb-6 md:mb-8 lg:mb-10"
       >
         Envoyez-moi un message
       </h2>
@@ -192,13 +192,13 @@
       <form
         action="https://formspree.io/f/xgvlgeqb"
         method="POST"
-        class="space-y-6 lg:space-y-8"
+        class="space-y-5 md:space-y-6 lg:space-y-8"
       >
         <!-- Nom -->
         <div>
           <label
             for="name"
-            class="block text-lg lg:text-xl font-medium text-violet-100 mb-3"
+            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
           >
             Votre nom
           </label>
@@ -208,7 +208,7 @@
             name="name"
             required
             placeholder="Jean Dupont"
-            class="w-full px-5 lg:px-6 py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-lg lg:text-xl rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
+            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
           />
         </div>
 
@@ -216,7 +216,7 @@
         <div>
           <label
             for="email"
-            class="block text-lg lg:text-xl font-medium text-violet-100 mb-3"
+            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
           >
             Votre email
           </label>
@@ -226,7 +226,7 @@
             name="email"
             required
             placeholder="exemple@domaine.com"
-            class="w-full px-5 lg:px-6 py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-lg lg:text-xl rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
+            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
           />
         </div>
 
@@ -234,14 +234,14 @@
         <div>
           <label
             for="subject"
-            class="block text-lg lg:text-xl font-medium text-violet-100 mb-3"
+            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
           >
             Sujet
           </label>
           <select
             id="subject"
             name="subject"
-            class="w-full px-5 lg:px-6 py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-lg lg:text-xl rounded-2xl focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
+            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
           >
             <option value="devis">Demande de devis</option>
             <option value="collaboration">Collaboration</option>
@@ -254,27 +254,27 @@
         <div>
           <label
             for="message"
-            class="block text-lg lg:text-xl font-medium text-violet-100 mb-3"
+            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
           >
             Votre message
           </label>
           <textarea
             id="message"
             name="message"
-            rows="5"
+            rows="4"
             required
             placeholder="Décrivez votre projet ou votre demande..."
-            class="w-full px-5 lg:px-6 py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-lg lg:text-xl rounded-2xl placeholder-violet-400 resize-none focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
+            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 resize-none focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
           ></textarea>
         </div>
 
         <!-- Bouton -->
         <button
           type="submit"
-          class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-5 lg:py-6 px-8 rounded-2xl text-xl lg:text-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-3"
+          class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-4 md:py-5 lg:py-6 px-6 md:px-8 rounded-xl md:rounded-2xl text-lg md:text-xl lg:text-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-2 md:gap-3"
         >
           <svg
-            class="w-6 h-6 lg:w-7 lg:h-7"
+            class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -294,7 +294,7 @@
 
   <!-- Note -->
   <p
-    class="text-center text-violet-200 mt-16 lg:mt-20 max-w-4xl mx-auto text-xl md:text-2xl lg:text-3xl leading-relaxed"
+    class="text-center text-violet-200 mt-12 md:mt-16 lg:mt-20 max-w-4xl mx-auto text-base md:text-xl lg:text-2xl xl:text-3xl leading-relaxed px-2"
     data-aos="fade-up"
     data-aos-delay="300"
   >

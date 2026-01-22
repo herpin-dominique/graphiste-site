@@ -209,21 +209,22 @@
 {#if !$isAuthenticated}
   <LoginForm />
 {:else}
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-8 md:py-12">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-8">
       <!-- Header -->
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-10 md:mb-14">
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">Facturation</h1>
           <p class="text-gray-500 mt-2 md:mt-3 text-lg md:text-xl">Gestion des devis et factures</p>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 relative z-[60]">
           <button
+            type="button"
             on:click={startNewInvoice}
             class="flex items-center gap-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white
                    px-6 md:px-8 py-3 md:py-4 rounded-xl text-lg md:text-xl font-semibold
                    hover:from-violet-500 hover:to-purple-500 transition-all shadow-lg shadow-violet-500/30
-                   transform hover:scale-105"
+                   transform hover:scale-105 cursor-pointer"
           >
             <Plus class="w-6 h-6 md:w-7 md:h-7" />
             Nouveau devis

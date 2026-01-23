@@ -116,7 +116,7 @@
           class="aspect-square rounded-3xl bg-gradient-to-br from-violet-100 to-pink-100 overflow-hidden shadow-2xl"
         >
           <img
-            src="/src/projets/portrait-lola-herpin.png"
+            src="/src/projets/lola-herpin-creative-studio.png"
             alt="Lola Herpin"
             class="w-full h-full object-cover"
           />

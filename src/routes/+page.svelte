@@ -116,7 +116,7 @@
           class="aspect-square rounded-3xl bg-gradient-to-br from-violet-100 to-pink-100 overflow-hidden shadow-2xl"
         >
           <img
-            src="/src/projets/lola-herpin-creative-studio.png"
+            src="/projets/lola-herpin-creative-studio.png"
             alt="Lola Herpin"
             class="w-full h-full object-cover"
           />
@@ -222,7 +222,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/src/projets/spike_5illustration.png"
+            src="/projets/spike_5illustration.png"
             alt="Projet de branding"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -249,7 +249,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/src/projets/Affiche-luc-et-lea.png"
+            src="/projets/Affiche-luc-et-lea.png"
             alt="Illustration éditoriale"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -272,7 +272,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/src/projets/canadrance.jpg"
+            src="/projets/canadrance.jpg"
             alt="Packaging design"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />

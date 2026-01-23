@@ -146,7 +146,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Fichiers optimisés (prg,svg,pdf)</span>
+          <span>Fichiers optimisés (png, svg, pdf)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -342,7 +342,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Eléments graphiques uniques ( Picto,Icones)</span>
+          <span>Éléments graphiques uniques (Picto, Icônes)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -496,7 +496,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>3propositions de logo</span>
+          <span>3 propositions de logo</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -539,7 +539,7 @@
             ></path>
           </svg>
           <span
-            >Déclinaisons (Horizontal,vertical,icone, couleur,noir et blanc)</span
+            >Déclinaisons (horizontal, vertical, icône, couleur, noir et blanc)</span
           >
         </li>
         <li class="flex items-start gap-4">
@@ -568,7 +568,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Typographie + règles d'utilisations</span>
+          <span>Typographie + règles d'utilisation</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -582,7 +582,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Univers graphiques (motifs,picto,illustration)</span>
+          <span>Univers graphiques (motifs, picto, illustration)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -596,7 +596,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>règles d'utilisations</span>
+          <span>Règles d'utilisation</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -610,7 +610,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Design, papeterie</span>
+          <span>Design papeterie</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -638,7 +638,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>4-5 allers-retours / fichiers sources + prg,svg,pdf</span>
+          <span>4-5 allers-retours / fichiers sources + png, svg, pdf</span>
         </li>
       </ul>
 
@@ -658,6 +658,6 @@
     data-aos-delay="400"
   >
     Chaque projet est unique. Contactez-moi pour un devis personnalisé adapté à
-    vos besoins spécifiques. Exemple : un flyer seul simple ou recto -verso
+    vos besoins spécifiques. Exemple : un flyer seul simple ou recto-verso
   </p>
 </main>

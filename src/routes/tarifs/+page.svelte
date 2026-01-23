@@ -90,7 +90,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Design de 3 logos (3 concepts)</span>
+          <span>Moodboard + recherche</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -104,7 +104,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Guidelines de marque basiques</span>
+          <span>Logo principal</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -118,7 +118,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>2 aller-retours de modification</span>
+          <span>1 Déclinaison</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -132,7 +132,63 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Livraison des fichiers finaux</span>
+          <span>Palette de couleurs</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-violet-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Fichiers optimisés (prg,svg,pdf)</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-violet-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Typographies</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-violet-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>1-2 allers-retours</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-violet-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Charte simplifiée (5-8 pages)</span>
         </li>
       </ul>
 
@@ -202,7 +258,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Identité de marque complète</span>
+          <span>Moodboard + Recherche</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -216,7 +272,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Logo + 5 variations</span>
+          <span>2 propositions de logo</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -230,7 +286,63 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Charte graphique complète</span>
+          <span>Logo principal</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-pink-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>2 Déclinaisons (Format secondaire + monogramme)</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-pink-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>5 Palettes de couleurs</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-pink-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Typographies</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-pink-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>Eléments graphiques uniques ( Picto,Icones)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -258,7 +370,7 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>5 révisions incluses</span>
+          <span>Charte graphique détaillée (10-15 pages)</span>
         </li>
         <li class="flex items-start gap-4">
           <svg
@@ -272,7 +384,21 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Deck de présentation de marque</span>
+          <span>Mockup sur différents supports</span>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg
+            class="w-6 h-6 lg:w-7 lg:h-7 text-pink-400 mt-1 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>3 allers-retours</span>
         </li>
       </ul>
 

@@ -51,7 +51,10 @@
         class="relative inline-block text-white transform -rotate-6 hover:-rotate-3 hover:scale-105 transition-transform duration-300"
         style="text-shadow: 0 4px 20px rgba(0,0,0,0.9);"
         >décoller
-        <span class="absolute -top-4 -right-4 lg:-top-8 lg:-right-6 text-3xl lg:text-5xl animate-bounce" style="transform: rotate(-30deg);">🚀</span>
+        <span
+          class="absolute -top-4 -right-4 lg:-top-8 lg:-right-6 text-3xl lg:text-5xl animate-bounce"
+          style="transform: rotate(-30deg);">🚀</span
+        >
       </span> votre image
     </h1>
     <p
@@ -113,7 +116,7 @@
           class="aspect-square rounded-3xl bg-gradient-to-br from-violet-100 to-pink-100 overflow-hidden shadow-2xl"
         >
           <img
-            src="/projets/Emballage parfumé et couleurs vibrantes.png"
+            src="/src/projets/spike_5illustration.png"
             alt="Lola Herpin"
             class="w-full h-full object-cover"
           />
@@ -219,7 +222,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/projets/Emballage parfumé et couleurs vibrantes.png"
+            src="/src/projets/spike_5illustration.png"
             alt="Projet de branding"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -246,7 +249,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/projets/inspicopilotlolachat.png"
+            src="/src/projets/Affiche-luc-et-lea.png"
             alt="Illustration éditoriale"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -255,8 +258,8 @@
           class="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-pink-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"
         >
           <div class="text-white">
-            <h3 class="font-bold text-2xl lg:text-3xl mb-2">Illustration</h3>
-            <p class="text-pink-200 text-lg lg:text-xl">Mode & Travaux</p>
+            <h3 class="font-bold text-2xl lg:text-3xl mb-2">AFFICHE</h3>
+            <p class="text-pink-200 text-lg lg:text-xl">PUB</p>
           </div>
         </div>
       </div>
@@ -269,7 +272,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/projets/Cookies.png"
+            src="/src/projets/"
             alt="Packaging design"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -278,8 +281,8 @@
           class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"
         >
           <div class="text-white">
-            <h3 class="font-bold text-2xl lg:text-3xl mb-2">Packaging</h3>
-            <p class="text-indigo-200 text-lg lg:text-xl">Design produit</p>
+            <h3 class="font-bold text-2xl lg:text-3xl mb-2">VIDEO</h3>
+            <p class="text-indigo-200 text-lg lg:text-xl">Motion Design</p>
           </div>
         </div>
       </div>

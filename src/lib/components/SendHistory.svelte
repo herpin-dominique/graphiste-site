@@ -56,11 +56,11 @@
 
 <div class="space-y-0">
   {#if sortedEvents.length === 0}
-    <p class="text-gray-500 text-center py-4">Aucun historique</p>
+    <p class="text-violet-300 text-center py-4">Aucun historique</p>
   {:else}
     <div class="relative">
       <!-- Ligne verticale -->
-      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-violet-500/30"></div>
 
       {#each sortedEvents as event, index}
         <div class="relative flex items-start gap-4 pb-6 last:pb-0">
@@ -73,16 +73,16 @@
           <!-- Contenu -->
           <div class="flex-1 min-w-0 pt-0.5">
             <div class="flex items-center gap-2 flex-wrap">
-              <span class="font-medium text-gray-900">
+              <span class="font-medium text-white">
                 {getEventLabel(event.type)}
               </span>
-              <span class="text-xs text-gray-500">
+              <span class="text-xs text-violet-300">
                 {formatDate(event.date)}
               </span>
             </div>
 
             {#if event.note}
-              <p class="mt-1 text-sm text-gray-600">
+              <p class="mt-1 text-sm text-violet-200">
                 {event.note}
               </p>
             {/if}

@@ -163,26 +163,118 @@ export function generateInvoicePDF(invoice: Invoice): void {
   doc.text('TVA non applicable, art. 293 B du CGI (auto-entrepreneur)', 20, finalY + 15);
 
   // Notes si présentes
+  let currentY = finalY + 25;
   if (invoice.notes) {
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(...grayText);
-    doc.text('Notes :', 20, finalY + 30);
+    doc.text('Notes :', 20, currentY);
     const notesLines = doc.splitTextToSize(invoice.notes, 170);
-    doc.text(notesLines, 20, finalY + 37);
+    doc.text(notesLines, 20, currentY + 7);
+    currentY += 7 + (notesLines.length * 5) + 10;
   }
 
-  // Conditions (en bas de page)
+  // Mentions légales - Droits d'utilisation (uniquement pour les devis)
+  if (isQuote) {
+    // Vérifier si on a besoin d'une nouvelle page
+    const pageHeight = doc.internal.pageSize.height;
+    if (currentY > pageHeight - 100) {
+      doc.addPage();
+      currentY = 20;
+    }
+
+    // Titre section mentions légales
+    doc.setFillColor(245, 245, 250);
+    doc.roundedRect(20, currentY, 170, 8, 2, 2, 'F');
+    doc.setTextColor(...violetDark);
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'bold');
+    doc.text('MENTIONS LÉGALES - DROITS D\'UTILISATION', 25, currentY + 6);
+    currentY += 15;
+
+    // Contenu des mentions légales
+    doc.setTextColor(...grayText);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+
+    const legalMentions = [
+      '1. ENGAGEMENTS DU CLIENT - PAIEMENT DES HONORAIRES',
+      'En acceptant ce devis, le client s\'engage à :',
+      '• Verser un acompte de 30% à la signature du devis pour démarrer le projet',
+      '• Régler le solde (70%) à la livraison des fichiers finaux, avant transmission',
+      '• Respecter un délai de paiement de 14 jours à compter de la date de facturation',
+      '• En cas de retard : pénalités de 3 fois le taux d\'intérêt légal + indemnité forfaitaire de 40€',
+      'Tout projet non réglé dans les délais pourra être suspendu sans préavis.',
+      '',
+      '2. PROPRIÉTÉ INTELLECTUELLE',
+      'Jusqu\'au paiement intégral de la prestation, l\'ensemble des créations (logos, vidéos, illustrations, etc.) reste',
+      'la propriété exclusive de Herpin Creative Studio. Aucune utilisation n\'est autorisée avant règlement complet.',
+      '',
+      '3. CESSION DES DROITS - LOGOS',
+      'Après paiement intégral, le client acquiert les droits d\'utilisation du logo pour :',
+      '• Usage commercial et promotionnel (print, web, réseaux sociaux, packaging)',
+      '• Durée illimitée sur le territoire mondial',
+      '• Modification interdite sans accord préalable écrit du créateur',
+      'Le créateur conserve le droit de mentionner la création dans son portfolio.',
+      '',
+      '4. CESSION DES DROITS - VIDÉOS / MOTION DESIGN',
+      'Après paiement intégral, le client acquiert les droits d\'utilisation pour :',
+      '• Diffusion sur ses propres supports (site web, réseaux sociaux, présentations)',
+      '• Durée illimitée sur le territoire mondial',
+      '• Toute modification, montage ou utilisation commerciale pour revente nécessite un accord écrit',
+      '• Les rushes et fichiers sources restent la propriété du créateur sauf mention contraire.',
+      '',
+      '5. CLAUSE DE RÉSERVE',
+      'Le créateur se réserve le droit de refuser toute utilisation qui pourrait porter atteinte à son image',
+      'ou qui serait contraire à ses valeurs (contenu discriminatoire, illégal, etc.).'
+    ];
+
+    legalMentions.forEach((line) => {
+      // Vérifier si on doit passer à une nouvelle page
+      if (currentY > pageHeight - 20) {
+        doc.addPage();
+        currentY = 20;
+        // Réappliquer les styles après le saut de page
+        doc.setTextColor(...grayText);
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'normal');
+      }
+
+      if (/^\d+\./.test(line)) {
+        doc.setFont('helvetica', 'bold');
+        doc.text(line, 20, currentY);
+        doc.setFont('helvetica', 'normal');
+      } else if (line === '') {
+        // Ligne vide = petit espace
+      } else {
+        doc.text(line, 20, currentY);
+      }
+      currentY += line === '' ? 3 : 4;
+    });
+
+    currentY += 5;
+  }
+
+  // Conditions (en bas de page ou après les mentions)
   const pageHeight = doc.internal.pageSize.height;
+
+  // Vérifier si on a besoin d'une nouvelle page pour la signature
+  if (currentY > pageHeight - 50) {
+    doc.addPage();
+    currentY = 20;
+  }
 
   doc.setFontSize(9);
   doc.setTextColor(100, 100, 100);
 
   if (isQuote) {
-    doc.text('Ce devis est valable 30 jours à compter de sa date d\'émission.', 20, pageHeight - 30);
-    doc.text('Bon pour accord (signature précédée de la mention "Lu et approuvé") :', 20, pageHeight - 22);
+    // Positionner la zone de signature
+    const signatureY = Math.max(currentY + 10, pageHeight - 45);
+    doc.text('Ce devis est valable 30 jours à compter de sa date d\'émission.', 20, signatureY);
+    doc.text('En signant ce devis, le client accepte les conditions et mentions légales ci-dessus.', 20, signatureY + 7);
+    doc.text('Bon pour accord (signature précédée de la mention "Lu et approuvé") :', 20, signatureY + 17);
     doc.setDrawColor(150, 150, 150);
-    doc.line(20, pageHeight - 10, 90, pageHeight - 10);
+    doc.line(20, signatureY + 30, 90, signatureY + 30);
   } else {
     doc.text('Paiement à réception de facture.', 20, pageHeight - 30);
     doc.text('En cas de retard de paiement, des pénalités seront appliquées.', 20, pageHeight - 22);

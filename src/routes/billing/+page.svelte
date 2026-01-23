@@ -209,13 +209,13 @@
 {#if !$isAuthenticated}
   <LoginForm />
 {:else}
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 relative">
+  <div class="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 relative">
     <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-8">
       <!-- Header -->
       <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-10 md:mb-14">
         <div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">Facturation</h1>
-          <p class="text-gray-500 mt-2 md:mt-3 text-lg md:text-xl">Gestion des devis et factures</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">Facturation</h1>
+          <p class="text-violet-200 mt-2 md:mt-3 text-lg md:text-xl">Gestion des devis et factures</p>
         </div>
         <div class="flex items-center gap-4 relative z-[60]">
           <button
@@ -231,8 +231,8 @@
           </button>
           <button
             on:click={() => authStore.logout()}
-            class="flex items-center gap-2 px-4 md:px-5 py-3 md:py-4 text-gray-500 hover:text-gray-700
-                   hover:bg-white/80 rounded-xl transition-all text-lg"
+            class="flex items-center gap-2 px-4 md:px-5 py-3 md:py-4 text-violet-200 hover:text-white
+                   hover:bg-white/10 rounded-xl transition-all text-lg"
             title="Déconnexion"
           >
             <LogOut class="w-6 h-6" />
@@ -498,43 +498,43 @@
 
       <!-- Stats -->
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
-          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">{$billingStore.length}</div>
-          <div class="text-base md:text-lg text-gray-500 mt-2">Total documents</div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-violet-500/30">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">{$billingStore.length}</div>
+          <div class="text-base md:text-lg text-violet-200 mt-2">Total documents</div>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-blue-100">
-          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600">
+        <div class="bg-blue-500/20 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-blue-400/30">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-300">
             {$billingStore.filter(i => i.status === 'sent').length}
           </div>
-          <div class="text-base md:text-lg text-gray-500 mt-2">En attente</div>
+          <div class="text-base md:text-lg text-violet-200 mt-2">En attente</div>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-green-100">
-          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600">
+        <div class="bg-green-500/20 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-green-400/30">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-green-300">
             {$billingStore.filter(i => i.status === 'paid').length}
           </div>
-          <div class="text-base md:text-lg text-gray-500 mt-2">Payés</div>
+          <div class="text-base md:text-lg text-violet-200 mt-2">Payés</div>
         </div>
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-violet-100">
-          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-violet-600">
+        <div class="bg-pink-500/20 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-pink-400/30">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-pink-300">
             {$billingStore.filter(i => i.status === 'paid').reduce((sum, i) => sum + i.total, 0).toFixed(0)} €
           </div>
-          <div class="text-base md:text-lg text-gray-500 mt-2">Total encaissé</div>
+          <div class="text-base md:text-lg text-violet-200 mt-2">Total encaissé</div>
         </div>
       </div>
 
       <!-- Filters -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8 md:mb-12 border border-gray-100">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6">Filtres</h2>
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-8 md:mb-12 border border-violet-500/30">
+        <h2 class="text-xl md:text-2xl font-bold text-white mb-6">Filtres</h2>
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label for="filter-type" class="block text-base md:text-lg font-medium text-gray-700 mb-3">
+            <label for="filter-type" class="block text-base md:text-lg font-medium text-violet-200 mb-3">
               Type de document
             </label>
             <select
               id="filter-type"
               bind:value={filterType}
-              class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl bg-gray-50
-                     focus:ring-4 focus:ring-violet-500/30 focus:border-violet-500 transition-all"
+              class="w-full px-5 py-4 text-lg border-2 border-violet-500/50 rounded-xl bg-violet-900/50 text-white
+                     focus:ring-4 focus:ring-pink-500/30 focus:border-pink-500 transition-all"
             >
               <option value="all">Tous les documents</option>
               <option value="quote">Devis uniquement</option>
@@ -543,14 +543,14 @@
           </div>
 
           <div>
-            <label for="filter-status" class="block text-base md:text-lg font-medium text-gray-700 mb-3">
+            <label for="filter-status" class="block text-base md:text-lg font-medium text-violet-200 mb-3">
               Statut
             </label>
             <select
               id="filter-status"
               bind:value={filterStatus}
-              class="w-full px-5 py-4 text-lg border-2 border-gray-200 rounded-xl bg-gray-50
-                     focus:ring-4 focus:ring-violet-500/30 focus:border-violet-500 transition-all"
+              class="w-full px-5 py-4 text-lg border-2 border-violet-500/50 rounded-xl bg-violet-900/50 text-white
+                     focus:ring-4 focus:ring-pink-500/30 focus:border-pink-500 transition-all"
             >
               <option value="all">Tous les statuts</option>
               <option value="draft">Brouillon</option>
@@ -563,55 +563,55 @@
       </div>
 
       <!-- List -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-        <div class="p-6 md:p-8 border-b border-gray-100">
-          <h2 class="text-xl md:text-2xl font-bold text-gray-800">Documents</h2>
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-violet-500/30">
+        <div class="p-6 md:p-8 border-b border-violet-500/30">
+          <h2 class="text-xl md:text-2xl font-bold text-white">Documents</h2>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full">
-            <thead class="bg-gray-50 border-b border-gray-200">
+            <thead class="bg-violet-900/50 border-b border-violet-500/30">
               <tr>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Numéro
                 </th>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Type
                 </th>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Client
                 </th>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Total
                 </th>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Statut
                 </th>
-                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-gray-600 uppercase tracking-wider">
+                <th class="px-6 md:px-8 py-5 text-left text-sm md:text-base font-bold text-violet-200 uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-gray-100">
+            <tbody class="divide-y divide-violet-500/20">
               {#each filteredInvoices as invoice}
-                <tr class="hover:bg-violet-50/50 transition-colors">
+                <tr class="hover:bg-violet-800/30 transition-colors">
                   <td class="px-6 md:px-8 py-5 md:py-6 whitespace-nowrap">
-                    <span class="font-bold text-lg md:text-xl text-gray-900">{invoice.invoice_number}</span>
-                    <div class="text-sm md:text-base text-gray-500 mt-1">
+                    <span class="font-bold text-lg md:text-xl text-white">{invoice.invoice_number}</span>
+                    <div class="text-sm md:text-base text-violet-300 mt-1">
                       {new Date(invoice.created_at).toLocaleDateString('fr-FR')}
                     </div>
                   </td>
                   <td class="px-6 md:px-8 py-5 md:py-6 whitespace-nowrap">
-                    <span class="inline-flex items-center gap-2 text-base md:text-lg text-gray-700">
+                    <span class="inline-flex items-center gap-2 text-base md:text-lg text-violet-200">
                       <FileText class="w-5 h-5 md:w-6 md:h-6" />
                       {invoice.type === 'quote' ? 'Devis' : 'Facture'}
                     </span>
                   </td>
                   <td class="px-6 md:px-8 py-5 md:py-6">
-                    <div class="font-semibold text-lg md:text-xl text-gray-900">{invoice.client_name}</div>
-                    <div class="text-base text-gray-500">{invoice.client_email}</div>
+                    <div class="font-semibold text-lg md:text-xl text-white">{invoice.client_name}</div>
+                    <div class="text-base text-violet-300">{invoice.client_email}</div>
                   </td>
                   <td class="px-6 md:px-8 py-5 md:py-6 whitespace-nowrap">
-                    <span class="font-bold text-xl md:text-2xl text-gray-900">{invoice.total.toFixed(2)} €</span>
+                    <span class="font-bold text-xl md:text-2xl text-white">{invoice.total.toFixed(2)} €</span>
                   </td>
                   <td class="px-6 md:px-8 py-5 md:py-6 whitespace-nowrap">
                     <span class="px-4 py-2 rounded-full text-sm md:text-base font-semibold {getStatusColor(invoice.status)}">
@@ -622,7 +622,7 @@
                     <div class="flex items-center gap-2">
                       <button
                         on:click={() => editInvoice(invoice)}
-                        class="p-3 text-gray-500 hover:text-violet-600 hover:bg-violet-100 rounded-xl transition-all"
+                        class="p-3 text-violet-300 hover:text-violet-100 hover:bg-violet-700/50 rounded-xl transition-all"
                         title="Modifier"
                       >
                         <Pencil class="w-5 h-5 md:w-6 md:h-6" />
@@ -630,7 +630,7 @@
 
                       <button
                         on:click={() => downloadPDF(invoice)}
-                        class="p-3 text-gray-500 hover:text-green-600 hover:bg-green-100 rounded-xl transition-all"
+                        class="p-3 text-violet-300 hover:text-green-400 hover:bg-green-900/50 rounded-xl transition-all"
                         title="Télécharger PDF"
                       >
                         <Download class="w-5 h-5 md:w-6 md:h-6" />
@@ -638,7 +638,7 @@
 
                       <button
                         on:click={() => openHistory(invoice)}
-                        class="p-3 text-gray-500 hover:text-blue-600 hover:bg-blue-100 rounded-xl transition-all"
+                        class="p-3 text-violet-300 hover:text-blue-400 hover:bg-blue-900/50 rounded-xl transition-all"
                         title="Historique"
                       >
                         <History class="w-5 h-5 md:w-6 md:h-6" />
@@ -647,7 +647,7 @@
                       {#if invoice.status === 'draft'}
                         <button
                           on:click={() => openSendModal(invoice, 'sent')}
-                          class="p-3 text-gray-500 hover:text-violet-600 hover:bg-violet-100 rounded-xl transition-all"
+                          class="p-3 text-violet-300 hover:text-violet-100 hover:bg-violet-700/50 rounded-xl transition-all"
                           title="Marquer comme envoyé"
                         >
                           <Send class="w-5 h-5 md:w-6 md:h-6" />
@@ -657,7 +657,7 @@
                       {#if invoice.status === 'sent'}
                         <button
                           on:click={() => openSendModal(invoice, 'reminder')}
-                          class="p-3 text-gray-500 hover:text-orange-600 hover:bg-orange-100 rounded-xl transition-all"
+                          class="p-3 text-violet-300 hover:text-orange-400 hover:bg-orange-900/50 rounded-xl transition-all"
                           title="Envoyer une relance"
                         >
                           <Bell class="w-5 h-5 md:w-6 md:h-6" />
@@ -667,7 +667,7 @@
                       {#if invoice.status !== 'paid'}
                         <button
                           on:click={() => markAsPaid(invoice.id)}
-                          class="p-3 text-gray-500 hover:text-green-600 hover:bg-green-100 rounded-xl transition-all"
+                          class="p-3 text-violet-300 hover:text-green-400 hover:bg-green-900/50 rounded-xl transition-all"
                           title="Marquer comme payé"
                         >
                           <CircleCheck class="w-5 h-5 md:w-6 md:h-6" />
@@ -676,7 +676,7 @@
 
                       <button
                         on:click={() => deleteInvoice(invoice.id)}
-                        class="p-3 text-gray-500 hover:text-red-600 hover:bg-red-100 rounded-xl transition-all"
+                        class="p-3 text-violet-300 hover:text-red-400 hover:bg-red-900/50 rounded-xl transition-all"
                         title="Supprimer"
                       >
                         <Trash2 class="w-5 h-5 md:w-6 md:h-6" />
@@ -687,8 +687,8 @@
               {:else}
                 <tr>
                   <td colspan="6" class="px-8 py-20 text-center">
-                    <FileText class="w-20 h-20 mx-auto text-gray-300 mb-6" />
-                    <p class="text-xl md:text-2xl text-gray-500 mb-4">Aucun document trouvé</p>
+                    <FileText class="w-20 h-20 mx-auto text-violet-400/50 mb-6" />
+                    <p class="text-xl md:text-2xl text-violet-300 mb-4">Aucun document trouvé</p>
                     <button
                       on:click={startNewInvoice}
                       class="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white
@@ -709,18 +709,18 @@
 
   <!-- Send/Reminder Modal -->
   {#if showSendModal && selectedInvoice}
-    <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md">
+    <div class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+      <div class="bg-violet-950 border border-violet-500/30 rounded-xl shadow-2xl w-full max-w-md">
         <div class="p-6">
-          <h3 class="text-lg font-bold text-gray-800 mb-4">
+          <h3 class="text-lg font-bold text-white mb-4">
             {sendType === 'sent' ? 'Marquer comme envoyé' : 'Envoyer une relance'}
           </h3>
-          <p class="text-gray-600 mb-4">
-            Document : <strong>{selectedInvoice.invoice_number}</strong>
+          <p class="text-violet-200 mb-4">
+            Document : <strong class="text-white">{selectedInvoice.invoice_number}</strong>
           </p>
 
           <div class="mb-4">
-            <label for="send-note" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="send-note" class="block text-sm font-medium text-violet-200 mb-2">
               Note (optionnel)
             </label>
             <textarea
@@ -728,8 +728,8 @@
               bind:value={sendNote}
               rows="3"
               placeholder="Ex: Envoyé par email le..."
-              class="w-full px-4 py-2.5 border border-gray-300 rounded-lg
-                     focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+              class="w-full px-4 py-2.5 border border-violet-500/50 rounded-lg bg-violet-900/50 text-white placeholder-violet-400
+                     focus:ring-2 focus:ring-pink-500/30 focus:border-pink-500"
             ></textarea>
           </div>
 
@@ -737,13 +737,13 @@
             <button
               on:click={confirmSend}
               class="flex-1 py-2.5 bg-violet-600 text-white font-medium rounded-lg
-                     hover:bg-violet-700 transition-colors"
+                     hover:bg-violet-500 transition-colors"
             >
               Confirmer
             </button>
             <button
               on:click={() => { showSendModal = false; selectedInvoice = null; }}
-              class="px-4 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              class="px-4 py-2.5 border border-violet-500/50 text-violet-200 rounded-lg hover:bg-violet-800/50 transition-colors"
             >
               Annuler
             </button>
@@ -755,16 +755,16 @@
 
   <!-- History Modal -->
   {#if showHistoryModal && selectedInvoice}
-    <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md max-h-[80vh] overflow-hidden">
-        <div class="flex items-center justify-between p-6 border-b">
+    <div class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+      <div class="bg-violet-950 border border-violet-500/30 rounded-xl shadow-2xl w-full max-w-md max-h-[80vh] overflow-hidden">
+        <div class="flex items-center justify-between p-6 border-b border-violet-500/30">
           <div>
-            <h3 class="text-lg font-bold text-gray-800">Historique</h3>
-            <p class="text-sm text-gray-500">{selectedInvoice.invoice_number}</p>
+            <h3 class="text-lg font-bold text-white">Historique</h3>
+            <p class="text-sm text-violet-300">{selectedInvoice.invoice_number}</p>
           </div>
           <button
             on:click={() => { showHistoryModal = false; selectedInvoice = null; }}
-            class="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            class="p-2 text-violet-300 hover:bg-violet-800/50 rounded-lg transition-colors"
           >
             <X class="w-5 h-5" />
           </button>

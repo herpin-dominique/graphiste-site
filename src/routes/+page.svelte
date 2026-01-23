@@ -272,7 +272,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/src/projets/"
+            src="/src/projets/canadrance.jpg"
             alt="Packaging design"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -281,8 +281,10 @@
           class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"
         >
           <div class="text-white">
-            <h3 class="font-bold text-2xl lg:text-3xl mb-2">VIDEO</h3>
-            <p class="text-indigo-200 text-lg lg:text-xl">Motion Design</p>
+            <h3 class="font-bold text-2xl lg:text-3xl mb-2">
+              Cartes de visites
+            </h3>
+            <p class="text-indigo-200 text-lg lg:text-xl">Identité visuelle</p>
           </div>
         </div>
       </div>

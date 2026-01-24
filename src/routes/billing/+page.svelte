@@ -124,8 +124,8 @@
     }
   }
 
-  function downloadPDF(invoice: Invoice) {
-    generateInvoicePDF(invoice);
+  async function downloadPDF(invoice: Invoice) {
+    await generateInvoicePDF(invoice);
   }
 
   function openSendModal(invoice: Invoice, type: 'sent' | 'reminder') {

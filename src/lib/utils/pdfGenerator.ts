@@ -18,7 +18,29 @@ const COMPANY_INFO: CompanyInfo = {
   siret: ''
 };
 
-export function generateInvoicePDF(invoice: Invoice): void {
+// Fonction pour charger une image et la convertir en base64
+async function loadImageAsBase64(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0);
+        resolve(canvas.toDataURL('image/png'));
+      } else {
+        reject(new Error('Could not get canvas context'));
+      }
+    };
+    img.onerror = () => reject(new Error('Could not load image'));
+    img.src = url;
+  });
+}
+
+export async function generateInvoicePDF(invoice: Invoice): Promise<void> {
   const doc = new jsPDF();
   const isQuote = invoice.type === 'quote';
   const title = isQuote ? 'DEVIS' : 'FACTURE';
@@ -32,13 +54,22 @@ export function generateInvoicePDF(invoice: Invoice): void {
   doc.setFillColor(...violetPrimary);
   doc.rect(0, 0, 220, 40, 'F');
 
-  // Nom de l'entreprise
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(22);
-  doc.setFont('helvetica', 'bold');
-  doc.text(COMPANY_INFO.name, 20, 25);
+  // Charger et ajouter le logo
+  try {
+    const logoBase64 = await loadImageAsBase64('/LOGO HERPIN CREATIVE STUDIOb_4.svg');
+    // Ajouter le logo (ajuster les dimensions selon le ratio de l'image)
+    doc.addImage(logoBase64, 'PNG', 15, 5, 50, 30);
+  } catch (error) {
+    // Si le logo ne charge pas, afficher le texte comme fallback
+    console.warn('Logo could not be loaded, using text fallback');
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(22);
+    doc.setFont('helvetica', 'bold');
+    doc.text(COMPANY_INFO.name, 20, 25);
+  }
 
   // Type de document
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(14);
   doc.setFont('helvetica', 'normal');
   doc.text(title, 160, 25);
@@ -290,10 +321,8 @@ export function generateInvoicePDF(invoice: Invoice): void {
   doc.save(filename);
 }
 
-export function previewInvoicePDF(invoice: Invoice): string {
-  const doc = new jsPDF();
-  // ... même code que generateInvoicePDF mais retourne un data URL
+export async function previewInvoicePDF(invoice: Invoice): Promise<string> {
   // Pour simplifier, on utilise la même fonction
-  generateInvoicePDF(invoice);
+  await generateInvoicePDF(invoice);
   return '';
 }

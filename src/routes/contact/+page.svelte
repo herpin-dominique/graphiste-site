@@ -63,12 +63,14 @@
             </svg>
           </div>
           <div class="min-w-0 flex-1">
-            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Écrivez-moi à</p>
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">
+              Écrivez-moi à
+            </p>
             <a
               href="mailto:contact@herpincreative.studio"
               class="text-white text-sm md:text-xl lg:text-2xl font-semibold hover:text-pink-300 transition-colors break-all"
             >
-              contact@herpincreative.studio
+              herpinlavie@gmail.com
             </a>
           </div>
         </div>
@@ -100,7 +102,9 @@
             </svg>
           </div>
           <div class="min-w-0 flex-1">
-            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Suivez-moi sur</p>
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">
+              Suivez-moi sur
+            </p>
             <a
               href="https://instagram.com/herpincreativestudio"
               target="_blank"
@@ -149,8 +153,12 @@
             </svg>
           </div>
           <div class="min-w-0 flex-1">
-            <p class="text-violet-200 text-base md:text-lg lg:text-xl">Basée à</p>
-            <p class="text-white text-base md:text-xl lg:text-2xl font-semibold">
+            <p class="text-violet-200 text-base md:text-lg lg:text-xl">
+              Basée à
+            </p>
+            <p
+              class="text-white text-base md:text-xl lg:text-2xl font-semibold"
+            >
               Caen, Normandie
             </p>
           </div>
@@ -161,7 +169,9 @@
       <div
         class="bg-violet-800/30 p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-600/30"
       >
-        <p class="text-violet-100 text-base md:text-lg lg:text-xl leading-relaxed">
+        <p
+          class="text-violet-100 text-base md:text-lg lg:text-xl leading-relaxed"
+        >
           Vous avez un projet créatif, une idée ou une collaboration en tête ?
           N'hésitez pas à m'envoyer un message, je vous répondrai sous 48h.
         </p>

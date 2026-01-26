@@ -417,6 +417,7 @@
 
 <!-- Lightbox plein ecran -->
 {#if selectedPhoto}
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
     id="modal-container"
     role="dialog"
@@ -427,17 +428,26 @@
     on:keydown={handleKey}
     on:touchstart={handleTouchStart}
     on:touchend={handleTouchEnd}
+    on:click={(e) => {
+      // Fermer si on clique sur le fond (pas sur l'image ou les contrôles)
+      if (e.target === e.currentTarget || (e.target as HTMLElement).id === 'backdrop-close') {
+        closeModal();
+      }
+    }}
     transition:fadeZoom
   >
-    <!-- Bouton fermer -->
+    <!-- Zone cliquable pour fermer (fond) -->
+    <div id="backdrop-close" class="absolute inset-0 z-10"></div>
+
+    <!-- Bouton fermer - Plus visible -->
     <button
       type="button"
-      class="absolute top-3 right-3 md:top-4 md:right-4 z-20 bg-white/10 hover:bg-white/20 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition"
+      class="absolute top-4 right-4 md:top-6 md:right-6 z-30 bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-pink-500/30"
       aria-label="Fermer"
       on:click={closeModal}
     >
       <svg
-        class="w-6 h-6"
+        class="w-6 h-6 md:w-7 md:h-7"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -445,7 +455,7 @@
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
+          stroke-width="2.5"
           d="M6 18L18 6M6 6l12 12"
         ></path>
       </svg>
@@ -464,14 +474,14 @@
 
     <!-- Image ou Vidéo -->
     <div
-      class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16"
+      class="absolute inset-0 flex items-center justify-center p-2 md:p-4 pt-16 z-20 pointer-events-none"
     >
       {#if selectedPhoto && isVideo(selectedPhoto)}
         <video
           src={selectedPhoto}
           controls
           autoplay
-          class="max-w-full max-h-full object-contain rounded-lg"
+          class="max-w-full max-h-full object-contain rounded-lg pointer-events-auto"
           transition:slideHorizontal={{ direction }}
         >
           <track kind="captions" />
@@ -480,7 +490,7 @@
         <img
           src={selectedPhoto}
           alt={selectedProjectTitle}
-          class="max-w-full max-h-full object-contain rounded-lg"
+          class="max-w-full max-h-full object-contain rounded-lg pointer-events-auto"
           transition:slideHorizontal={{ direction }}
         />
       {/if}
@@ -489,12 +499,12 @@
     <!-- Navigation desktop -->
     <button
       type="button"
-      class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full items-center justify-center transition"
+      class="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
       aria-label="Précédent"
       on:click={prevPhoto}
     >
       <svg
-        class="w-6 h-6"
+        class="w-7 h-7"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -502,19 +512,19 @@
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
+          stroke-width="2.5"
           d="M15 19l-7-7 7-7"
         ></path>
       </svg>
     </button>
     <button
       type="button"
-      class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full items-center justify-center transition"
+      class="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
       aria-label="Suivant"
       on:click={nextPhoto}
     >
       <svg
-        class="w-6 h-6"
+        class="w-7 h-7"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -522,7 +532,7 @@
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
+          stroke-width="2.5"
           d="M9 5l7 7-7 7"
         ></path>
       </svg>
@@ -530,16 +540,16 @@
 
     <!-- Navigation mobile -->
     <div
-      class="md:hidden absolute bottom-4 left-0 right-0 flex justify-center items-center gap-6 z-20"
+      class="md:hidden absolute bottom-4 left-0 right-0 flex justify-center items-center gap-8 z-20"
     >
       <button
         type="button"
-        class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
+        class="bg-gradient-to-r from-pink-500/80 to-violet-500/80 hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/30 active:scale-95"
         aria-label="Précédent"
         on:click={prevPhoto}
       >
         <svg
-          class="w-6 h-6"
+          class="w-7 h-7"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -547,19 +557,19 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            stroke-width="2.5"
             d="M15 19l-7-7 7-7"
           ></path>
         </svg>
       </button>
       <button
         type="button"
-        class="bg-white/10 hover:bg-white/20 text-white w-12 h-12 rounded-full flex items-center justify-center transition"
+        class="bg-gradient-to-r from-pink-500/80 to-violet-500/80 hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/30 active:scale-95"
         aria-label="Suivant"
         on:click={nextPhoto}
       >
         <svg
-          class="w-6 h-6"
+          class="w-7 h-7"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -567,31 +577,52 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            stroke-width="2.5"
             d="M9 5l7 7-7 7"
           ></path>
         </svg>
       </button>
     </div>
 
+    <!-- Indicateurs de pagination (points) - Mobile et Desktop -->
+    <div
+      class="absolute bottom-24 md:bottom-20 left-0 right-0 flex justify-center z-20"
+    >
+      <div class="flex items-center gap-2 bg-black/60 backdrop-blur-sm px-4 py-3 rounded-full">
+        {#each projects.find((p) => p.title === selectedProjectTitle)?.photos || [] as photo, idx}
+          <button
+            type="button"
+            class="transition-all duration-300 rounded-full {selectedPhoto === photo
+              ? 'w-8 h-3 bg-gradient-to-r from-pink-500 to-violet-500'
+              : 'w-3 h-3 bg-white/40 hover:bg-white/70'}"
+            aria-label="Aller à l'image {idx + 1}"
+            on:click={() => {
+              selectedPhoto = photo;
+              direction = idx > currentIndex() ? "right" : "left";
+            }}
+          ></button>
+        {/each}
+      </div>
+    </div>
+
     <!-- Indicateur swipe mobile -->
     <div
-      class="md:hidden absolute bottom-20 left-0 right-0 flex justify-center z-20 pointer-events-none"
+      class="md:hidden absolute bottom-16 left-0 right-0 flex justify-center z-20 pointer-events-none"
     >
-      <p class="text-white/50 text-xs">Swipez pour naviguer</p>
+      <p class="text-white/70 text-sm font-medium">← Swipez pour naviguer →</p>
     </div>
 
     <!-- Miniatures en bas (desktop) -->
     <div
-      class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 z-20 gap-2 bg-black/50 p-2 rounded-xl max-w-[80vw] overflow-x-auto"
+      class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 z-20 gap-2 bg-black/70 backdrop-blur-sm p-3 rounded-2xl max-w-[85vw] overflow-x-auto"
     >
       {#each projects.find((p) => p.title === selectedProjectTitle)?.photos || [] as photo, idx}
         <button
           type="button"
-          class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all relative {selectedPhoto ===
+          class="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden border-3 transition-all duration-300 relative {selectedPhoto ===
           photo
-            ? 'border-pink-500 scale-110'
-            : 'border-transparent hover:border-violet-400'}"
+            ? 'border-pink-500 scale-110 shadow-lg shadow-pink-500/50'
+            : 'border-white/20 hover:border-violet-400 hover:scale-105'}"
           on:click={() => {
             selectedPhoto = photo;
             direction = idx > currentIndex() ? "right" : "left";
@@ -609,6 +640,9 @@
               alt="Miniature {idx + 1}"
               class="w-full h-full object-cover"
             />
+          {/if}
+          {#if selectedPhoto === photo}
+            <div class="absolute inset-0 bg-pink-500/20"></div>
           {/if}
         </button>
       {/each}

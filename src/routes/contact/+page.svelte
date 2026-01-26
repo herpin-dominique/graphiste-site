@@ -67,7 +67,7 @@
               Écrivez-moi à
             </p>
             <a
-              href="mailto:contact@herpincreative.studio"
+              href="mailto:herpinlavie@gmail.com"
               class="text-white text-sm md:text-xl lg:text-2xl font-semibold hover:text-pink-300 transition-colors break-all"
             >
               herpinlavie@gmail.com

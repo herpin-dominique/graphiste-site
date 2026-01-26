@@ -13,7 +13,7 @@ interface CompanyInfo {
 const COMPANY_INFO: CompanyInfo = {
   name: 'Herpin Creative Studio',
   address: 'France',
-  email: 'contact@herpincreative.studio',
+  email: 'herpinlavie@gmail.com',
   phone: '',
   siret: ''
 };

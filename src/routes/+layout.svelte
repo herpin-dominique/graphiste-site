@@ -91,11 +91,11 @@
         <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">Contact</h3>
         <ul class="space-y-3">
           <li>
-            <a href="mailto:contact@herpincreative.studio" class="text-violet-300 hover:text-pink-400 transition-colors flex items-center gap-2">
+            <a href="mailto:herpinlavie@gmail.com" class="text-violet-300 hover:text-pink-400 transition-colors flex items-center gap-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
-              contact@herpincreative.studio
+              herpinlavie@gmail.com
             </a>
           </li>
           <li class="flex items-center gap-2 text-violet-300">

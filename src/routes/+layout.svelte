@@ -51,7 +51,7 @@
 </script>
 
 <!-- Header style magazine -->
-<Header links={navLinks} transparent={!scrolled} />
+<Header links={navLinks} transparent={!scrolled} {scrolled} />
 
 <!-- Contenu principal -->
 <main class="pt-24 md:pt-32 lg:pt-36">

@@ -446,20 +446,20 @@
     <!-- Bouton fermer - Plus visible -->
     <button
       type="button"
-      class="absolute top-4 right-4 md:top-6 md:right-6 z-30 bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-pink-500/30"
+      class="absolute top-4 right-4 md:top-8 md:right-12 z-30 bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-pink-500/30"
       aria-label="Fermer"
       on:click={closeModal}
     >
       <svg
-        class="w-6 h-6 md:w-7 md:h-7"
+        class="w-8 h-8 md:w-12 md:h-12"
         fill="none"
         stroke="currentColor"
-        viewBox="0 0 24 24"
+        viewBox="4 4 16 16"
       >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2.5"
+          stroke-width="3"
           d="M6 18L18 6M6 6l12 12"
         ></path>
       </svg>
@@ -503,12 +503,12 @@
     <!-- Navigation desktop -->
     <button
       type="button"
-      class="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
+      class="hidden md:flex absolute left-8 lg:left-12 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-18 h-18 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
       aria-label="Précédent"
       on:click={prevPhoto}
     >
       <svg
-        class="w-7 h-7"
+        class="w-11 h-11"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -523,12 +523,12 @@
     </button>
     <button
       type="button"
-      class="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-14 h-14 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
+      class="hidden md:flex absolute right-8 lg:right-12 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 text-white w-18 h-18 rounded-full items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg backdrop-blur-sm border border-white/20"
       aria-label="Suivant"
       on:click={nextPhoto}
     >
       <svg
-        class="w-7 h-7"
+        class="w-11 h-11"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

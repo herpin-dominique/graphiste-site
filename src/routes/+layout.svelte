@@ -35,7 +35,6 @@
     { href: "/services", label: "Services" },
     { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
-    { href: "/billing", label: "Facturation" },
   ];
 
   let scrolled = false;

@@ -8,7 +8,11 @@
 </script>
 
 <svelte:head>
-  <title>Services - Herpin Creative Studio</title>
+  <title>Services graphisme & motion design à Caen | Herpin Creative Studio</title>
+  <meta name="description" content="Création de logos, identité visuelle, motion design, affiches, flyers et supports de communication. Graphiste freelance à Caen pour entreprises et associations en Normandie." />
+  <meta property="og:title" content="Services - Graphiste & Motion Designer à Caen" />
+  <meta property="og:description" content="Identité visuelle, motion design, supports print & digital. Votre graphiste freelance à Caen, Normandie." />
+  <meta property="og:url" content="https://herpin-creative-studio.fr/services" />
 </svelte:head>
 
 <main
@@ -24,7 +28,8 @@
     <p
       class="text-violet-100 text-xl md:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed"
     >
-      Des solutions créatives adaptées à vos besoins
+      Graphiste freelance à Caen, je propose des prestations en design graphique
+      et motion design pour les entreprises, commerces et associations en Normandie.
     </p>
   </div>
 
@@ -65,8 +70,8 @@
       <p
         class="text-lg md:text-xl lg:text-2xl text-violet-100 text-center max-w-xl leading-relaxed"
       >
-        Création de logos, chartes graphiques et déclinaisons visuelles adaptées
-        à vos besoins.
+        Création de logo professionnel, charte graphique et déclinaisons
+        visuelles pour affirmer l'image de votre entreprise à Caen et en Normandie.
       </p>
     </div>
 
@@ -101,8 +106,8 @@
       <p
         class="text-lg md:text-xl lg:text-2xl text-violet-100 text-center max-w-xl leading-relaxed"
       >
-        Affiches, brochures, flyers, cartes de visite, présentations
-        professionnelles...
+        Affiches publicitaires, brochures, flyers, cartes de visite et
+        présentations pour booster la visibilité de votre activité.
       </p>
     </div>
 
@@ -137,7 +142,8 @@
       <p
         class="text-lg md:text-xl lg:text-2xl text-violet-100 text-center max-w-xl leading-relaxed"
       >
-        Bannières, visuels pour réseaux sociaux, newsletters.
+        Bannières web, visuels pour Instagram et réseaux sociaux,
+        newsletters et templates pour votre communication digitale.
       </p>
     </div>
 
@@ -172,7 +178,8 @@
       <p
         class="text-lg md:text-xl lg:text-2xl text-violet-100 text-center max-w-xl leading-relaxed"
       >
-        Illustrations sur mesure pour vos projets éditoriaux ou numériques.
+        Illustrations sur mesure et personnalisées pour l'édition,
+        le packaging ou vos projets créatifs.
       </p>
     </div>
   </div>
@@ -186,7 +193,7 @@
     <p
       class="text-violet-100 text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed"
     >
-      Vous avez un projet en tête ? Discutons-en ensemble !
+      Un projet de logo, d'identité visuelle ou de motion design ? Contactez votre graphiste à Caen !
     </p>
     <a
       href="/contact"

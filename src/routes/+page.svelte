@@ -8,6 +8,14 @@
   });
 </script>
 
+<svelte:head>
+  <title>Graphiste Caen & Motion Designer Normandie | Herpin Creative Studio</title>
+  <meta name="description" content="Graphiste freelance à Caen, spécialisée en création de logos, identité visuelle et motion design. Lola Herpin accompagne les entreprises normandes dans leur communication visuelle." />
+  <meta property="og:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
+  <meta property="og:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
+  <meta property="og:url" content="https://herpin-creative-studio.fr" />
+</svelte:head>
+
 <!-- Hero Section -->
 <section
   class="relative z-0 w-full min-h-screen flex items-center justify-center overflow-hidden"
@@ -63,8 +71,8 @@
       data-aos-delay="100"
       style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);"
     >
-      Design graphique & Motion design pour les entreprises qui veulent se
-      démarquer
+      Graphiste freelance & motion designer à Caen — logos, identité visuelle et
+      animations pour les entreprises en Normandie
     </p>
     <div
       class="flex flex-col sm:flex-row gap-6 justify-center"
@@ -137,17 +145,10 @@
           class="space-y-6 text-gray-600 text-xl md:text-2xl lg:text-2xl leading-relaxed"
         >
           <p>
-            En tant que chef d'entreprise, ma principale motivation est de
-            mettre mes compétences en <strong class="text-violet-600"
-              >graphisme</strong
-            >
-            et <strong class="text-violet-600">motion design</strong> au service
-            des entreprises qui souhaitent se démarquer visuellement.
+            <strong class="text-violet-600">Graphiste freelance basée à Caen</strong>, je crée des identités visuelles percutantes pour les entreprises, commerces et associations en <strong class="text-violet-600">Normandie</strong>. Du logo à la charte graphique complète, chaque projet est pensé pour refléter votre image.
           </p>
           <p>
-            J'ai fondé mon propre studio pour apporter des <strong
-              >solutions créatives sur mesure</strong
-            > à mes clients, avec liberté et passion.
+            Spécialisée en <strong class="text-violet-600">motion design</strong> et en création de supports de communication print & digital, j'accompagne mes clients de la conception à la livraison pour des visuels qui marquent les esprits.
           </p>
         </div>
 
@@ -207,8 +208,8 @@
       <p
         class="text-xl md:text-2xl lg:text-3xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
       >
-        Une sélection de mes réalisations en design graphique, illustration et
-        motion design.
+        Logos, chartes graphiques, affiches, motion design — découvrez les projets
+        réalisés pour des entreprises en Normandie et au-delà.
       </p>
     </div>
 
@@ -364,8 +365,8 @@
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      Discutons de votre projet et donnons vie à vos idées avec une identité
-      visuelle unique.
+      Besoin d'un logo, d'une identité visuelle ou d'une vidéo motion design ?
+      Votre graphiste à Caen est là pour donner vie à vos idées.
     </p>
     <div
       class="flex flex-col sm:flex-row gap-6 justify-center"

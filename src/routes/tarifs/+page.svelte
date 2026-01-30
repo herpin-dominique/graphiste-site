@@ -8,7 +8,11 @@
 </script>
 
 <svelte:head>
-  <title>Forfaits - Herpin Creative Studio</title>
+  <title>Tarifs graphiste Caen - Forfaits design & motion | Herpin Creative Studio</title>
+  <meta name="description" content="Tarifs et forfaits graphisme à Caen. Création de logo, identité visuelle, motion design, supports print & digital. Devis gratuit, graphiste freelance en Normandie." />
+  <meta property="og:title" content="Tarifs graphiste freelance Caen | Herpin Creative Studio" />
+  <meta property="og:description" content="Découvrez les forfaits pour vos projets de design graphique et motion design à Caen, Normandie." />
+  <meta property="og:url" content="https://herpin-creative-studio.fr/tarifs" />
 </svelte:head>
 
 <main

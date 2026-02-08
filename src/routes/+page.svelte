@@ -48,7 +48,7 @@
     "knowsAbout": ["Graphic Design", "Motion Design", "Logo Design", "Visual Identity", "Print Design"],
     "sameAs": [
       "https://instagram.com/herpincreativestudio",
-      "https://www.linkedin.com/in/lola-herpin",
+      "https://www.linkedin.com/in/lola-herpin-design-graphique",
       "https://www.behance.net/lolaherpin"
     ]
   })}</script>`}

@@ -127,7 +127,7 @@
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/lola-herpin"
+              href="https://www.linkedin.com/in/lola-herpin-design-graphique"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 bg-violet-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300"

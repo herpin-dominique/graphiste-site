@@ -32,7 +32,7 @@
       {#each links as link}
         <a
           href={link.href}
-          class="relative px-6 py-3 font-bold uppercase tracking-wider transition-all duration-300 rounded-full {scrolled ? 'text-base lg:text-lg' : 'text-lg lg:text-xl xl:text-2xl'} {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
+          class="relative px-6 py-3 font-bold uppercase tracking-wider transition-all duration-300 rounded-full {scrolled ? 'text-sm lg:text-base' : 'text-base lg:text-lg xl:text-xl'} {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
         >
           {link.label}
         </a>

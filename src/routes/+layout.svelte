@@ -153,14 +153,25 @@
 
       <!-- Mentions légales -->
       <div>
-        <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">Mentions légales</h3>
-        <ul class="space-y-2 text-sm text-violet-300">
-          <li><strong class="text-violet-200">Statut :</strong> Auto-entrepreneur</li>
-          <li><strong class="text-violet-200">Responsable :</strong> Lola Herpin</li>
-          <li><strong class="text-violet-200">TVA :</strong> Non applicable (art. 293 B du CGI)</li>
-          <li class="pt-2 text-xs leading-relaxed">
-            Toutes les créations présentées sur ce site sont la propriété intellectuelle de Herpin Creative Studio.
-            Toute reproduction ou utilisation sans autorisation est interdite.
+        <h3 class="text-white font-bold text-lg mb-4 uppercase tracking-wider">Informations</h3>
+        <ul class="space-y-3">
+          <li>
+            <span class="text-violet-300 text-sm block">EI Lola Herpin</span>
+            <span class="text-violet-400 text-xs">Entrepreneur Individuel</span>
+          </li>
+          <li>
+            <span class="text-violet-300 text-sm">TVA non applicable (art. 293 B du CGI)</span>
+          </li>
+          <li class="pt-2">
+            <a
+              href="/mentions-legales"
+              class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 transition-colors text-sm font-semibold"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Mentions légales complètes
+            </a>
           </li>
         </ul>
       </div>

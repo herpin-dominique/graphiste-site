@@ -10,7 +10,7 @@
 
 <svelte:head>
   <title>Graphiste Caen & Motion Designer Normandie | Herpin Creative Studio</title>
-  <meta name="description" content="Graphiste freelance à Caen, spécialisée en création de logos, identité visuelle et motion design. Lola Herpin accompagne les entreprises normandes dans leur communication visuelle." />
+  <meta name="description" content="Besoin de booster votre image de marque ? Herpin Creative Studio accompagne les entreprises à Caen et en Normandie dans leur communication visuelle : logo, identité visuelle et motion design." />
   <meta property="og:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
   <meta property="og:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr" />

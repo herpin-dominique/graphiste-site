@@ -29,7 +29,7 @@
         Éditeur du site
       </h2>
       <div class="space-y-3 text-violet-100 text-base md:text-lg leading-relaxed">
-        <p><strong class="text-white">Nom :</strong> EI Lola Herpin</p>
+        <p><strong class="text-white">Nom :</strong> Lola Herpin</p>
         <p><strong class="text-white">Statut :</strong> Entrepreneur Individuel (EI)</p>
         <p><strong class="text-white">Nom commercial :</strong> Herpin Creative Studio</p>
         <p><strong class="text-white">SIRET :</strong> 999 394 786 00019</p>

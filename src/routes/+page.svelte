@@ -14,6 +14,44 @@
   <meta property="og:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
   <meta property="og:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr" />
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Herpin Creative Studio",
+    "description": "Graphiste freelance et motion designer à Caen, Normandie. Création de logos, identité visuelle, supports de communication et motion design.",
+    "url": "https://herpin-creative-studio.fr",
+    "logo": "https://herpin-creative-studio.fr/LOGO HERPIN CREATIVE STUDIOb_4.svg",
+    "image": "https://herpin-creative-studio.fr/BANNIERE.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "17 rue de la Montagne",
+      "addressLocality": "Giberville",
+      "postalCode": "14730",
+      "addressRegion": "Normandie",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.1787,
+      "longitude": -0.3087
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Caen" },
+      { "@type": "AdministrativeArea", "name": "Normandie" }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Lola Herpin",
+      "jobTitle": "Graphiste & Motion Designer"
+    },
+    "priceRange": "€€",
+    "knowsAbout": ["Graphic Design", "Motion Design", "Logo Design", "Visual Identity", "Print Design"],
+    "sameAs": [
+      "https://instagram.com/herpincreativestudio",
+      "https://www.linkedin.com/in/lola-herpin",
+      "https://www.behance.net/lolaherpin"
+    ]
+  })}</script>`}
 </svelte:head>
 
 <!-- Hero Section -->

@@ -38,8 +38,9 @@
   let sendNote = '';
   let sendType: 'sent' | 'reminder' = 'sent';
 
-  onMount(() => {
+  onMount(async () => {
     authStore.checkSession();
+    await billingStore.reload();
   });
 
   function addItem() {
@@ -61,11 +62,11 @@
     );
   }
 
-  function submitForm() {
+  async function submitForm() {
     calculateTotal();
 
     if (editingInvoice) {
-      billingStore.update(editingInvoice.id, {
+      await billingStore.update(editingInvoice.id, {
         type: formData.type,
         invoice_number: formData.invoice_number,
         client_name: formData.client_name,
@@ -78,7 +79,7 @@
         notes: formData.notes || undefined
       });
     } else {
-      billingStore.add({
+      await billingStore.add({
         type: formData.type,
         invoice_number: formData.invoice_number || generateInvoiceNumber(formData.type),
         client_name: formData.client_name,
@@ -118,9 +119,9 @@
     showForm = true;
   }
 
-  function deleteInvoice(id: string) {
+  async function deleteInvoice(id: string) {
     if (confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')) {
-      billingStore.delete(id);
+      await billingStore.delete(id);
     }
   }
 
@@ -135,13 +136,13 @@
     showSendModal = true;
   }
 
-  function confirmSend() {
+  async function confirmSend() {
     if (!selectedInvoice) return;
 
     if (sendType === 'sent') {
-      billingStore.markAsSent(selectedInvoice.id, sendNote || undefined);
+      await billingStore.markAsSent(selectedInvoice.id, sendNote || undefined);
     } else {
-      billingStore.addReminder(selectedInvoice.id, sendNote || undefined);
+      await billingStore.addReminder(selectedInvoice.id, sendNote || undefined);
     }
 
     showSendModal = false;
@@ -149,8 +150,8 @@
     sendNote = '';
   }
 
-  function markAsPaid(id: string) {
-    billingStore.updateStatus(id, 'paid');
+  async function markAsPaid(id: string) {
+    await billingStore.updateStatus(id, 'paid');
   }
 
   function openHistory(invoice: Invoice) {

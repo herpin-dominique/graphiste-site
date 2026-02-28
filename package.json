@@ -9,7 +9,10 @@
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "npx tsx src/lib/server/db/seed.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^6.1.0",
@@ -19,6 +22,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.21",
     "baseline-browser-mapping": "^2.8.30",
+    "drizzle-kit": "^0.31.9",
     "postcss": "^8.5.6",
     "svelte-check": "^3.3.0",
     "svelte-preprocess": "^6.0.3",
@@ -31,11 +35,13 @@
     "@types/react-dom": "^19.1.9",
     "@vercel/analytics": "^1.6.1",
     "aos": "^2.3.4",
+    "drizzle-orm": "^0.45.1",
     "esbuild": "^0.25.10",
     "jspdf": "^4.0.0",
     "jspdf-autotable": "^5.0.7",
     "lucide-svelte": "^0.554.0",
     "phosphor-svelte": "^3.0.1",
+    "postgres": "^3.4.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.50.2"

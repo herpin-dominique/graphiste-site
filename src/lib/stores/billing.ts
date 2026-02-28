@@ -1,5 +1,4 @@
 import { writable, get } from 'svelte/store';
-import { browser } from '$app/environment';
 
 export interface InvoiceItem {
   description: string;
@@ -29,177 +28,146 @@ export interface Invoice {
   notes?: string;
 }
 
-const STORAGE_KEY = 'billing_invoices';
-
-function loadInvoices(): Invoice[] {
-  if (!browser) return [];
-
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored) {
-    try {
-      return JSON.parse(stored);
-    } catch {
-      return [];
-    }
-  }
-  return [];
-}
-
-function saveInvoices(invoices: Invoice[]) {
-  if (browser) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(invoices));
-  }
+// Adapte la réponse DB (snake_case Drizzle) vers l'interface Invoice
+function fromDb(row: Record<string, unknown>): Invoice {
+  return {
+    id: row.id as string,
+    type: row.type as Invoice['type'],
+    invoice_number: (row.invoiceNumber ?? row.invoice_number) as string,
+    client_name: (row.clientName ?? row.client_name) as string,
+    client_email: (row.clientEmail ?? row.client_email) as string,
+    client_address: (row.clientAddress ?? row.client_address) as string,
+    items: (row.items ?? []) as InvoiceItem[],
+    total: Number(row.total),
+    status: row.status as Invoice['status'],
+    created_at: (row.createdAt ?? row.created_at) as string,
+    due_date: (row.dueDate ?? row.due_date) as string | undefined,
+    send_history: (row.sendHistory ?? row.send_history ?? []) as SendEvent[],
+    notes: row.notes as string | undefined,
+  };
 }
 
 function createBillingStore() {
-  const { subscribe, set, update } = writable<Invoice[]>(loadInvoices());
-
-  // Sauvegarder automatiquement les changements
-  subscribe(invoices => {
-    saveInvoices(invoices);
-  });
+  const { subscribe, set, update } = writable<Invoice[]>([]);
 
   return {
     subscribe,
 
-    add: (invoiceData: Omit<Invoice, 'id' | 'created_at' | 'send_history'>) => {
-      const newInvoice: Invoice = {
+    reload: async () => {
+      const res = await fetch('/api/invoices');
+      if (res.ok) {
+        const rows = await res.json();
+        set(rows.map(fromDb));
+      }
+    },
+
+    add: async (invoiceData: Omit<Invoice, 'id' | 'created_at' | 'send_history'>): Promise<Invoice> => {
+      const newInvoice = {
         ...invoiceData,
         id: generateId(),
         created_at: new Date().toISOString(),
-        send_history: [{
-          date: new Date().toISOString(),
-          type: 'created',
-          note: 'Document créé'
-        }]
+        send_history: [{ date: new Date().toISOString(), type: 'created', note: 'Document créé' }],
+      };
+      const res = await fetch('/api/invoices', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newInvoice),
+      });
+      const created = fromDb(await res.json());
+      update(inv => [...inv, created]);
+      return created;
+    },
+
+    update: async (id: string, invoiceData: Partial<Invoice>) => {
+      const current = get({ subscribe });
+      const existing = current.find(inv => inv.id === id);
+      if (!existing) return;
+
+      const updated: Invoice = {
+        ...existing,
+        ...invoiceData,
+        send_history: (invoiceData.items || invoiceData.total !== undefined || invoiceData.client_name)
+          ? [...existing.send_history, { date: new Date().toISOString(), type: 'updated', note: 'Document modifié' }]
+          : existing.send_history,
       };
 
-      update(invoices => [...invoices, newInvoice]);
-      return newInvoice;
-    },
-
-    update: (id: string, invoiceData: Partial<Invoice>) => {
-      update(invoices => {
-        return invoices.map(inv => {
-          if (inv.id === id) {
-            const updated = { ...inv, ...invoiceData };
-            // Ajouter un événement de modification si des changements significatifs
-            if (invoiceData.items || invoiceData.total || invoiceData.client_name) {
-              updated.send_history = [
-                ...updated.send_history,
-                {
-                  date: new Date().toISOString(),
-                  type: 'updated' as const,
-                  note: 'Document modifié'
-                }
-              ];
-            }
-            return updated;
-          }
-          return inv;
-        });
+      await fetch(`/api/invoices/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updated),
       });
+      update(inv => inv.map(i => i.id === id ? updated : i));
     },
 
-    delete: (id: string) => {
-      update(invoices => invoices.filter(inv => inv.id !== id));
+    delete: async (id: string) => {
+      await fetch(`/api/invoices/${id}`, { method: 'DELETE' });
+      update(inv => inv.filter(i => i.id !== id));
     },
 
-    updateStatus: (id: string, status: Invoice['status']) => {
-      update(invoices => {
-        return invoices.map(inv => {
-          if (inv.id === id) {
-            const eventType = status === 'paid' ? 'paid' : status === 'sent' ? 'sent' : 'updated';
-            return {
-              ...inv,
-              status,
-              send_history: [
-                ...inv.send_history,
-                {
-                  date: new Date().toISOString(),
-                  type: eventType as SendEvent['type'],
-                  note: `Statut changé en "${getStatusLabel(status)}"`
-                }
-              ]
-            };
-          }
-          return inv;
-        });
+    updateStatus: async (id: string, status: Invoice['status']) => {
+      const current = get({ subscribe });
+      const existing = current.find(inv => inv.id === id);
+      if (!existing) return;
+
+      const eventType = status === 'paid' ? 'paid' : status === 'sent' ? 'sent' : 'updated';
+      const send_history = [
+        ...existing.send_history,
+        { date: new Date().toISOString(), type: eventType as SendEvent['type'], note: `Statut changé en "${getStatusLabel(status)}"` },
+      ];
+
+      await fetch(`/api/invoices/${id}/status`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status, send_history }),
       });
+      update(inv => inv.map(i => i.id === id ? { ...i, status, send_history } : i));
     },
 
-    addSendEvent: (id: string, type: SendEvent['type'], note?: string) => {
-      update(invoices => {
-        return invoices.map(inv => {
-          if (inv.id === id) {
-            return {
-              ...inv,
-              send_history: [
-                ...inv.send_history,
-                {
-                  date: new Date().toISOString(),
-                  type,
-                  note
-                }
-              ]
-            };
-          }
-          return inv;
-        });
+    addSendEvent: async (id: string, type: SendEvent['type'], note?: string) => {
+      const current = get({ subscribe });
+      const existing = current.find(inv => inv.id === id);
+      if (!existing) return;
+
+      const send_history = [...existing.send_history, { date: new Date().toISOString(), type, note }];
+      await fetch(`/api/invoices/${id}/status`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: existing.status, send_history }),
       });
+      update(inv => inv.map(i => i.id === id ? { ...i, send_history } : i));
     },
 
-    markAsSent: (id: string, note?: string) => {
-      update(invoices => {
-        return invoices.map(inv => {
-          if (inv.id === id) {
-            return {
-              ...inv,
-              status: 'sent' as const,
-              send_history: [
-                ...inv.send_history,
-                {
-                  date: new Date().toISOString(),
-                  type: 'sent' as const,
-                  note: note || 'Document envoyé au client'
-                }
-              ]
-            };
-          }
-          return inv;
-        });
+    markAsSent: async (id: string, note?: string) => {
+      const current = get({ subscribe });
+      const existing = current.find(inv => inv.id === id);
+      if (!existing) return;
+
+      const send_history = [...existing.send_history, { date: new Date().toISOString(), type: 'sent' as const, note: note || 'Document envoyé au client' }];
+      await fetch(`/api/invoices/${id}/status`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: 'sent', send_history }),
       });
+      update(inv => inv.map(i => i.id === id ? { ...i, status: 'sent', send_history } : i));
     },
 
-    addReminder: (id: string, note?: string) => {
-      update(invoices => {
-        return invoices.map(inv => {
-          if (inv.id === id) {
-            return {
-              ...inv,
-              send_history: [
-                ...inv.send_history,
-                {
-                  date: new Date().toISOString(),
-                  type: 'reminder' as const,
-                  note: note || 'Relance envoyée'
-                }
-              ]
-            };
-          }
-          return inv;
-        });
+    addReminder: async (id: string, note?: string) => {
+      const current = get({ subscribe });
+      const existing = current.find(inv => inv.id === id);
+      if (!existing) return;
+
+      const send_history = [...existing.send_history, { date: new Date().toISOString(), type: 'reminder' as const, note: note || 'Relance envoyée' }];
+      await fetch(`/api/invoices/${id}/status`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: existing.status, send_history }),
       });
+      update(inv => inv.map(i => i.id === id ? { ...i, send_history } : i));
     },
 
     getById: (id: string): Invoice | undefined => {
-      const invoices = get({ subscribe });
-      return invoices.find(inv => inv.id === id);
+      return get({ subscribe }).find(inv => inv.id === id);
     },
-
-    reload: () => {
-      set(loadInvoices());
-    }
   };
 }
 
@@ -218,7 +186,6 @@ function getStatusLabel(status: string): string {
 
 export const billingStore = createBillingStore();
 
-// Helpers pour générer les numéros de facture/devis
 export function generateInvoiceNumber(type: 'quote' | 'invoice'): string {
   const prefix = type === 'quote' ? 'DEV' : 'FAC';
   const year = new Date().getFullYear();

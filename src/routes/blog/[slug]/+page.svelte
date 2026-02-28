@@ -8,10 +8,20 @@
 <svelte:head>
   <title>{post.title} | Blog Herpin Creative Studio</title>
   <meta name="description" content={post.excerpt} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Herpin Creative Studio" />
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="{post.title} - Herpin Creative Studio" />
   <meta property="og:description" content={post.excerpt} />
   <meta property="og:url" content="https://herpin-creative-studio.fr/blog/{post.slug}" />
-  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{post.title} - Herpin Creative Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{post.title} - Herpin Creative Studio" />
+  <meta name="twitter:description" content={post.excerpt} />
+  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
 </svelte:head>
 
 <main

@@ -5,9 +5,18 @@
 <svelte:head>
   <title>Blog graphisme & design à Caen | Herpin Creative Studio</title>
   <meta name="description" content="Conseils en design graphique, tendances créatives et astuces branding. Le blog de Herpin Creative Studio, graphiste freelance à Caen, Normandie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Herpin Creative Studio" />
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Blog - Herpin Creative Studio" />
   <meta property="og:description" content="Conseils en design graphique, tendances créatives et astuces branding par votre graphiste à Caen." />
   <meta property="og:url" content="https://herpin-creative-studio.fr/blog" />
+  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Blog graphisme - Herpin Creative Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
 </svelte:head>
 
 <main

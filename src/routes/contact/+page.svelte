@@ -10,9 +10,18 @@
 <svelte:head>
   <title>Contact graphiste Caen - Devis gratuit | Herpin Creative Studio</title>
   <meta name="description" content="Contactez Lola Herpin, graphiste freelance à Caen. Devis gratuit pour création de logo, identité visuelle, motion design. Basée à Caen, disponible dans toute la Normandie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Herpin Creative Studio" />
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Contactez votre graphiste à Caen | Herpin Creative Studio" />
   <meta property="og:description" content="Demandez un devis gratuit pour votre projet de design graphique ou motion design à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr/contact" />
+  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Contact graphiste Caen - Herpin Creative Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
 </svelte:head>
 
 <main

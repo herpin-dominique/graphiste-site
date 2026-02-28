@@ -11,9 +11,20 @@
 <svelte:head>
   <title>Graphiste Caen & Motion Designer Normandie | Herpin Creative Studio</title>
   <meta name="description" content="Besoin de booster votre image de marque ? Herpin Creative Studio accompagne les entreprises à Caen et en Normandie dans leur communication visuelle : logo, identité visuelle et motion design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Herpin Creative Studio" />
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
   <meta property="og:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr" />
+  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
+  <meta name="twitter:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
+  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",

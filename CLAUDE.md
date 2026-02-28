@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a portfolio website for Herpin Creative Studio (Lola Herpin), a graphic design and motion design studio. Built with SvelteKit, it showcases creative projects and services with a premium violet-themed visual identity.
+This is a portfolio website for Herpin Creative Studio (Lola Herpin), a graphic design and motion design studio based in Giberville (Caen), Normandie. Built with SvelteKit, it showcases creative projects and services with a premium violet-themed visual identity.
 
 ## Tech Stack
 
@@ -12,8 +12,9 @@ This is a portfolio website for Herpin Creative Studio (Lola Herpin), a graphic 
 - **Styling**: TailwindCSS with custom violet color palette
 - **Animations**: AOS (Animate On Scroll) library
 - **Icons**: lucide-svelte, phosphor-svelte
-- **Deployment**: Vercel (via @sveltejs/adapter-vercel)
+- **Deployment**: Vercel (via @sveltejs/adapter-vercel) — auto-deploys from `main` branch on GitHub
 - **Build Tool**: Vite
+- **Forms**: Formspree (contact form submissions)
 
 ## Common Commands
 
@@ -35,74 +36,57 @@ npm run preview          # Preview production build
 
 ### Routing Structure
 
-SvelteKit file-based routing with the following pages:
-- `/` - Home page with parallax banner and project grid
-- `/portfolio` - Full portfolio gallery
-- `/services` - Services offered
-- `/contact` - Contact form
-- `/tarifs` - Pricing information
-- `/billing` - Billing page (uses React component)
+- `/` — Home page with parallax banner and project grid
+- `/portfolio` — Full portfolio gallery with lightbox and swiper
+- `/services` — Services offered
+- `/contact` — Contact form (Formspree)
+- `/tarifs` — Pricing information
+- `/billing` — Password-protected invoice management tool (not linked in nav, hidden from public)
+- `/blog` — Blog listing page
+- `/blog/[slug]` — Individual blog articles (dynamic route)
+- `/mentions-legales` — French LCEN legal page
 
 ### Layout System
 
-- **Root Layout** ([src/routes/+layout.svelte](src/routes/+layout.svelte)): Provides global Header component with sticky/transparent behavior based on scroll position, and includes AOS initialization
-- **Header** ([src/lib/components/Header.svelte](src/lib/components/Header.svelte)): Responsive navigation with mobile menu, supports transparent/solid modes
-- Navigation links are defined in the root layout and passed as props
+- **Root Layout** ([src/routes/+layout.svelte](src/routes/+layout.svelte)): Wraps every page. Defines `navLinks`, renders `<Header>`, handles AOS init, and contains the global `<Footer>` with social links
+- **Header** ([src/lib/components/Header.svelte](src/lib/components/Header.svelte)): Responsive nav with mobile menu. Transitions between transparent (top) and solid violet (scrolled) modes
+
+### Key Data Files
+
+- **Blog posts**: [`src/lib/data/blog-posts.ts`](src/lib/data/blog-posts.ts) — Array of `BlogPost` objects with `slug`, `title`, `excerpt`, `content: string[]` (HTML blocks), `date`, `category`, `categoryColor`, `readingTime`. Add new articles here; the dynamic route reads this at load time.
+
+### Billing System (protected)
+
+The `/billing` route is a standalone invoice management tool for Lola's internal use:
+- **Auth**: [`src/lib/stores/auth.ts`](src/lib/stores/auth.ts) — `authStore` / `isAuthenticated` derived store. Uses SHA-256 hashed password comparison + `localStorage` session (24h TTL). Password: `HerpinStudio2024!`
+- **Invoices**: [`src/lib/stores/billing.ts`](src/lib/stores/billing.ts) — `billingStore` manages invoice CRUD with `localStorage` persistence
+- **PDF**: [`src/lib/utils/pdfGenerator.ts`](src/lib/utils/pdfGenerator.ts) — Generates invoice PDFs with jsPDF
+- **Components**: `LoginForm.svelte`, `SendHistory.svelte`
 
 ### Styling Architecture
 
-- **Global styles**: [src/app.css](src/app.css) - Contains Tailwind directives, custom utility classes, and global element styling
-- **Color palette**: Custom violet theme defined in [tailwind.config.cjs](tailwind.config.cjs)
+- **Global styles**: [src/app.css](src/app.css) — Tailwind directives, custom utility classes, global element styling
+- **Color palette**: [tailwind.config.cjs](tailwind.config.cjs)
   - Primary: violet (#7F00FF to #4B0082)
-  - Accent colors: lavande, rose violacé
-  - Dark backgrounds: purple-900, purple-950
-- **Fonts**:
-  - Body: Inter
-  - Headings: Montserrat
-
-### Component Organization
-
-Components live in `src/lib/components/`:
-- Svelte components for UI elements (Header, Footer, ProjectCard, etc.)
-- React components are supported via vite-plugin-react (see ReactBilling.tsx)
+  - Dark backgrounds: `purple-900`, `purple-950`
+- **Fonts**: Body → Inter, Headings → Montserrat
+- **Design language**: violet gradients, glassmorphism (`backdrop-blur`), uppercase tracking for nav, scale/brightness hover transitions
 
 ### React Integration
 
-The project supports React components alongside Svelte:
-- React is enabled via `@vitejs/plugin-react` in [vite.config.ts](vite.config.ts)
-- React components can be imported into Svelte files
-- See [src/lib/components/ReactBilling.tsx](src/lib/components/ReactBilling.tsx) for example
+React is enabled alongside Svelte via `@vitejs/plugin-react` in [vite.config.ts](vite.config.ts). See [src/lib/components/ReactBilling.tsx](src/lib/components/ReactBilling.tsx) for the pattern.
 
 ### Static Assets
 
-- Images in `/static` are publicly accessible at root path (e.g., `/BANNIERE.png`)
-- Project images in `src/projets/` are referenced with `/src/projets/` path prefix
+- `/static/og-image.png` — 1200×630 OG image for WhatsApp/social previews
+- `/static/BANNIERE.png` — Main hero banner (4000×2000)
 - Logo: `/LOGO HERPIN CREATIVE STUDIOb_4.svg`
+- Project images: `/static/projets/` (referenced as `/projets/...` in code)
 
-## Development Notes
+### SEO
 
-### Scroll Effects
-
-The site uses multiple scroll-based effects:
-- Parallax banner on home page (custom scroll listener)
-- AOS animations throughout (initialized in `+layout.svelte`)
-- Header transparency toggle based on scroll position
-
-### Type Safety
-
-- TypeScript strict mode enabled
-- AOS types defined in [src/types/aos.d.ts](src/types/aos.d.ts)
-- SvelteKit generates types in `.svelte-kit/tsconfig.json`
+Every page has full Open Graph tags (`og:title`, `og:description`, `og:image`, `og:type`, `og:locale: fr_FR`, `og:site_name`) and Twitter Card tags in `<svelte:head>`. The homepage also includes a Schema.org `LocalBusiness` JSON-LD block. Sitemap at [`static/sitemap.xml`](static/sitemap.xml) — update it when adding pages or blog articles.
 
 ### Server Hooks
 
-[src/hooks.server.ts](src/hooks.server.ts) blocks Chrome DevTools extension requests in development mode to prevent 404 noise.
-
-## Design System
-
-The site follows a premium/luxury aesthetic with:
-- Heavy use of violet gradients and overlays
-- Uppercase tracking for navigation
-- Large, bold typography
-- Hover animations with scale and brightness transitions
-- Glassmorphism effects (backdrop-blur)
+[src/hooks.server.ts](src/hooks.server.ts) blocks Chrome DevTools extension requests in development to prevent 404 noise.

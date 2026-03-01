@@ -7,6 +7,12 @@
   export let data: PageData;
   $: projects = data.projects;
 
+  let activeFilter = "Tous";
+  $: tags = ["Tous", ...new Set(projects.map((p) => p.tag))];
+  $: filteredProjects = activeFilter === "Tous"
+    ? projects
+    : projects.filter((p) => p.tag === activeFilter);
+
   onMount(() => {
     AOS.init({ duration: 600, once: true });
   });
@@ -134,11 +140,25 @@
     </p>
   </div>
 
+  <!-- Filtres par catégorie -->
+  <div class="flex flex-wrap justify-center gap-3 mb-12 lg:mb-16" data-aos="fade-up" data-aos-delay="100">
+    {#each tags as tag}
+      <button
+        on:click={() => activeFilter = tag}
+        class="px-5 py-2 rounded-full text-sm lg:text-base font-semibold uppercase tracking-wider transition-all duration-300 {activeFilter === tag
+          ? 'bg-violet-500 text-white shadow-lg shadow-violet-500/30'
+          : 'bg-violet-900/60 text-violet-300 border border-violet-600/50 hover:border-violet-400 hover:text-white'}"
+      >
+        {tag}
+      </button>
+    {/each}
+  </div>
+
   <!-- Grille des projets -->
   <div
     class="w-full max-w-[1800px] mx-auto grid md:grid-cols-2 gap-8 lg:gap-12"
   >
-    {#each projects as project, i}
+    {#each filteredProjects as project, i}
       <div
         class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 overflow-hidden"
         data-aos="fade-up"

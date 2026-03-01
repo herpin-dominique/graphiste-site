@@ -5,6 +5,73 @@
   onMount(() => {
     AOS.init({ duration: 600, once: true });
   });
+
+  // Formulaire multi-étapes
+  let step = 1;
+  const totalSteps = 4;
+
+  let projectType = "";
+  let budget = "";
+  let delay = "";
+  let name = "";
+  let email = "";
+  let message = "";
+  let submitted = false;
+  let sending = false;
+  let error = "";
+
+  const projectTypes = [
+    { value: "logo", label: "Logo & Identité visuelle", icon: "✦" },
+    { value: "motion", label: "Motion Design", icon: "▶" },
+    { value: "print", label: "Print & Éditorial", icon: "◈" },
+    { value: "reseaux", label: "Réseaux sociaux", icon: "◎" },
+    { value: "pack", label: "Packaging", icon: "⬡" },
+    { value: "autre", label: "Autre projet", icon: "+" },
+  ];
+
+  const budgets = [
+    { value: "< 500€", label: "< 500 €", desc: "Petit projet" },
+    { value: "500-1000€", label: "500 – 1 000 €", desc: "Projet standard" },
+    { value: "1000-2000€", label: "1 000 – 2 000 €", desc: "Projet complet" },
+    { value: "> 2000€", label: "> 2 000 €", desc: "Projet premium" },
+  ];
+
+  const delays = [
+    { value: "urgent", label: "Urgent", desc: "< 2 semaines" },
+    { value: "1 mois", label: "1 mois", desc: "Délai confortable" },
+    { value: "2-3 mois", label: "2 – 3 mois", desc: "Projet réfléchi" },
+    { value: "flexible", label: "Flexible", desc: "Pas de contrainte" },
+  ];
+
+  function next() { if (step < totalSteps) step++; }
+  function prev() { if (step > 1) step--; }
+
+  async function submit() {
+    sending = true;
+    error = "";
+    try {
+      const res = await fetch("https://formspree.io/f/xgvlgeqb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          "Type de projet": projectType,
+          "Budget": budget,
+          "Délai": delay,
+        }),
+      });
+      if (res.ok) {
+        submitted = true;
+      } else {
+        error = "Une erreur est survenue, veuillez réessayer.";
+      }
+    } catch {
+      error = "Une erreur est survenue, veuillez réessayer.";
+    }
+    sending = false;
+  }
 </script>
 
 <svelte:head>
@@ -191,7 +258,7 @@
       </div>
     </div>
 
-    <!-- Colonne droite : Formulaire -->
+    <!-- Colonne droite : Formulaire multi-étapes -->
     <div
       class="relative bg-gradient-to-b from-violet-800/90 to-violet-950/90 backdrop-blur-sm p-6 md:p-10 lg:p-12 rounded-3xl border-2 border-pink-500/50 hover:border-pink-400/70 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10"
       data-aos="fade-up"
@@ -199,119 +266,138 @@
     >
       <!-- Tag -->
       <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
-        <span
-          class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base lg:text-lg font-bold px-4 md:px-5 lg:px-6 py-2 lg:py-3 rounded-full uppercase tracking-wider"
-        >
-          Formulaire
+        <span class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm md:text-base font-bold px-4 md:px-5 py-2 rounded-full uppercase tracking-wider">
+          Devis gratuit
         </span>
       </div>
 
-      <h2
-        class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mt-6 lg:mt-8 mb-6 md:mb-8 lg:mb-10"
-      >
-        Envoyez-moi un message
-      </h2>
-
-      <form
-        action="https://formspree.io/f/xgvlgeqb"
-        method="POST"
-        class="space-y-5 md:space-y-6 lg:space-y-8"
-      >
-        <!-- Nom -->
-        <div>
-          <label
-            for="name"
-            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
-          >
-            Votre nom
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Jean Dupont"
-            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
-          />
+      {#if submitted}
+        <!-- Confirmation -->
+        <div class="flex flex-col items-center justify-center py-12 text-center">
+          <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-4">Message envoyé !</h2>
+          <p class="text-violet-200 text-lg">Je vous répondrai sous 24 à 48h. À très vite !</p>
         </div>
 
-        <!-- Email -->
-        <div>
-          <label
-            for="email"
-            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
-          >
-            Votre email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="exemple@domaine.com"
-            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
-          />
+      {:else}
+        <!-- Indicateur de progression -->
+        <div class="flex items-center gap-2 mt-6 mb-8">
+          {#each Array(totalSteps) as _, i}
+            <div class="h-1.5 flex-1 rounded-full transition-all duration-500 {i + 1 <= step ? 'bg-gradient-to-r from-pink-500 to-violet-500' : 'bg-violet-700/50'}"></div>
+          {/each}
+          <span class="text-violet-300 text-sm font-medium ml-1 whitespace-nowrap">{step}/{totalSteps}</span>
         </div>
 
-        <!-- Sujet -->
-        <div>
-          <label
-            for="subject"
-            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
-          >
-            Sujet
-          </label>
-          <select
-            id="subject"
-            name="subject"
-            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
-          >
-            <option value="devis">Demande de devis</option>
-            <option value="collaboration">Collaboration</option>
-            <option value="question">Question</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
+        <!-- Étape 1 : Type de projet -->
+        {#if step === 1}
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Quel est votre projet ?</h2>
+          <p class="text-violet-300 mb-6">Sélectionnez le type de prestation souhaitée.</p>
+          <div class="grid grid-cols-2 gap-3">
+            {#each projectTypes as pt}
+              <button
+                on:click={() => { projectType = pt.value; next(); }}
+                class="flex flex-col items-center gap-2 p-4 rounded-2xl border transition-all duration-200 text-center
+                  {projectType === pt.value
+                    ? 'bg-gradient-to-br from-pink-500/30 to-violet-500/30 border-pink-400 text-white'
+                    : 'bg-violet-900/40 border-violet-600/40 text-violet-200 hover:border-violet-400 hover:text-white'}"
+              >
+                <span class="text-2xl">{pt.icon}</span>
+                <span class="text-sm font-medium leading-tight">{pt.label}</span>
+              </button>
+            {/each}
+          </div>
 
-        <!-- Message -->
-        <div>
-          <label
-            for="message"
-            class="block text-base md:text-lg lg:text-xl font-medium text-violet-100 mb-2 md:mb-3"
-          >
-            Votre message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            required
-            placeholder="Décrivez votre projet ou votre demande..."
-            class="w-full px-4 md:px-5 lg:px-6 py-3 md:py-4 lg:py-5 bg-violet-900/50 border border-violet-600/50 text-white text-base md:text-lg lg:text-xl rounded-xl md:rounded-2xl placeholder-violet-400 resize-none focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all duration-300"
-          ></textarea>
-        </div>
+        <!-- Étape 2 : Budget -->
+        {:else if step === 2}
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Quel est votre budget ?</h2>
+          <p class="text-violet-300 mb-6">Une estimation pour mieux adapter ma proposition.</p>
+          <div class="space-y-3">
+            {#each budgets as b}
+              <button
+                on:click={() => { budget = b.value; next(); }}
+                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl border transition-all duration-200
+                  {budget === b.value
+                    ? 'bg-gradient-to-r from-pink-500/30 to-violet-500/30 border-pink-400 text-white'
+                    : 'bg-violet-900/40 border-violet-600/40 text-violet-200 hover:border-violet-400 hover:text-white'}"
+              >
+                <span class="font-bold text-lg">{b.label}</span>
+                <span class="text-sm opacity-70">{b.desc}</span>
+              </button>
+            {/each}
+          </div>
+          <button on:click={prev} class="mt-4 text-violet-400 hover:text-violet-200 text-sm transition-colors">← Retour</button>
 
-        <!-- Bouton -->
-        <button
-          type="submit"
-          class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 text-white font-bold py-4 md:py-5 lg:py-6 px-6 md:px-8 rounded-xl md:rounded-2xl text-lg md:text-xl lg:text-2xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-2 md:gap-3"
-        >
-          <svg
-            class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-            ></path>
-          </svg>
-          Envoyer le message
-        </button>
-      </form>
+        <!-- Étape 3 : Délai -->
+        {:else if step === 3}
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Quel est votre délai ?</h2>
+          <p class="text-violet-300 mb-6">Pour que je puisse planifier votre projet.</p>
+          <div class="space-y-3">
+            {#each delays as d}
+              <button
+                on:click={() => { delay = d.value; next(); }}
+                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl border transition-all duration-200
+                  {delay === d.value
+                    ? 'bg-gradient-to-r from-pink-500/30 to-violet-500/30 border-pink-400 text-white'
+                    : 'bg-violet-900/40 border-violet-600/40 text-violet-200 hover:border-violet-400 hover:text-white'}"
+              >
+                <span class="font-bold text-lg">{d.label}</span>
+                <span class="text-sm opacity-70">{d.desc}</span>
+              </button>
+            {/each}
+          </div>
+          <button on:click={prev} class="mt-4 text-violet-400 hover:text-violet-200 text-sm transition-colors">← Retour</button>
+
+        <!-- Étape 4 : Coordonnées -->
+        {:else if step === 4}
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Vos coordonnées</h2>
+          <p class="text-violet-300 mb-6">Je vous réponds sous 24 à 48h.</p>
+          <div class="space-y-4">
+            <input
+              type="text"
+              bind:value={name}
+              placeholder="Votre nom"
+              required
+              class="w-full px-5 py-4 bg-violet-900/50 border border-violet-600/50 text-white rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all"
+            />
+            <input
+              type="email"
+              bind:value={email}
+              placeholder="Votre email"
+              required
+              class="w-full px-5 py-4 bg-violet-900/50 border border-violet-600/50 text-white rounded-2xl placeholder-violet-400 focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all"
+            />
+            <textarea
+              bind:value={message}
+              rows="4"
+              placeholder="Décrivez votre projet en quelques mots..."
+              class="w-full px-5 py-4 bg-violet-900/50 border border-violet-600/50 text-white rounded-2xl placeholder-violet-400 resize-none focus:ring-2 focus:ring-pink-500 focus:border-transparent focus:outline-none transition-all"
+            ></textarea>
+            {#if error}
+              <p class="text-red-400 text-sm">{error}</p>
+            {/if}
+            <button
+              on:click={submit}
+              disabled={!name || !email || sending}
+              class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-400 disabled:opacity-50 text-white font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30 flex items-center justify-center gap-3"
+            >
+              {#if sending}
+                <span class="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></span>
+                Envoi en cours...
+              {:else}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+                Envoyer ma demande
+              {/if}
+            </button>
+          </div>
+          <button on:click={prev} class="mt-4 text-violet-400 hover:text-violet-200 text-sm transition-colors">← Retour</button>
+        {/if}
+      {/if}
     </div>
   </div>
 

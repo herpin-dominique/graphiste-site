@@ -33,6 +33,7 @@
     { href: "/", label: "Accueil" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
+    { href: "/a-propos", label: "À propos" },
     { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
     { href: "/blog", label: "Blog" },
@@ -86,6 +87,7 @@
           <li><a href="/portfolio" class="text-violet-300 hover:text-white transition-colors">Portfolio</a></li>
           <li><a href="/services" class="text-violet-300 hover:text-white transition-colors">Services</a></li>
           <li><a href="/tarifs" class="text-violet-300 hover:text-white transition-colors">Forfaits</a></li>
+          <li><a href="/a-propos" class="text-violet-300 hover:text-white transition-colors">À propos</a></li>
           <li><a href="/contact" class="text-violet-300 hover:text-white transition-colors">Contact</a></li>
         </ul>
       </div>

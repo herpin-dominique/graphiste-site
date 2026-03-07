@@ -37,6 +37,7 @@
     { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
     { href: "/blog", label: "Blog" },
+    { href: "/avis", label: "Avis" },
   ];
 
   let scrolled = false;
@@ -89,6 +90,7 @@
           <li><a href="/tarifs" class="text-violet-300 hover:text-white transition-colors">Forfaits</a></li>
           <li><a href="/a-propos" class="text-violet-300 hover:text-white transition-colors">À propos</a></li>
           <li><a href="/contact" class="text-violet-300 hover:text-white transition-colors">Contact</a></li>
+          <li><a href="/avis" class="text-violet-300 hover:text-white transition-colors">Avis clients</a></li>
         </ul>
       </div>
 

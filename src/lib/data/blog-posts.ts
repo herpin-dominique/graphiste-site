@@ -11,6 +11,54 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "motion-design-reseaux-sociaux-sans-budget",
+    title: "Motion design : 5 façons de l'utiliser pour ses réseaux sociaux sans budget",
+    excerpt:
+      "Animations, transitions, textes animés... Le motion design n'est plus réservé aux grandes marques. Voici 5 façons concrètes de dynamiser vos réseaux sociaux, même avec un budget serré.",
+    date: "18 mars 2026",
+    category: "Motion Design",
+    categoryColor: "from-violet-500 to-purple-600",
+    readingTime: 7,
+    content: [
+      "<h2>Le motion design, c'est pour tout le monde</h2>",
+      "<p>On associe souvent le motion design aux grandes campagnes publicitaires, aux intros de films ou aux vidéos d'entreprise avec gros budget. Pourtant, depuis quelques années, les outils et les usages ont radicalement changé. Aujourd'hui, une vidéo animée de 10 secondes sur Instagram peut faire plus d'effet qu'une photo statique soignée — et elle est à la portée de n'importe quelle TPE ou entrepreneur solo.</p>",
+      "<p>Voici 5 façons concrètes d'intégrer le motion design dans votre communication sur les réseaux sociaux, même sans budget conséquent.</p>",
+
+      "<h2>1. Animer ses citations et ses chiffres clés</h2>",
+      "<p>C'est le point d'entrée le plus simple. Prenez une citation inspirante liée à votre activité, un chiffre marquant ou un conseil court — et animez le texte. Un texte qui apparaît mot par mot, une statistique qui compte jusqu'au bon chiffre, un titre qui glisse à l'écran : ces animations simples captent l'attention bien mieux qu'un texte statique sur fond coloré.</p>",
+      "<p><strong>Outil gratuit :</strong> CapCut (mobile et desktop) permet de faire ces animations en quelques minutes sans aucune compétence technique. Canva propose aussi des animations de texte basiques.</p>",
+      "<p><strong>Format idéal :</strong> Carré (1080x1080) pour le feed Instagram, ou vertical (1080x1920) pour les stories et Reels.</p>",
+
+      "<h2>2. Transformer ses photos en vidéos avec un effet Ken Burns</h2>",
+      "<p>L'effet Ken Burns, c'est ce léger zoom ou panoramique appliqué à une photo fixe pour lui donner vie. En 5 secondes, une belle photo de votre dernier projet se transforme en vidéo qui accroche l'œil dans un feed.</p>",
+      "<p>Les algorithmes Instagram et LinkedIn favorisent les vidéos par rapport aux images statiques — même une vidéo très simple aura mécaniquement plus de portée. C'est une astuce peu connue mais redoutablement efficace pour valoriser votre portfolio sans refaire de shooting.</p>",
+      "<p><strong>Outil gratuit :</strong> CapCut, iMovie (sur Mac/iPhone) ou même l'éditeur vidéo intégré à Windows permettent de créer cet effet facilement.</p>",
+
+      "<h2>3. Créer des transitions entre les slides de carrousel</h2>",
+      "<p>Les carrousels (publications à plusieurs slides) sont le format qui génère le plus d'engagement sur Instagram et LinkedIn. En ajoutant de légères transitions animées entre vos slides — un fondu, un glissement, une révélation — vous créez une expérience plus fluide et mémorable.</p>",
+      "<p>L'astuce consiste à créer vos slides dans Canva ou Illustrator, puis à les assembler dans CapCut ou Adobe Express avec des transitions. Le rendu final est une vidéo qui simule un carrousel scrollable.</p>",
+      "<p><strong>Résultat :</strong> Plus de temps passé sur votre publication, plus de sauvegardes, meilleur référencement algorithmique.</p>",
+
+      "<h2>4. Animer son logo pour les stories et les intros</h2>",
+      "<p>Une intro animée de 2-3 secondes avec votre logo avant chaque vidéo ou story professionnelle : c'est le détail qui fait passer une communication de « sympa » à « vraiment pro ». Ça ancre votre identité visuelle, ça renforce la mémorisation de votre marque, et ça prend 30 secondes à insérer une fois que vous avez le fichier.</p>",
+      "<p>C'est exactement ce que je crée pour mes clients dans le cadre de mes projets de motion design : une animation logo courte (2-5 secondes), exportée en MP4 et en format transparent (MOV avec canal alpha) pour s'intégrer sur n'importe quel fond.</p>",
+      "<p><strong>Outil gratuit :</strong> Adobe Express propose des animations de logo basiques. Pour quelque chose de vraiment sur-mesure et impactant, c'est là qu'un graphiste motion designer apporte une vraie valeur ajoutée.</p>",
+
+      "<h2>5. Utiliser les templates d'After Effects gratuits</h2>",
+      "<p>Si vous avez Adobe After Effects (inclus dans Creative Cloud), des milliers de templates gratuits sont disponibles sur des plateformes comme Motion Array, Mixkit ou Envato Elements. Ces templates vous permettent de créer des vidéos animées très professionnelles en remplaçant simplement le texte et les couleurs par les vôtres.</p>",
+      "<p>Pour une TPE, même un seul template bien choisi peut servir pour des dizaines de publications : annonce de nouveauté, promotion, présentation d'un projet, citation de client...</p>",
+      "<p><strong>Sans After Effects ?</strong> Mixkit propose aussi des templates directement utilisables dans CapCut ou Premiere Pro.</p>",
+
+      "<h2>La règle des 3 secondes</h2>",
+      "<p>Sur les réseaux sociaux, vous avez 3 secondes pour capter l'attention avant que quelqu'un scrolle. Le mouvement est le meilleur allié pour gagner ces 3 secondes. Une animation, même minimaliste, déclenche un réflexe visuel que le cerveau ne peut pas ignorer.</p>",
+      "<p>Ce n'est pas un hasard si toutes les grandes marques ont intégré le motion design dans leur communication quotidienne. Ce qui était réservé aux budgets de plusieurs milliers d'euros il y a 5 ans est aujourd'hui accessible à tous — à condition de savoir par où commencer.</p>",
+
+      "<h2>Et si vous voulez aller plus loin ?</h2>",
+      "<p>Ces 5 techniques vous permettent de démarrer avec vos propres moyens. Mais si vous souhaitez une communication vraiment différenciante — une animation logo sur-mesure, des templates de stories cohérents avec votre identité visuelle, ou une vidéo de présentation animée — c'est exactement ce que je propose chez Herpin Creative Studio.</p>",
+      "<p>Chaque projet motion design est créé sur-mesure, dans le respect de votre charte graphique, et livré dans tous les formats dont vous avez besoin. <a href=\"/contact\">Contactez-moi</a> pour en discuter.</p>",
+    ],
+  },
+  {
     slug: "combien-coute-identite-visuelle-entreprise",
     title: "Combien coûte une identité visuelle complète pour une entreprise ?",
     excerpt:

@@ -11,6 +11,54 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "test-generateurs-logo-ia-looka-wix-brandmark",
+    title: "J'ai testé 3 générateurs de logos IA — voici ce qui se passe vraiment",
+    excerpt:
+      "Looka, Wix Logo Maker, Brandmark... Ces outils promettent un logo pro en 5 minutes. J'ai tout testé pour vous, en tant que graphiste professionnelle. Le verdict est sans appel.",
+    date: "11 mars 2026",
+    category: "IA & Design",
+    categoryColor: "from-cyan-500 to-blue-500",
+    readingTime: 8,
+    content: [
+      "<h2>Pourquoi j'ai fait ce test</h2>",
+      "<p>En tant que graphiste freelance, on me pose souvent la même question : « Pourquoi te payer toi, alors qu'il y a des outils IA qui font des logos gratuits ? » Honnêtement, c'est une question légitime. Ces outils existent, ils sont accessibles, et leur marketing est agressif. Alors plutôt que de répondre théoriquement, j'ai décidé de les tester moi-même, avec un vrai projet fictif : une boulangerie artisanale appelée « Le Four d'Antan ».</p>",
+      "<p>Voici ce qui s'est vraiment passé — sans langue de bois.</p>",
+
+      "<h2>Générateur n°1 — Looka</h2>",
+      "<p><strong>Le principe :</strong> Looka est probablement le plus connu. Il vous demande votre nom d'entreprise, votre secteur, vos couleurs préférées et quelques logos que vous aimez. L'IA génère ensuite des dizaines de propositions.</p>",
+      "<p><strong>Ce que j'ai obtenu :</strong> En 3 minutes, j'avais effectivement des dizaines de logos. Certains étaient visuellement corrects — de loin. En y regardant de plus près, tous utilisaient les mêmes icônes de bibliothèque (un épi de blé, une silhouette de boulangerie) qu'on retrouve sur des milliers d'autres logos. Aucune des propositions ne reflétait quoi que ce soit de particulier sur « Le Four d'Antan ».</p>",
+      "<p><strong>Le prix :</strong> Le logo de base est gratuit mais en basse résolution. Pour obtenir les fichiers vectoriels (indispensables pour imprimer), il faut payer entre 65 et 80€. Sans les fichiers vectoriels, votre logo pixélise dès qu'on l'agrandit.</p>",
+      "<p><strong>Le vrai problème :</strong> J'ai cherché les CGU. Looka utilise des éléments de bibliothèques sous licence — ce qui signifie que votre logo n'est pas unique. D'autres entreprises peuvent avoir le même icône, voire un logo très similaire.</p>",
+
+      "<h2>Générateur n°2 — Wix Logo Maker</h2>",
+      "<p><strong>Le principe :</strong> Même fonctionnement qu'un quiz rapide, puis génération automatique. L'interface est plus simple, ciblée pour les non-designers.</p>",
+      "<p><strong>Ce que j'ai obtenu :</strong> Les résultats étaient encore plus génériques. Les logos produits ressemblaient à ceux qu'on voit dans tous les kits graphiques vendus sur Envato pour 15€. Pas de réelle personnalisation, juste des combinaisons automatiques de formes + texte.</p>",
+      "<p><strong>Le vrai problème :</strong> Wix pousse évidemment vers son écosystème. Le logo est pensé pour fonctionner sur un site Wix, pas pour exister de manière indépendante dans votre communication globale. Si vous partez un jour de Wix, vous recommencez tout.</p>",
+
+      "<h2>Générateur n°3 — Brandmark.io</h2>",
+      "<p><strong>Le principe :</strong> Brandmark est plus sophistiqué techniquement. Il utilise l'IA pour générer des combinaisons typographiques et iconographiques plus variées.</p>",
+      "<p><strong>Ce que j'ai obtenu :</strong> C'est le plus impressionnant des trois sur le plan esthétique. Certaines propositions étaient réellement jolies. Mais « joli » ne veut pas dire « stratégique ». Aucun des logos générés ne racontait l'histoire de la boulangerie, ne reflétait son positionnement artisanal, ni ne se différenciait vraiment de la concurrence.</p>",
+      "<p><strong>Le prix :</strong> À partir de 25$ pour un accès basique, jusqu'à 65$ pour tous les fichiers. Le problème des droits est identique aux autres — des éléments sous licence non-exclusive.</p>",
+
+      "<h2>Ce que ces outils ne peuvent pas faire</h2>",
+      "<p>Après avoir passé une journée à tester ces trois plateformes, voici ce que j'ai confirmé :</p>",
+      "<p><strong>Ils ne comprennent pas votre positionnement.</strong> Un logo, c'est d'abord une stratégie. Qui êtes-vous ? À qui vous adressez-vous ? Qu'est-ce qui vous distingue ? Ces questions nécessitent une vraie conversation, pas un quiz à choix multiples.</p>",
+      "<p><strong>Ils ne garantissent pas l'unicité.</strong> Vos éléments graphiques sont tirés de bibliothèques partagées. Votre concurrent peut avoir un logo très similaire, voire identique.</p>",
+      "<p><strong>Ils ne livrent pas de fichiers propres.</strong> Sans vectoriel (.AI, .SVG, .EPS), votre logo ne peut pas être utilisé pour de l'impression professionnelle de qualité.</p>",
+      "<p><strong>Ils ne créent pas d'identité visuelle.</strong> Un logo sorti d'un générateur, c'est juste un logo. Pas de palette de couleurs documentée, pas de règles typographiques, pas de charte d'utilisation. Résultat : une communication incohérente dès que vous faites appel à un imprimeur ou un webdesigner.</p>",
+
+      "<h2>Mais alors, pour qui ces outils sont-ils utiles ?</h2>",
+      "<p>Je veux être honnête : ces générateurs ne sont pas inutiles dans tous les cas. Ils peuvent dépanner pour :</p><ul><li>Un projet personnel ou une association sans budget</li><li>Un test de concept avant de valider une idée</li><li>Une activité très temporaire (événement ponctuel, vente de garage...)</li></ul>",
+      "<p>En revanche, si vous lancez une vraie entreprise, que vous cherchez à inspirer confiance à vos clients et à construire une image durable, un générateur IA ne suffit pas.</p>",
+
+      "<h2>Ce que fait un graphiste que l'IA ne fera jamais</h2>",
+      "<p>Un graphiste professionnel ne « fait un logo ». Il écoute, questionne, comprend votre univers, analyse votre concurrence, cherche ce qui vous rend unique — puis traduit tout cela en un langage visuel cohérent et mémorable.</p>",
+      "<p>Chez Herpin Creative Studio, chaque projet commence par un brief créatif approfondi. Je prends le temps de comprendre votre activité, vos valeurs, vos clients. Le logo qui en découle n'est pas une combinaison algorithmique — c'est une décision stratégique, réfléchie, unique.</p>",
+      "<p>Et vous repartez avec tous les fichiers sources, une charte graphique utilisable par n'importe quel prestataire, et un logo que personne d'autre n'aura.</p>",
+      "<p>Vous avez un projet d'identité visuelle ? <a href=\"/contact\">Discutons-en</a>.</p>",
+    ],
+  },
+  {
     slug: "combien-coute-identite-visuelle-entreprise",
     title: "Combien coûte une identité visuelle complète pour une entreprise ?",
     excerpt:

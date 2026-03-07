@@ -1,6 +1,21 @@
 import { blogPosts } from "$lib/data/blog-posts";
 import type { RequestHandler } from "./$types";
 
+const FR_MONTHS: Record<string, string> = {
+  janvier: "January", février: "February", mars: "March",
+  avril: "April", mai: "May", juin: "June",
+  juillet: "July", août: "August", septembre: "September",
+  octobre: "October", novembre: "November", décembre: "December",
+};
+
+function parseFrenchDate(dateStr: string): string {
+  const match = dateStr.match(/(\d+)\s+(\w+)\s+(\d+)/);
+  if (!match) return new Date().toUTCString();
+  const [, day, monthFr, year] = match;
+  const monthEn = FR_MONTHS[monthFr.toLowerCase()] ?? monthFr;
+  return new Date(`${monthEn} ${day}, ${year}`).toUTCString();
+}
+
 export const GET: RequestHandler = () => {
   const site = "https://herpin-creative-studio.fr";
 
@@ -13,7 +28,7 @@ export const GET: RequestHandler = () => {
       <guid isPermaLink="true">${site}/blog/${post.slug}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
       <category>${post.category}</category>
-      <pubDate>${new Date(post.date.replace(/(\d+) (\w+) (\d+)/, "$1 $2 $3")).toUTCString()}</pubDate>
+      <pubDate>${parseFrenchDate(post.date)}</pubDate>
     </item>`
     )
     .join("");

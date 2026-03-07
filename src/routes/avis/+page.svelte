@@ -1,6 +1,14 @@
 <script lang="ts">
   const testimonials = [
     {
+      name: "Gabriel Savini",
+      role: "Potier artisan — Région caennaise",
+      text: "Lola a vraiment pris le temps de comprendre mon métier, ma façon de travailler, ce qui fait l'essence de la poterie. Elle n'a pas cherché à imposer une direction — elle a écouté, posé les bonnes questions, et a su traduire visuellement ce que j'avais du mal à formuler moi-même. Le résultat colle parfaitement à mon activité. Je suis ravi de cette collaboration et je la recommande à tous les artisans qui cherchent quelqu'un qui s'investit vraiment dans votre projet.",
+      stars: 5,
+      service: "Identité visuelle artisanale",
+      gradient: "from-amber-600 to-orange-500",
+    },
+    {
       name: "Sophie M.",
       role: "Fondatrice, La Maison des Fleurs — Caen",
       text: "Lola a su capter l'essence de ma boutique dès notre premier échange. Le logo qu'elle a créé reflète exactement l'univers que je voulais transmettre : élégant, naturel, mémorable. Mes clientes me complimentent dessus régulièrement. Je recommande sans hésitation.",

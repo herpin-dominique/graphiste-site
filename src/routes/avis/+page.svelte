@@ -10,51 +10,19 @@
     },
     {
       name: "Sophie M.",
-      role: "Fondatrice, La Maison des Fleurs — Caen",
-      text: "Lola a su capter l'essence de ma boutique dès notre premier échange. Le logo qu'elle a créé reflète exactement l'univers que je voulais transmettre : élégant, naturel, mémorable. Mes clientes me complimentent dessus régulièrement. Je recommande sans hésitation.",
+      role: "Fondatrice d'une boutique — Normandie",
+      text: "Lola a su capter l'essence de ma boutique dès notre premier échange. Le logo qu'elle a créé reflète exactement l'univers que je voulais transmettre. Mes clientes me complimentent dessus régulièrement. Je recommande sans hésitation.",
       stars: 5,
       service: "Logo & Charte graphique",
       gradient: "from-pink-500 to-violet-500",
     },
     {
       name: "Thomas R.",
-      role: "Gérant, Atelier Menuiserie Renault — Normandie",
-      text: "J'avais un logo vieillot que j'osais à peine mettre sur mes devis. Lola a tout repris avec une vraie démarche professionnelle : elle m'a posé les bonnes questions, proposé plusieurs directions créatives, et le résultat est bluffant. Mon entreprise a enfin une image à la hauteur de mon travail.",
+      role: "Artisan indépendant — Calvados",
+      text: "J'avais un logo que j'osais à peine mettre sur mes devis. Lola a tout repris avec une vraie démarche professionnelle : elle m'a posé les bonnes questions, proposé plusieurs pistes, et le résultat est bluffant. Mon activité a enfin une image à la hauteur de mon travail.",
       stars: 5,
       service: "Refonte identité visuelle",
-      gradient: "from-amber-500 to-orange-500",
-    },
-    {
-      name: "Camille D.",
-      role: "Coach de vie certifiée — Paris",
-      text: "Travailler avec Lola a été une évidence. Elle a pris le temps de comprendre ce que je voulais transmettre avant même de commencer à créer. Les animations motion design qu'elle a réalisées pour mes réseaux sociaux ont complètement transformé ma présence en ligne. Professionnelle, réactive et vraiment créative.",
-      stars: 5,
-      service: "Motion design & Réseaux sociaux",
-      gradient: "from-cyan-500 to-violet-500",
-    },
-    {
-      name: "Marc & Julie L.",
-      role: "Co-fondateurs, Brasserie L'Étang — Calvados",
-      text: "Nous avions besoin d'une identité visuelle complète pour le lancement de notre brasserie artisanale. Lola nous a livré un travail remarquable : logo, étiquettes, menu, carte de visite — tout est cohérent et raconte notre histoire. Le budget était respecté, les délais aussi. Exactement ce qu'on espérait.",
-      stars: 5,
-      service: "Identité complète & Supports print",
-      gradient: "from-emerald-500 to-teal-500",
-    },
-    {
-      name: "Aurélie F.",
-      role: "Architecte d'intérieur indépendante — Rouen",
-      text: "J'avais du mal à trouver un graphiste qui comprenne l'univers du design d'intérieur. Avec Lola, le courant est passé immédiatement. Elle a créé une identité visuelle épurée et sophistiquée qui me ressemble vraiment. Mes prospects me disent souvent que mon site et mes supports inspirent confiance — c'est exactement ce que je voulais.",
-      stars: 5,
-      service: "Logo, Charte & Site web",
       gradient: "from-violet-500 to-blue-500",
-    },
-    {
-      name: "Kevin B.",
-      role: "Personal trainer — Caen",
-      text: "Super collaboration ! Lola a conçu mon logo et mes visuels Instagram en tenant compte de mon univers sportif et de ma cible. Les animations pour mes stories sont vraiment top — j'ai gagné des abonnés depuis que je les utilise. Tarifs transparents, livraison dans les délais. Je reviens pour la suite !",
-      stars: 5,
-      service: "Identité visuelle & Motion design",
-      gradient: "from-pink-500 to-orange-500",
     },
   ];
 </script>
@@ -84,7 +52,7 @@
         {/each}
       </div>
       <span class="text-white font-bold text-xl">5/5</span>
-      <span class="text-violet-400 text-sm">· {testimonials.length} avis</span>
+      <span class="text-violet-400 text-sm">· {testimonials.length} premiers avis</span>
     </div>
   </div>
 </section>

@@ -11,6 +11,37 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "combien-coute-identite-visuelle-entreprise",
+    title: "Combien coûte une identité visuelle complète pour une entreprise ?",
+    excerpt:
+      "Logo, charte graphique, supports de communication... Le budget pour une identité visuelle professionnelle varie énormément. Voici un guide honnête des tarifs pratiqués en 2026.",
+    date: "7 mars 2026",
+    category: "Tarifs & Budget",
+    categoryColor: "from-emerald-500 to-teal-500",
+    readingTime: 7,
+    content: [
+      "<h2>Pourquoi l'identité visuelle est un investissement, pas une dépense</h2>",
+      "<p>Quand on lance une entreprise ou qu'on rebrande une activité existante, la question du budget pour l'identité visuelle revient systématiquement. Et pour cause : les tarifs pratiqués sur le marché vont du simple au quintuple selon le prestataire. Pour y voir clair, voici un tour d'horizon honnête des différentes options et de ce qu'elles impliquent vraiment.</p>",
+      "<h2>Les éléments d'une identité visuelle complète</h2>",
+      "<p>Avant de parler chiffres, clarifions ce qu'on entend par « identité visuelle complète » :</p><ul><li><strong>Le logo</strong> — votre signature visuelle principale</li><li><strong>La palette de couleurs</strong> — les teintes qui vous représentent</li><li><strong>La typographie</strong> — les polices utilisées dans vos communications</li><li><strong>La charte graphique</strong> — le document de référence qui codifie tout</li><li><strong>Les déclinaisons</strong> — carte de visite, en-tête mail, profils réseaux sociaux</li></ul>",
+      "<h2>Option 1 : Les outils en ligne (50–150 €/an)</h2>",
+      "<p>Des outils comme Canva, Adobe Express ou Looka permettent de créer un logo en quelques minutes. Le coût est minimal, mais les résultats le sont aussi. Ces solutions utilisent des templates partagés par des milliers d'entreprises — votre logo ressemblera forcément à celui d'une autre marque. Sans parler des droits d'utilisation souvent flous et de l'impossibilité d'obtenir des fichiers vectoriels propres pour l'impression.</p><p><strong>Pour qui ?</strong> Pour un projet personnel, un test de concept ou une activité très temporaire.</p>",
+      "<h2>Option 2 : Les plateformes de freelances (200–800 €)</h2>",
+      "<p>Sur des plateformes comme Fiverr ou Malt, on trouve des graphistes proposant des logos à des tarifs très variables. Entre 200 et 400 €, vous aurez souvent un logo correct, mais rarement une démarche stratégique. Le risque : un logo livré sans vraie réflexion sur votre positionnement, ou des droits de propriété non clairement définis.</p><p>Entre 500 et 800 €, certains graphistes sérieux proposent un logo + mini-charte. C'est une option viable si vous prenez le temps de bien choisir votre prestataire et de vérifier son portfolio.</p>",
+      "<h2>Option 3 : Un graphiste freelance spécialisé (800–2 500 €)</h2>",
+      "<p>C'est la zone où le rapport qualité/prix est le meilleur pour une TPE ou PME. Un graphiste freelance expérimenté vous proposera :</p><ul><li>Un brief créatif approfondi pour comprendre votre activité et vos objectifs</li><li>Plusieurs pistes créatives avant d'affiner</li><li>Une charte graphique complète et utilisable</li><li>Tous les fichiers sources (AI, SVG, PNG, PDF)</li><li>Un accompagnement personnalisé tout au long du projet</li></ul><p>Chez Herpin Creative Studio, une identité visuelle complète (logo + charte + déclinaisons essentielles) démarre à partir de 890 €. Un investissement qui vous suit pendant des années.</p>",
+      "<h2>Option 4 : Une agence de communication (3 000–15 000 €+)</h2>",
+      "<p>Les agences facturent davantage car elles mobilisent plusieurs profils (DA, stratège, chef de projet) et ont des frais de structure importants. Ce budget se justifie pour des grands comptes ou des projets de rebranding complexes nécessitant des études de marché approfondies. Pour une TPE ou PME, c'est souvent surdimensionné.</p>",
+      "<h2>Ce qui influence le tarif d'un graphiste freelance</h2>",
+      "<p><strong>La complexité du logo</strong> — Un logotype simple (texte stylisé) coûte moins qu'un emblème avec une illustration personnalisée.</p><p><strong>Le nombre de déclinaisons</strong> — Carte de visite, flyer, signalétique, packaging... chaque support demande du temps.</p><p><strong>L'expérience du graphiste</strong> — Un graphiste avec 10 ans de portfolio et des références solides facturera plus qu'un junior, et pour cause.</p><p><strong>La réactivité et le suivi</strong> — Certains forfaits incluent plusieurs allers-retours de corrections, d'autres sont limités.</p>",
+      "<h2>Les questions à poser avant de signer</h2>",
+      "<p>Quel que soit votre prestataire, vérifiez ces points :</p><ul><li>Vais-je recevoir les fichiers sources (AI ou SVG) ?</li><li>Combien de propositions créatives sont incluses ?</li><li>Combien d'allers-retours de corrections sont prévus ?</li><li>Les droits de propriété me sont-ils cédés intégralement ?</li><li>Puis-je voir des exemples similaires à mon secteur dans votre portfolio ?</li></ul>",
+      "<h2>Mon conseil final</h2>",
+      "<p>Ne choisissez pas un graphiste uniquement sur le prix. Choisissez-le sur la qualité de son portfolio, sa capacité à vous comprendre et sa transparence sur le processus. Une identité visuelle réussie vous accompagne pendant des années et impacte directement la perception qu'ont vos clients de votre sérieux. C'est l'une des meilleures décisions que vous pouvez prendre pour votre communication.</p><p>Vous souhaitez un devis personnalisé pour votre projet ? <a href=\"/contact\">Contactez-moi</a>, je vous réponds sous 24h.</p>",
+    ],
+  },
+
+  {
     slug: "comment-choisir-logo-entreprise",
     title: "Comment choisir un logo pour son entreprise",
     excerpt:

@@ -78,7 +78,7 @@
       <div class="relative" data-aos="fade-right">
         <div class="aspect-square max-w-md mx-auto md:max-w-full rounded-3xl overflow-hidden shadow-2xl shadow-violet-900/50">
           <img
-            src="/projets/lola-herpin-creative-studio.png"
+            src="/projets/lolaherpinphotosite.png"
             alt="Lola Herpin — Herpin Creative Studio"
             class="w-full h-full object-cover"
           />

@@ -1,7 +1,7 @@
 <script lang="ts">
   const testimonials = [
     {
-      name: "Gabriel Savini",
+      name: "Gabriel S.",
       role: "Potier artisan — Région caennaise",
       text: "Lola a vraiment pris le temps de comprendre mon métier, ma façon de travailler, ce qui fait l'essence de la poterie. Elle n'a pas cherché à imposer une direction — elle a écouté, posé les bonnes questions, et a su traduire visuellement ce que j'avais du mal à formuler moi-même. Le résultat colle parfaitement à mon activité. Je suis ravi de cette collaboration et je la recommande à tous les artisans qui cherchent quelqu'un qui s'investit vraiment dans votre projet.",
       stars: 5,

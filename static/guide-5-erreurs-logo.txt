@@ -1,0 +1,245 @@
+========================================================
+  5 ERREURS QUI FONT PARAÎTRE UN LOGO AMATEUR
+  (et comment les éviter)
+
+  Par Lola Herpin — Herpin Creative Studio
+  Graphiste freelance · Caen, Normandie
+  herpin-creative-studio.fr
+========================================================
+
+
+INTRODUCTION
+────────────────────────────────────────────────────────
+
+Votre logo est la première chose que voient vos clients.
+En moins de 7 secondes, il donne une impression — positive
+ou négative — sur votre sérieux et votre professionnalisme.
+
+Pourtant, beaucoup d'entrepreneurs font sans le savoir
+des erreurs qui sabotent leur image de marque dès le départ.
+
+Dans ce guide, je vous révèle les 5 erreurs les plus
+courantes que je vois dans mon activité de graphiste
+freelance, et surtout comment les corriger.
+
+Bonne lecture,
+Lola Herpin
+Herpin Creative Studio
+
+
+────────────────────────────────────────────────────────
+ERREUR N°1 — UTILISER TROP DE COULEURS
+────────────────────────────────────────────────────────
+
+LE PROBLÈME
+
+Un logo avec 4, 5 ou 6 couleurs différentes donne
+immédiatement une impression de désordre et d'amateurisme.
+C'est l'une des erreurs les plus fréquentes chez les
+entrepreneurs qui créent leur logo eux-mêmes.
+
+Plus il y a de couleurs, moins le logo est mémorisable
+et moins il fonctionne sur tous les supports.
+
+LA RÈGLE D'OR
+
+Maximum 2 couleurs principales + 1 couleur d'accent.
+Les logos les plus iconiques au monde respectent cette règle :
+Nike (noir), Apple (gris), Coca-Cola (rouge et blanc).
+
+LA SOLUTION
+
+Choisissez une couleur primaire qui reflète vos valeurs,
+une couleur secondaire complémentaire, et restez-en là.
+Si votre logo ne fonctionne pas en noir et blanc,
+c'est qu'il dépend trop de ses couleurs — signe que
+la forme en elle-même n'est pas assez forte.
+
+CONSEIL PRO : Testez toujours votre logo en niveaux de gris
+avant de valider. S'il perd toute lisibilité, retravailler
+la forme avant les couleurs.
+
+
+────────────────────────────────────────────────────────
+ERREUR N°2 — CHOISIR DES POLICES ILLISIBLES OU INADAPTÉES
+────────────────────────────────────────────────────────
+
+LE PROBLÈME
+
+Les polices décoratives, trop stylisées ou trop fines
+sont séduisantes sur écran mais catastrophiques sur
+une carte de visite, un tampon, une enseigne ou un favicon.
+
+Un logo doit rester lisible à 1 cm de hauteur comme
+à 3 mètres de distance.
+
+Les combinaisons de polices hasardeuses (serif + script +
+condensed dans le même logo) donnent une impression
+de manque de cohérence et de professionnalisme.
+
+LA RÈGLE D'OR
+
+Une ou deux polices maximum dans un logo. Privilegiez
+la lisibilité à l'originalité. Une bonne police bien
+utilisée vaut mieux qu'une police fantaisie illisible.
+
+LA SOLUTION
+
+Testez votre logo imprimé en petit format (2 cm de large).
+Si le texte devient illisible ou flou, la police n'est
+pas adaptée à un usage logo.
+
+CONSEIL PRO : Les polices géométriques sans-serif
+(type Futura, Montserrat, Gotham) vieillissent bien
+et fonctionnent sur tous les supports. Un bon choix
+pour une marque qui veut durer.
+
+
+────────────────────────────────────────────────────────
+ERREUR N°3 — NÉGLIGER LES FORMATS DE FICHIERS
+────────────────────────────────────────────────────────
+
+LE PROBLÈME
+
+Beaucoup d'entrepreneurs ont un logo... uniquement en JPEG
+ou PNG basse résolution. C'est une catastrophe dès qu'on
+a besoin de l'utiliser en grand format (enseigne, roll-up,
+impression quadrichromie).
+
+Un JPEG pixélise quand on l'agrandit.
+Un PNG basse résolution devient flou à l'impression.
+
+LA RÈGLE D'OR
+
+Votre logo doit exister en format vectoriel (SVG ou AI).
+Un fichier vectoriel est redimensionnable à l'infini
+sans aucune perte de qualité — du favicon au panneau
+publicitaire 4x3.
+
+LES FICHIERS INDISPENSABLES À DEMANDER À VOTRE GRAPHISTE
+
+· .AI ou .EPS — fichier source modifiable (Illustrator)
+· .SVG — vectoriel pour le web
+· .PDF — vectoriel pour l'impression
+· .PNG fond transparent — pour usage numérique
+· Version couleur + version noir + version blanc
+
+CONSEIL PRO : Si votre graphiste ne peut pas vous fournir
+ces fichiers, c'est un signal d'alarme. Un logo professionnel
+est toujours livré en vectoriel.
+
+
+────────────────────────────────────────────────────────
+ERREUR N°4 — COPIER SES CONCURRENTS (OU LES GRANDES MARQUES)
+────────────────────────────────────────────────────────
+
+LE PROBLÈME
+
+S'inspirer des concurrents pour rassurer ses clients
+est une erreur de raisonnement très courante. En voulant
+ressembler aux autres acteurs du marché, on finit par
+se fondre dans la masse et perdre toute mémorabilité.
+
+De même, vouloir un logo "dans le style d'Apple" ou
+"comme Nike" aboutit à un résultat générique qui manque
+d'authenticité.
+
+LA RÈGLE D'OR
+
+Votre logo doit refléter CE QUI VOUS DISTINGUE,
+pas ce qui vous ressemble à tout le monde.
+
+LA SOLUTION
+
+Avant de penser au visuel, répondez à ces questions :
+· Quelle est ma valeur ajoutée par rapport à mes concurrents ?
+· Qui sont mes clients idéaux et qu'est-ce qui les touche ?
+· Quels adjectifs doivent venir à l'esprit en voyant ma marque ?
+
+Ce sont ces réponses qui doivent guider les choix visuels,
+pas ce que font les autres.
+
+CONSEIL PRO : Un bon graphiste commence toujours par
+un brief créatif approfondi avant de toucher à la souris.
+Si on vous propose un logo sans vous poser de questions,
+méfiez-vous.
+
+
+────────────────────────────────────────────────────────
+ERREUR N°5 — CONFONDRE LOGO ET IDENTITÉ VISUELLE
+────────────────────────────────────────────────────────
+
+LE PROBLÈME
+
+Un logo seul ne suffit pas à construire une image de marque
+cohérente. Beaucoup d'entrepreneurs ont un logo mais
+aucune règle sur comment l'utiliser — résultat : chaque
+support de communication a l'air fait par quelqu'un
+de différent, avec des couleurs différentes, des polices
+différentes, et le logo dans tous les sens.
+
+Cette incohérence visuelle nuit directement à votre
+crédibilité et à la mémorisation de votre marque.
+
+LA RÈGLE D'OR
+
+Un logo est l'élément central d'une identité visuelle,
+pas l'identité visuelle entière. Pour une communication
+cohérente et professionnelle, il faut aussi définir :
+la palette de couleurs, les typographies, les zones
+de protection du logo, les usages autorisés et interdits.
+
+LA SOLUTION : LA CHARTE GRAPHIQUE
+
+La charte graphique est le document qui codifie tout cela.
+C'est le "mode d'emploi" de votre marque, utilisable
+par n'importe qui (imprimeur, webdesigner, community manager)
+pour produire des supports cohérents.
+
+CONSEIL PRO : Même une mini-charte d'une page (couleurs
++ polices + logo dans ses différentes versions) fait
+une énorme différence dans la cohérence de vos communications.
+
+
+────────────────────────────────────────────────────────
+EN RÉSUMÉ
+────────────────────────────────────────────────────────
+
+Les 5 erreurs à éviter :
+
+1. Trop de couleurs (maximum 2 + 1 accent)
+2. Polices illisibles ou inadaptées
+3. Pas de fichiers vectoriels
+4. Copier ses concurrents au lieu de se distinguer
+5. Confondre logo et identité visuelle complète
+
+Un logo professionnel, c'est un investissement
+qui vous accompagne pendant des années.
+Autant le faire bien dès le départ.
+
+
+────────────────────────────────────────────────────────
+VOUS AVEZ UN PROJET D'IDENTITÉ VISUELLE ?
+────────────────────────────────────────────────────────
+
+Je suis Lola Herpin, graphiste freelance basée à Caen
+(Normandie). J'accompagne les TPE, PME et entrepreneurs
+dans la création de leur identité visuelle : logo,
+charte graphique, supports de communication, motion design.
+
+Chaque projet commence par un échange pour comprendre
+votre activité, vos valeurs et vos objectifs.
+Pas de template, pas de copier-coller : uniquement
+du sur-mesure.
+
+Contactez-moi pour discuter de votre projet :
+herpin-creative-studio.fr/contact
+
+Instagram : @herpincreativestudio
+LinkedIn : Lola Herpin Design Graphique
+
+
+© 2026 Herpin Creative Studio — Tous droits réservés
+Ce guide est offert gratuitement. Il ne peut pas être
+revendu ou redistribué sans autorisation écrite.
+========================================================

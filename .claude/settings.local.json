@@ -21,7 +21,11 @@
       "Bash(git push:*)",
       "Bash(ls:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat\\(seo\\): add sitemap.xml for search engine indexing\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git merge:*)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\dherp\\Documents\\graphiste-site\\src\\routes"
     ]
   }
 }

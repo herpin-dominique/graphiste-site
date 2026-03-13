@@ -11,6 +11,48 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "refonte-logo-5-signes-temps-de-changer",
+    title: "Refonte de logo : 5 signes qu'il est temps de changer",
+    excerpt:
+      "Votre logo vous représentait parfaitement à vos débuts — mais est-ce toujours le cas ? Voici 5 signaux concrets qui indiquent qu'une refonte s'impose, et comment bien l'aborder.",
+    date: "25 mars 2026",
+    category: "Identité visuelle",
+    categoryColor: "from-violet-500 to-purple-600",
+    readingTime: 6,
+    content: [
+      "<h2>Votre logo a une date de péremption</h2>",
+      "<p>Un logo n'est pas éternel. Il porte les codes esthétiques de l'époque où il a été créé, reflète une version de votre entreprise qui a peut-être évolué, et communique une image qui peut ne plus correspondre à qui vous êtes aujourd'hui. Pourtant, beaucoup d'entreprises gardent leur logo par habitude, par peur du changement, ou parce qu'elles n'ont pas identifié les signaux d'alerte.</p>",
+      "<p>Voici les 5 signes les plus révélateurs qu'une refonte s'impose.</p>",
+
+      "<h2>Signe n°1 — Votre logo est illisible en petit format</h2>",
+      "<p>Il y a dix ans, votre logo était principalement utilisé sur des cartes de visite et des enseignes. Aujourd'hui, il doit fonctionner sur un favicon de navigateur (16×16 pixels), une photo de profil Instagram (110×110 px), un badge de livraison Amazon. Si votre logo contient trop de détails, une typographie trop fine ou des couleurs qui se confondent, il devient invisible — littéralement — sur ces supports.</p>",
+      "<p><strong>Le test :</strong> Réduisez votre logo à 32×32 pixels. Est-il encore reconnaissable ? Si vous devez plisser les yeux, il faut repenser sa construction.</p>",
+      "<p><strong>Exemple concret :</strong> C'est exactement pour cette raison qu'Instagram a abandonné son logo « appareil photo » ultra-détaillé en 2016 au profit d'une icône épurée et colorée. L'ancien logo devenait illisible en notification mobile — le nouveau fonctionne parfaitement à toutes les tailles.</p>",
+
+      "<h2>Signe n°2 — Votre entreprise a changé, mais pas son logo</h2>",
+      "<p>Vous avez élargi votre offre, changé de cible, repositionné votre marque sur le haut de gamme, ou diversifié votre activité ? Si votre logo a été conçu pour une version antérieure de votre entreprise, il envoie aujourd'hui un message incohérent.</p>",
+      "<p>Exemple classique : un artisan qui s'est spécialisé dans le luxe mais qui conserve un logo aux couleurs criardes et à la typographie générique. Le décalage entre ce que vous vendez et ce que vous projetez crée une friction inconsciente chez vos clients potentiels.</p>",
+
+      "<h2>Signe n°3 — Vous avez honte de montrer vos supports de communication</h2>",
+      "<p>C'est le signal le plus franc. Si vous hésitez avant de remettre votre carte de visite, si vous préférez ne pas mentionner votre site web lors d'un rendez-vous, ou si vous ressentez un malaise quand on vous demande votre email professionnel — c'est que vous n'êtes plus en phase avec votre image.</p>",
+      "<p>Cette honte inconsciente a des conséquences réelles : vous êtes moins proactif dans votre prospection, moins confiant en rendez-vous, moins visible dans votre réseau. Une identité visuelle dans laquelle vous croyez change tout à votre posture commerciale.</p>",
+
+      "<h2>Signe n°4 — Votre logo ressemble à celui de votre concurrent</h2>",
+      "<p>Les tendances graphiques font des cycles. À la fin des années 2000, tout le monde avait un logo avec un effet biseau et un dégradé bleu. Dans les années 2010, les logos plats et minimalistes ont envahi tous les secteurs. Si votre logo a été créé pendant une période de tendance forte, il ressemble probablement à des dizaines d'autres dans votre secteur.</p>",
+      "<p>Un logo qui se confond avec la concurrence est un logo qui ne convertit pas. La différenciation visuelle n'est pas un luxe — c'est une nécessité commerciale.</p>",
+      "<p><strong>Exemple concret :</strong> Burger King a opéré une refonte remarquée en 2021 en revenant à un design rétro des années 70 — précisément pour se distinguer d'une décennie de logos « fast-food modernes » qui se ressemblaient tous. Résultat : une identité immédiatement reconnaissable et une couverture médiatique mondiale.</p>",
+
+      "<h2>Signe n°5 — Votre logo n'existe que dans un seul format</h2>",
+      "<p>Si votre logo ne vous a été livré qu'en JPEG ou en PNG, vous êtes dans une situation fragile. Sans fichier vectoriel (.SVG, .AI, .EPS), vous ne pouvez pas l'imprimer en grand format sans qu'il pixélise, vous ne pouvez pas le décliner proprement sur tous vos supports, et vous dépendez totalement du graphiste original pour toute modification.</p>",
+      "<p>Dans ce cas, la refonte est aussi l'occasion de récupérer une base technique solide : des fichiers sources complets, une charte graphique documentée, et des déclinaisons prêtes à l'emploi pour chaque usage.</p>",
+
+      "<h2>Refonte ≠ tout recommencer à zéro</h2>",
+      "<p>Une refonte de logo ne signifie pas effacer ce que vous avez construit. Les meilleures refontes conservent l'essence de l'identité originale — la reconnaissance que vous avez déjà — tout en la modernisant et en la rendant plus efficace. C'est un exercice d'évolution, pas de révolution.</p>",
+      "<p>Chez Herpin Creative Studio, chaque refonte commence par un audit de votre identité existante : ce qui fonctionne, ce qui bloque, ce que vos clients perçoivent vraiment. Sur cette base, on construit quelque chose de plus fort, plus cohérent, et surtout plus aligné avec ce que vous êtes devenu.</p>",
+      "<p>Vous vous reconnaissez dans un ou plusieurs de ces signes ? <a href=\"/contact\">Parlons-en.</a></p>",
+    ],
+  },
+  {
     slug: "test-generateurs-logo-ia-looka-wix-brandmark",
     title: "J'ai testé 3 générateurs de logos IA — voici ce qui se passe vraiment",
     excerpt:

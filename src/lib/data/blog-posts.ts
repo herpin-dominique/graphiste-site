@@ -11,6 +11,45 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "comment-preparer-brief-creatif-graphiste",
+    title: "Comment préparer un brief créatif pour votre graphiste",
+    excerpt:
+      "Un brief bien préparé, c'est la moitié du travail. Voici les 6 points essentiels à couvrir pour que votre projet graphique démarre sur des bases solides et aboutisse à un résultat qui vous ressemble.",
+    date: "25 mars 2026",
+    category: "Conseils pratiques",
+    categoryColor: "from-orange-500 to-amber-500",
+    readingTime: 5,
+    content: [
+      "<h2>Un bon brief, c'est la moitié du travail</h2>",
+      "<p>Le brief créatif est le document qui permet à votre graphiste de comprendre exactement ce que vous voulez — et surtout pourquoi. Sans brief clair, vous risquez des allers-retours interminables, des propositions qui ratent la cible, et une frustration des deux côtés. Avec un bon brief, le projet démarre sur des bases solides et les résultats vous ressemblent dès le premier jet.</p>",
+
+      "<h2>1. Décrivez votre activité en 3 phrases</h2>",
+      "<p>Pas votre site web, pas votre plaquette commerciale — trois phrases simples qui expliquent ce que vous faites, pour qui, et ce qui vous distingue. Exemple : <em>« Je suis photographe de mariage dans le Calvados. Je m'adresse aux couples qui veulent des photos naturelles et émotionnelles, loin du style posé classique. Ce qui me distingue : je suis discrète le jour J, et je livre des albums dans les 4 semaines. »</em></p>",
+      "<p>Ce type de description donne immédiatement au graphiste une direction créative précise.</p>",
+
+      "<h2>2. Définissez votre cible</h2>",
+      "<p>Qui sont vos clients idéaux ? Âge, profession, style de vie, valeurs. Plus vous êtes précis, plus l'identité visuelle sera juste. Un logo pour une clientèle de 25-35 ans urbains ne ressemble pas à un logo pour des retraités aisés.</p>",
+
+      "<h2>3. Listez 3 adjectifs qui décrivent l'image que vous voulez projeter</h2>",
+      "<p>Élégant ? Accessible ? Dynamique ? Artisanal ? Luxueux ? Humain ? Ces 3 mots serviront de boussole tout au long du projet. Si à n'importe quelle étape une proposition ne correspond pas à ces adjectifs, c'est une indication claire de ce qui ne va pas.</p>",
+
+      "<h2>4. Montrez des exemples qui vous inspirent — et expliquez pourquoi</h2>",
+      "<p>Trouvez 3 à 5 logos, sites ou visuels que vous aimez. Mais ne vous arrêtez pas là : expliquez ce qui vous plaît dans chacun. <em>« J'aime ce logo pour sa sobriété »</em>, <em>« j'aime cette palette pour ses tons chauds »</em>. Ce contexte est infiniment plus utile qu'une image sans explication.</p>",
+      "<p>Faites la même chose avec des exemples que vous n'aimez pas. Savoir ce que vous rejetez est tout aussi précieux.</p>",
+
+      "<h2>5. Précisez les contraintes techniques</h2>",
+      "<p>Sur quels supports votre logo sera-t-il utilisé ? Site web, réseaux sociaux, enseigne, véhicule, packaging, broderie sur vêtement ? Chaque support a ses contraintes. Un logo brodé ne peut pas avoir de dégradés fins. Une enseigne lumineuse nécessite des formes simplifiées. Ces informations influencent directement les choix de conception.</p>",
+
+      "<h2>6. Parlez de votre budget et de votre délai</h2>",
+      "<p>Ce n'est pas une question gênante — c'est une information utile. Un graphiste qui connaît votre budget peut calibrer sa proposition en conséquence et être transparent sur ce qui est réalisable. De même, un délai connu dès le départ permet d'organiser le travail sereinement.</p>",
+
+      "<h2>Ce que ce brief va changer</h2>",
+      "<p>Un brief bien préparé transforme la collaboration. Vous gagnez du temps, vous réduisez les incompréhensions, et vous obtenez un résultat qui correspond vraiment à votre vision. Pour le graphiste, c'est la garantie de pouvoir mettre toute son énergie créative là où elle compte.</p>",
+      "<p>Chez Herpin Creative Studio, chaque projet commence par un échange approfondi pour construire ce brief ensemble. Pas de formulaire générique — une vraie conversation pour comprendre votre univers.</p>",
+      "<p>Vous avez un projet ? <a href=\"/contact\">Parlons-en.</a></p>",
+    ],
+  },
+  {
     slug: "refonte-logo-5-signes-temps-de-changer",
     title: "Refonte de logo : 5 signes qu'il est temps de changer",
     excerpt:

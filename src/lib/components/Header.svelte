@@ -3,14 +3,26 @@
   import { fade, fly } from "svelte/transition";
 
   export let links: { href: string; label: string }[] = [];
+  export let moreLinks: { href: string; label: string }[] = [];
   export let transparent = false;
   export let scrolled = false;
 
   let isOpen = false;
+  let isMoreOpen = false;
 
   function closeMenu() {
     isOpen = false;
   }
+
+  function toggleMore() {
+    isMoreOpen = !isMoreOpen;
+  }
+
+  function closeMore() {
+    isMoreOpen = false;
+  }
+
+  $: isMoreActive = moreLinks.some(l => $page.url.pathname === l.href);
 </script>
 
 <header
@@ -28,15 +40,54 @@
     </a>
 
     <!-- Menu desktop -->
-    <nav class="hidden md:flex items-center gap-4 lg:gap-6">
+    <nav class="hidden md:flex items-center gap-1 lg:gap-2">
       {#each links as link}
         <a
           href={link.href}
-          class="relative px-6 py-3 font-bold uppercase tracking-wider transition-all duration-300 rounded-full {scrolled ? 'text-sm lg:text-base' : 'text-base lg:text-lg xl:text-xl'} {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
+          class="relative px-3 lg:px-4 py-2 font-bold uppercase tracking-wide transition-all duration-300 rounded-full text-xs lg:text-sm xl:text-base whitespace-nowrap {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
         >
           {link.label}
         </a>
       {/each}
+
+      {#if moreLinks.length > 0}
+        <div class="relative">
+          <button
+            on:click={toggleMore}
+            class="relative px-3 lg:px-4 py-2 font-bold uppercase tracking-wide transition-all duration-300 rounded-full flex items-center gap-1 text-xs lg:text-sm xl:text-base whitespace-nowrap {isMoreActive ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-white/10'}"
+          >
+            Plus
+            <svg class="w-4 h-4 transition-transform duration-200 {isMoreOpen ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {#if isMoreOpen}
+            <div
+              class="absolute right-0 top-full mt-2 w-44 bg-violet-950/98 backdrop-blur-lg rounded-2xl shadow-xl border border-violet-800 overflow-hidden z-50"
+              transition:fade={{ duration: 150 }}
+            >
+              {#each moreLinks as link}
+                <a
+                  href={link.href}
+                  on:click={closeMore}
+                  class="block px-5 py-3 font-bold uppercase tracking-wider text-sm transition-all duration-200 {$page.url.pathname === link.href ? 'text-white bg-violet-600' : 'text-violet-100 hover:text-white hover:bg-violet-800/50'}"
+                >
+                  {link.label}
+                </a>
+              {/each}
+            </div>
+
+            <!-- Overlay pour fermer -->
+            <button
+              class="fixed inset-0 z-40"
+              on:click={closeMore}
+              aria-label="Fermer"
+              tabindex="-1"
+            ></button>
+          {/if}
+        </div>
+      {/if}
     </nav>
 
     <!-- Bouton menu mobile -->

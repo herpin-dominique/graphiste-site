@@ -36,6 +36,9 @@
     { href: "/a-propos", label: "À propos" },
     { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
+  ];
+
+  const moreLinks = [
     { href: "/blog", label: "Blog" },
     { href: "/avis", label: "Avis" },
   ];
@@ -54,7 +57,7 @@
 </script>
 
 <!-- Header style magazine -->
-<Header links={navLinks} transparent={!scrolled} {scrolled} />
+<Header links={navLinks} {moreLinks} transparent={!scrolled} {scrolled} />
 
 <!-- Contenu principal -->
 <main class="pt-24 md:pt-32 lg:pt-36">

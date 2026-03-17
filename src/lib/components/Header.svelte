@@ -79,12 +79,11 @@
             </div>
 
             <!-- Overlay pour fermer -->
-            <button
+            <div
               class="fixed inset-0 z-40"
               on:click={closeMore}
-              aria-label="Fermer"
-              tabindex="-1"
-            ></button>
+              role="presentation"
+            ></div>
           {/if}
         </div>
       {/if}

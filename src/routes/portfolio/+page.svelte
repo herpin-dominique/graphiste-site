@@ -191,9 +191,18 @@
             <img
               src={project.photos[0]}
               alt={project.title}
-              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
             />
+            <!-- Overlay hover -->
+            <div class="absolute inset-0 bg-gradient-to-t from-violet-900/90 via-violet-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex flex-col items-center justify-center gap-3">
+              <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/50 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
+              <span class="text-white font-bold text-lg uppercase tracking-wider transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Voir le projet</span>
+            </div>
           {/if}
         </button>
 

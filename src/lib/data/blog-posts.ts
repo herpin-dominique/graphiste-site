@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     title: "Refonte de logo : 5 signes qu'il est temps de changer",
     excerpt:
       "Votre logo vous représentait parfaitement à vos débuts — mais est-ce toujours le cas ? Voici 5 signaux concrets qui indiquent qu'une refonte s'impose, et comment bien l'aborder.",
-    date: "25 mars 2026",
+    date: "18 mars 2026",
     category: "Identité visuelle",
     categoryColor: "from-violet-500 to-purple-600",
     readingTime: 6,

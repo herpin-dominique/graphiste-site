@@ -2,6 +2,9 @@
   import { onMount } from "svelte";
   import AOS from "aos";
   import "aos/dist/aos.css";
+  import { blogPosts } from "$lib/data/blog-posts";
+
+  const recentPosts = blogPosts.slice(0, 3);
 
   onMount(() => {
     AOS.init({ duration: 800, once: true });
@@ -382,6 +385,65 @@
             stroke-width="2"
             d="M17 8l4 4m0 0l-4 4m4-4H3"
           ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Blog -->
+<section class="relative z-0 w-full py-24 lg:py-32 px-6 md:px-8 lg:px-12 xl:px-16 bg-white">
+  <div class="w-full max-w-[1800px] mx-auto">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+        Derniers articles
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-600">
+        Conseils, tendances et inspirations design
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {#each recentPosts as post, i}
+        <a
+          href="/blog/{post.slug}"
+          class="group block bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          data-aos="fade-up"
+          data-aos-delay={i * 100}
+        >
+          <div class="h-3 bg-gradient-to-r {post.categoryColor}"></div>
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-gradient-to-r {post.categoryColor} text-white">
+                {post.category}
+              </span>
+              <span class="text-sm text-gray-400">{post.readingTime} min</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors leading-snug">
+              {post.title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+              {post.excerpt}
+            </p>
+            <div class="mt-6 flex items-center gap-2 text-violet-600 font-semibold text-sm group-hover:gap-3 transition-all">
+              Lire l'article
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      {/each}
+    </div>
+
+    <div class="text-center mt-12" data-aos="fade-up">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-3 px-10 py-5 border-2 border-violet-600 text-violet-600 font-bold text-lg rounded-full hover:bg-violet-600 hover:text-white transition-all duration-300 hover:scale-105"
+      >
+        Voir tous les articles
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </a>
     </div>

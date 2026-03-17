@@ -269,7 +269,7 @@
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <!-- Projet 1 -->
       <div
-        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white"
+        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white animate-float illus-hover"
         data-aos="fade-up"
         data-aos-delay="100"
       >
@@ -296,7 +296,8 @@
 
       <!-- Projet 2 -->
       <div
-        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white"
+        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
+        style="animation: float 4s ease-in-out infinite; animation-delay: 1s;"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -319,7 +320,8 @@
 
       <!-- Projet 3 -->
       <div
-        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white"
+        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
+        style="animation: float 4s ease-in-out infinite; animation-delay: 2s;"
         data-aos="fade-up"
         data-aos-delay="300"
       >
@@ -344,7 +346,8 @@
 
       <!-- Projet 4 -->
       <div
-        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white"
+        class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
+        style="animation: float 4s ease-in-out infinite; animation-delay: 3s;"
         data-aos="fade-up"
         data-aos-delay="400"
       >

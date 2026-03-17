@@ -57,6 +57,36 @@ section {
   padding: 2rem 1rem;
 }
 
+/* 🎨 Animations illustrations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(-6px) rotate(-1deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.illus-hover {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+  cursor: pointer;
+}
+
+.illus-hover:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 20px 40px rgba(127, 0, 255, 0.4));
+}
+
 /* 🌫️ Animation fade-in */
 @keyframes fade-in {
   from {

@@ -114,7 +114,7 @@
       transition:fade={{ duration: 150 }}
     >
       <div class="flex flex-col py-4">
-        {#each links as link, i}
+        {#each [...links, ...moreLinks] as link, i}
           <a
             href={link.href}
             class="px-6 py-3 text-lg font-medium uppercase tracking-wider transition-all duration-300 {$page.url.pathname === link.href ? 'text-violet-300 bg-violet-800/50' : 'text-white/80 hover:text-white hover:bg-violet-800/30'}"

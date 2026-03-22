@@ -170,16 +170,20 @@
 >
   <div class="w-full max-w-[1800px] mx-auto">
     <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <!-- Photo/Illustration -->
+      <!-- Animation Lola -->
       <div class="relative" data-aos="fade-right">
-        <div
-          class="aspect-square rounded-3xl bg-gradient-to-br from-violet-100 to-pink-100 overflow-hidden shadow-2xl"
-        >
-          <img
-            src="/projets/lola-herpin-creative-studio.png"
-            alt="Lola Herpin"
-            class="w-full h-full object-cover"
-          />
+        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-violet-100 to-pink-100 relative">
+          <video
+            src="/lola-animation-graphiste.MP4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-full h-full object-cover scale-150"
+            style="object-position: center 35%;"
+          ></video>
+          <!-- Cache le filigrane bas droite -->
+          <div class="absolute bottom-0 right-0 w-24 h-12 bg-gradient-to-tl from-pink-100 to-transparent"></div>
         </div>
         <div
           class="absolute -bottom-6 -right-6 w-32 h-32 lg:w-40 lg:h-40 bg-gradient-to-br from-violet-500 to-pink-500 rounded-2xl -z-10"

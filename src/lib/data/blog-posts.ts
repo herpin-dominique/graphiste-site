@@ -11,6 +11,50 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "visuels-instagram-ne-convertissent-pas",
+    title: "Pourquoi vos visuels Instagram ne convertissent pas (et comment y remédier)",
+    excerpt: "Vous postez régulièrement sur Instagram, mais aucun client n'arrive via ce canal ? Ce n'est pas un problème de fréquence — c'est un problème de communication visuelle. Voici les 5 erreurs les plus courantes et comment les corriger.",
+    date: "1 avril 2026",
+    category: "Réseaux sociaux",
+    categoryColor: "from-pink-500 to-rose-500",
+    readingTime: 6,
+    content: [
+      "<h2>Vous postez. Personne ne réagit. Pourquoi ?</h2>",
+      "<p>Vous passez du temps à créer vos visuels Instagram. Vous postez régulièrement. Et pourtant — peu de likes, peu de commentaires, et surtout : aucun client qui arrive via ce canal. Ce n'est pas un problème de fréquence de publication. C'est un problème de communication visuelle.</p>",
+
+      "<h2>Erreur n°1 — Vos visuels ne ressemblent pas à votre marque</h2>",
+      "<p>Le fil Instagram d'une marque, c'est comme une vitrine de boutique. Si chaque post utilise des couleurs différentes, des typographies qui changent, des styles qui varient — le cerveau du visiteur ne reconnaît pas votre identité. Il passe.</p>",
+      "<p>La cohérence visuelle crée la reconnaissance. La reconnaissance crée la confiance. La confiance crée l'achat. Sans charte graphique définie, vous construisez sur du sable.</p>",
+
+      "<h2>Erreur n°2 — Vous parlez de vous, pas à votre client</h2>",
+      "<p>« Nouveau produit disponible ! » « On est fiers d'annoncer... » Ces formulations sont centrées sur vous. Votre client potentiel, lui, se pose une seule question en scrollant : <em>« Est-ce que ça me concerne ? »</em></p>",
+      "<p>Un visuel qui convertit parle au client de son problème, pas de votre produit. « Vous cherchez un logo qui inspire confiance ? » convertit mieux que « Nous créons des logos professionnels. »</p>",
+
+      "<h2>Erreur n°3 — Votre visuel est surchargé</h2>",
+      "<p>Trop de texte, trop d'éléments, trop de couleurs — l'œil ne sait pas où aller. En 1,7 seconde (c'est le temps moyen passé sur un post avant de scroller), votre message doit être compris instantanément.</p>",
+      "<p><strong>La règle : un visuel = un message.</strong> Pas deux, pas trois. Un.</p>",
+
+      "<h2>Erreur n°4 — Vous n'avez pas de call-to-action clair</h2>",
+      "<p>Un beau visuel sans direction, c'est un beau visuel inutile. Que voulez-vous que votre audience fasse ? Cliquer sur le lien en bio ? Vous envoyer un message ? Dites-le explicitement, visuellement. Une flèche, un bouton stylisé, une phrase d'action — guidez l'œil vers ce que vous voulez qu'il fasse.</p>",
+
+      "<h2>Erreur n°5 — Vos visuels ne sont pas adaptés au format</h2>",
+      "<p>Un visuel conçu pour un post carré mis en story — coupé, mal cadré, illisible. Instagram est une plateforme mobile-first : si vos visuels ne sont pas pensés pour un écran de 6 pouces, ils ne fonctionneront pas.</p>",
+      "<p>Format story : 1080×1920 px. Format post : 1080×1080 px. Format reels cover : 1080×1350 px. Chaque format a ses contraintes — respectez-les.</p>",
+
+      "<h2>Comment y remédier concrètement</h2>",
+      "<p><strong>Étape 1 :</strong> Définissez 3 couleurs max et 2 typographies pour votre compte. Appliquez-les systématiquement.</p>",
+      "<p><strong>Étape 2 :</strong> Avant de créer un visuel, répondez à : <em>« Quel problème de mon client est-ce que je résous avec ce post ? »</em></p>",
+      "<p><strong>Étape 3 :</strong> Réduisez le texte de moitié. Puis encore de moitié.</p>",
+      "<p><strong>Étape 4 :</strong> Ajoutez toujours une direction claire — visuellement, pas seulement en légende.</p>",
+      "<p><strong>Étape 5 :</strong> Créez des templates pour chaque format. Vous gagnerez du temps et en cohérence.</p>",
+
+      "<h2>Et si le problème, c'est la base ?</h2>",
+      "<p>Ces ajustements améliorent les performances. Mais si votre identité visuelle n'est pas solide au départ — pas de palette définie, pas de typographie cohérente, pas de logo déclinable — vous colmatez des brèches au lieu de construire.</p>",
+      "<p>Chez Herpin Creative Studio, je commence toujours par là : une identité visuelle claire, cohérente, pensée pour tous vos supports — y compris Instagram. Parce qu'un beau feed commence avant le premier post.</p>",
+      "<p>Vous voulez qu'on regarde ensemble votre communication visuelle ? <a href=\"/contact\">Parlons-en.</a></p>",
+    ],
+  },
+  {
     slug: "comment-preparer-brief-creatif-graphiste",
     title: "Comment préparer un brief créatif pour votre graphiste",
     excerpt:

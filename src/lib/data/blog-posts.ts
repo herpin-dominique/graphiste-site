@@ -29,6 +29,7 @@ export const blogPosts: BlogPost[] = [
       "<h2>9h04 — Les premières propositions</h2>",
       "<p>Canva me génère des dizaines de logos en quelques secondes. Et là... ils ne sont pas laids. Certains sont même techniquement corrects. Mais aucun ne me ressemble. Aucun ne raconte mon histoire, mes valeurs, mon univers créatif.</p>",
       "<p>C'est un peu comme essayer des vêtements qui sont à votre taille mais qui ne sont pas votre style. Tout va, rien ne vous va. Il y a un « H » stylisé qui ressemble au logo d'un hôtel, une palette de peinture clipart vue sur mille autres comptes, des dégradés génériques...</p>",
+      "<div style='text-align:center;margin:32px 0'><img src='/blog/logo-herpin-rate.svg' alt='Exemple de logo générique Canva' style='width:260px;border:1px solid #e5e7eb;border-radius:12px;padding:16px'/><p style='font-size:13px;color:#9ca3af;margin-top:8px;font-style:italic'>Résultat réel. Aucun commentaire.</p></div>",
       "<p><strong>Techniquement correct. Totalement générique.</strong></p>",
 
       "<h2>9h17 — Le marchandage</h2>",

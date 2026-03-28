@@ -11,6 +11,43 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "jai-laisse-canva-choisir-mon-logo",
+    title: "J'ai laissé Canva choisir mon logo — voici ce qui s'est passé",
+    excerpt: "Je suis graphiste. Et par curiosité professionnelle, j'ai fait ce que je déconseille à tous mes clients : j'ai laissé l'IA de Canva créer mon logo. Ce qui suit est un témoignage véridique.",
+    date: "28 mars 2026",
+    category: "Humour & Design",
+    categoryColor: "from-pink-500 to-violet-500",
+    readingTime: 4,
+    content: [
+      "<h2>Contexte : une expérience (légèrement) masochiste</h2>",
+      "<p>Je suis graphiste. Je viens tout juste de lancer mon studio — et dès les premières semaines, des clients m'ont posé la question fatidique : <em>« Pourquoi te payer toi, alors que Canva existe ? »</em> J'ai décidé de tester par moi-même.</p>",
+      "<p>Ce qui suit est un témoignage véridique. Les émotions ont été à peine exagérées.</p>",
+
+      "<h2>9h00 — L'enthousiasme du débutant</h2>",
+      "<p>Je crée un compte. L'interface est jolie, je l'admets. Canva me demande mon secteur d'activité : je tape « graphiste ». Il me propose « Art & Design ». Pourquoi pas. Ensuite : mes couleurs préférées. Je sélectionne violet et rose. Canva hoche la tête (métaphoriquement). On est partis.</p>",
+
+      "<h2>9h04 — Les premières propositions</h2>",
+      "<p>Canva me génère des dizaines de logos en quelques secondes. Et là... ils ne sont pas laids. Certains sont même techniquement corrects. Mais aucun ne me ressemble. Aucun ne raconte mon histoire, mes valeurs, mon univers créatif.</p>",
+      "<p>C'est un peu comme essayer des vêtements qui sont à votre taille mais qui ne sont pas votre style. Tout va, rien ne vous va. Il y a un « H » stylisé qui ressemble au logo d'un hôtel, une palette de peinture clipart vue sur mille autres comptes, des dégradés génériques...</p>",
+      "<p><strong>Techniquement correct. Totalement générique.</strong></p>",
+
+      "<h2>9h17 — Le marchandage</h2>",
+      "<p>Je modifie. Je change la typographie. Je teste « moderne ». Je teste « élégant ». Je teste « minimaliste ». À chaque fois, des variations du même univers — propre, mais interchangeable. N'importe quelle autre graphiste aurait pu avoir ces logos. N'importe quel autre studio dans n'importe quelle autre ville.</p>",
+
+      "<h2>9h34 — La colère (intérieure)</h2>",
+      "<p>Je veux exporter en SVG pour voir le fichier source. Canva m'informe que c'est une fonctionnalité Pro. Je veux supprimer un élément de fond. Fonctionnalité Pro. Je veux respirer normalement. Probablement aussi fonctionnalité Pro.</p>",
+
+      "<h2>9h51 — La révélation</h2>",
+      "<p>Je prends du recul. J'ai passé 51 minutes à essayer de faire dire à un algorithme ce que je voulais, alors qu'en 51 minutes j'aurais pu le créer moi-même. Avec mes propres mains. En réfléchissant à ce qui me représente vraiment.</p>",
+      "<p>C'est là que j'ai compris ce que vivent mes clients quand ils arrivent vers moi après des heures sur Canva — pas avec un logo moche, mais avec un logo <em>vide</em>. Un logo qui pourrait appartenir à n'importe qui.</p>",
+
+      "<h2>Ce que j'ai retenu</h2>",
+      "<p>Canva est un outil formidable pour beaucoup de choses. Créer une identité visuelle unique qui vous ressemble n'en fait pas partie. Un logo, ça ne se génère pas — ça se construit à partir d'une vraie conversation sur qui vous êtes, ce que vous vendez, et à qui.</p>",
+      "<p>Et non, je n'ai pas gardé le logo au « H » d'hôtel.</p>",
+      "<p><em>Vous avez vous aussi survécu à une session Canva ? Racontez-moi en commentaire. Et si vous voulez qu'on crée quelque chose qui vous ressemble vraiment — <a href=\"/contact\">c'est par ici.</a></em></p>",
+    ],
+  },
+  {
     slug: "visuels-instagram-ne-convertissent-pas",
     title: "Pourquoi vos visuels Instagram ne convertissent pas (et comment y remédier)",
     excerpt: "Vous postez régulièrement sur Instagram, mais aucun client n'arrive via ce canal ? Ce n'est pas un problème de fréquence — c'est un problème de communication visuelle. Voici les 5 erreurs les plus courantes et comment les corriger.",

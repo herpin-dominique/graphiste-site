@@ -673,4 +673,30 @@
     Chaque projet est unique. Contactez-moi pour un devis personnalisé adapté à
     vos besoins spécifiques. Exemple : un flyer seul simple ou recto-verso
   </p>
+
+  <!-- FAQ -->
+  <div class="w-full max-w-[900px] mx-auto mt-24 lg:mt-32" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">Questions fréquentes</h2>
+
+    <div class="space-y-4">
+      {#each [
+        { q: "Combien d'allers-retours sont inclus ?", r: "Selon le forfait : 2 allers-retours pour l'Essentiel, 3 pour le Studio, 4-5 pour le Premium. Chaque aller-retour correspond à une série de modifications sur une proposition. Au-delà, des ajustements mineurs restent possibles selon le projet." },
+        { q: "Quels fichiers je reçois à la livraison ?", r: "Tous les fichiers sources (AI ou Figma), ainsi que des exports PNG, SVG et PDF prêts à l'emploi pour l'impression et le web. Vous pouvez les utiliser librement et les confier à n'importe quel autre prestataire." },
+        { q: "Quel est le délai de réalisation ?", r: "Comptez 1 à 2 semaines pour un logo seul, 3 à 4 semaines pour une identité visuelle complète. Le délai dépend de la complexité du projet et de la réactivité sur les retours." },
+        { q: "Je n'ai pas de brief, est-ce un problème ?", r: "Pas du tout. On commence toujours par un échange pour construire le brief ensemble. Je vous guide avec des questions simples pour cerner votre univers, vos valeurs et vos attentes." },
+        { q: "Puis-je modifier mon logo moi-même après livraison ?", r: "Oui, vous recevez les fichiers sources. Je recommande cependant de me contacter pour toute modification importante afin de préserver la cohérence de votre identité visuelle." },
+        { q: "Travaillez-vous avec des clients hors Caen ?", r: "Tout à fait. Je travaille à distance avec des clients partout en France. Les échanges se font par email, visio ou téléphone selon vos préférences." },
+      ] as item, i}
+        <details class="group bg-violet-900/40 border border-violet-700/50 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay={i * 50}>
+          <summary class="flex items-center justify-between p-6 lg:p-8 cursor-pointer text-white font-semibold text-lg lg:text-xl list-none hover:bg-violet-800/30 transition-colors">
+            {item.q}
+            <svg class="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="px-6 pb-6 lg:px-8 lg:pb-8 text-violet-200 text-base lg:text-lg leading-relaxed">{item.r}</p>
+        </details>
+      {/each}
+    </div>
+  </div>
 </main>

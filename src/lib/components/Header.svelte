@@ -39,6 +39,15 @@
       />
     </a>
 
+    <!-- Badge disponibilité -->
+    <a href="/contact" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/40 hover:bg-green-500/30 transition-all duration-300 mr-2">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+      </span>
+      <span class="text-green-300 text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Disponible</span>
+    </a>
+
     <!-- Menu desktop -->
     <nav class="hidden md:flex items-center gap-1 lg:gap-2">
       {#each links as link}

@@ -356,11 +356,14 @@
         data-aos-delay="400"
       >
         <div class="aspect-[4/5] overflow-hidden">
-          <img
-            src="/projets/Manuel velo.png"
-            alt="Motion design"
+          <video
+            src="/Alvelo/Motion - manuel d'utilisation alvelo.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
+          ></video>
         </div>
         <div
           class="absolute inset-0 bg-gradient-to-t from-violet-900/90 via-violet-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"

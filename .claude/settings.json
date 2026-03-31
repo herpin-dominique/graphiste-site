@@ -3,7 +3,24 @@
     "allow": [
       "Bash(while read:*)",
       "Bash(do echo:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "WebSearch",
+      "WebFetch(domain:www.mathieuclauss.com)",
+      "WebFetch(domain:www.jordan-graphic.com)",
+      "WebFetch(domain:tiphaine-boilet.com)",
+      "WebFetch(domain:junto.fr)",
+      "WebFetch(domain:muz.li)",
+      "WebFetch(domain:graphics-illustrations.com)",
+      "WebFetch(domain:www.moonpalace.fr)",
+      "WebFetch(domain:www.yank.fr)",
+      "WebFetch(domain:lesodes.studio)",
+      "WebFetch(domain:www.ultra-book.com)",
+      "WebFetch(domain:carolineprouvost.fr)",
+      "WebFetch(domain:www.juliendugue.com)",
+      "WebFetch(domain:charlotte-bondue.fr)",
+      "WebFetch(domain:www.spark.do)",
+      "WebFetch(domain:7h34.fr)",
+      "WebFetch(domain:tympanus.net)"
     ]
   }
 }

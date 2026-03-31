@@ -279,7 +279,7 @@
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
-            src="/projets/spike_5illustration.png"
+            src="/projets/Emballage parfumé et couleurs vibrantes.png"
             alt="Projet de branding"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />

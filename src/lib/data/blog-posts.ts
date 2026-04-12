@@ -11,6 +11,46 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "graphiste-caen-identite-visuelle-professionnelle",
+    title: "Graphiste à Caen : pourquoi confier son identité visuelle à un professionnel plutôt qu'à Canva",
+    excerpt: "Vous avez lancé votre entreprise avec un logo fait sur Canva. C'était rapide, gratuit, et ça « faisait le job ». Mais maintenant que vous cherchez à attirer de vrais clients, quelque chose coince. Voici pourquoi.",
+    date: "12 avril 2026",
+    category: "Identité visuelle",
+    categoryColor: "from-violet-500 to-purple-600",
+    readingTime: 5,
+    content: [
+      "<p>Vous avez lancé votre entreprise avec un logo fait sur Canva. C'était rapide, gratuit, et ça « faisait le job ». Mais maintenant que vous cherchez à attirer de vrais clients, vous sentez que quelque chose coince. Vos visuels ne ressemblent pas vraiment à ce que vous voulez incarner. Et vous n'êtes pas le seul.</p>",
+
+      "<h2>Canva, c'est bien. Mais ce n'est pas une identité visuelle.</h2>",
+      "<p>Canva est un outil formidable pour créer une publication Instagram en 10 minutes. Mais une identité visuelle, ce n'est pas une publication. C'est la fondation sur laquelle repose toute votre communication.</p>",
+      "<p>Une identité visuelle professionnelle, c'est :</p>",
+      "<ul><li>Un logo déclinable sur tous les supports (carte de visite, réseaux, site, devis, emballage…)</li><li>Une palette de couleurs choisie pour déclencher les bonnes émotions chez vos clients</li><li>Des typographies cohérentes qui renforcent votre positionnement</li><li>Un univers visuel reconnaissable entre mille</li></ul>",
+      "<p>Canva vous donne des templates. Un graphiste vous construit un univers.</p>",
+
+      "<h2>Ce que vous perdez avec un logo générique</h2>",
+      "<p>Quand un prospect visite votre site ou voit votre carte de visite, il se fait une opinion en moins de 3 secondes. Si votre identité visuelle ressemble à celle de 500 autres entreprises, il ne se souvient pas de vous.</p>",
+      "<p>Un logo créé avec un template Canva ou un générateur IA peut être utilisé par n'importe qui d'autre. Vous n'êtes pas propriétaire d'un design unique. Et ça se voit.</p>",
+      "<p>Les clients que vous voulez attirer — ceux qui ont du budget, qui respectent votre travail — font la différence.</p>",
+
+      "<h2>Pourquoi travailler avec un graphiste local à Caen ?</h2>",
+      "<p>Travailler avec un graphiste basé à Caen, c'est plusieurs avantages concrets :</p>",
+      "<p><strong>La proximité.</strong> On peut se retrouver pour parler de votre projet, comprendre votre secteur, visiter votre espace si besoin. Pas de décalage horaire, pas de barrière culturelle.</p>",
+      "<p><strong>La connaissance du tissu local.</strong> Je connais les codes visuels qui fonctionnent en Normandie, les attentes des entrepreneurs de la région. Une identité visuelle pensée pour votre marché, pas pour un marché générique.</p>",
+      "<p><strong>Un interlocuteur unique.</strong> Pas d'agence avec 5 intermédiaires. Vous travaillez directement avec la personne qui dessine. Les échanges sont rapides, les retours sont directs.</p>",
+
+      "<h2>Ce que j'apporte concrètement</h2>",
+      "<p>Chez Herpin Creative Studio, chaque projet commence par un brief approfondi. Je prends le temps de comprendre :</p>",
+      "<ul><li>Votre activité et vos valeurs</li><li>Votre clientèle cible</li><li>Ce que vous voulez inspirer (confiance ? créativité ? sérieux ? modernité ?)</li><li>Vos concurrents et comment vous différencier visuellement</li></ul>",
+      "<p>Ensuite seulement, je crée. Vous recevez des propositions construites pour vous, pas des templates habillés à votre nom. À la livraison, vous obtenez tous vos fichiers sources, prêts à l'emploi dans tous les formats.</p>",
+
+      "<h2>Pour qui c'est fait ?</h2>",
+      "<ul><li>Vous lancez votre activité et vous voulez partir sur de bonnes bases</li><li>Vous avez déjà un logo mais il ne vous ressemble plus (ou ne vous a jamais ressemblé)</li><li>Vous voulez monter en gamme et attirer une clientèle qui vous correspond</li><li>Vous êtes artisan, thérapeute, consultant, commerçant, créateur… basé en Normandie ou ailleurs</li></ul>",
+
+      "<p>Canva restera toujours là pour vos stories du lundi matin. Mais quand il s'agit de construire une image professionnelle durable, vous méritez mieux qu'un template.</p>",
+      "<p><em>Si vous êtes prêt à investir dans une identité visuelle qui vous ressemble vraiment — <a href=\"/contact\">parlons-en, c'est gratuit.</a></em></p>",
+    ],
+  },
+  {
     slug: "jai-laisse-canva-choisir-mon-logo",
     title: "J'ai laissé Canva choisir mon logo — voici ce qui s'est passé",
     excerpt: "Je suis graphiste. Et par curiosité professionnelle, j'ai fait ce que je déconseille à tous mes clients : j'ai laissé l'IA de Canva créer mon logo. Ce qui suit est un témoignage véridique.",

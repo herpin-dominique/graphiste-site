@@ -460,6 +460,26 @@
   </div>
 </section>
 
+<!-- Section Témoignage Gabriel -->
+<section class="w-full py-24 lg:py-32 px-6 md:px-8 lg:px-12 xl:px-16 bg-purple-950">
+  <div class="max-w-[900px] mx-auto text-center" data-aos="fade-up">
+    <p class="text-violet-400 uppercase tracking-widest text-sm font-semibold mb-8">Ce que disent mes clients</p>
+    <div class="relative">
+      <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-8xl text-violet-500/30 font-serif leading-none select-none">"</span>
+      <blockquote class="text-2xl md:text-3xl lg:text-4xl text-white font-light leading-relaxed italic mb-10">
+        Lola a su capturer l'essence de mon travail. Mon logo et ma charte graphique me représentent parfaitement — je suis ravi du résultat.
+      </blockquote>
+    </div>
+    <div class="flex items-center justify-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white font-bold text-lg">G</div>
+      <div class="text-left">
+        <p class="text-white font-semibold">Gabriel S.</p>
+        <p class="text-violet-400 text-sm">Céramiste — KOP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Section CTA -->
 <section
   class="relative z-0 w-full py-32 lg:py-40 px-6 md:px-8 lg:px-12 xl:px-16 bg-gradient-to-br from-violet-600 via-purple-600 to-pink-600 overflow-hidden"

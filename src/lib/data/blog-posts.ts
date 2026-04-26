@@ -11,6 +11,49 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "identite-visuelle-ceramiste-gabriel-normandie",
+    title: "De salarié à son compte : comment Gabriel le céramiste a construit son identité visuelle",
+    excerpt: "Gabriel est céramiste. Il se lance à son compte et avait besoin d'une image qui le représente dès le premier jour. Voici comment on a construit ensemble l'identité visuelle de KOP.",
+    date: "26 avril 2026",
+    category: "Cas client",
+    categoryColor: "from-orange-400 to-amber-500",
+    readingTime: 5,
+    content: [
+      "<p>Gabriel est céramiste. Il travaille l'argile, façonne des pièces uniques au tour, connaît son métier sur le bout des doigts. Mais jusqu'ici, il exerçait comme salarié dans un atelier.</p>",
+      "<p>Cette année, il passe le cap. Il lance sa propre activité.</p>",
+      "<p>Et pour ça, il lui fallait une image. Pas juste un logo — une vraie identité visuelle qui marque le début de quelque chose.</p>",
+
+      "<h2>Étape 1 — Le brief : comprendre où il en est</h2>",
+      "<p>Quand Gabriel m'a contactée, il était dans cette période un peu particulière : encore salarié, mais déjà en train de construire sa future activité. Il voulait que son image soit prête le jour J.</p>",
+      "<p>Ce qu'il m'a dit lors de notre premier échange : <em>« Je veux quelque chose qui me ressemble vraiment — pas quelque chose de générique. »</em></p>",
+      "<p>On a parlé de son travail, de ses valeurs, de sa clientèle cible. Un mot est revenu dans chaque échange : <strong>texture</strong>.</p>",
+
+      "<h2>Étape 2 — La recherche visuelle</h2>",
+      "<p>Avant de créer quoi que ce soit, je construis toujours une direction artistique claire.</p>",
+      "<p>Pour Gabriel, je suis partie sur :</p>",
+      "<ul><li>Un <strong>orange chaud</strong> pour l'argile et la chaleur du four</li><li>Un <strong>beige doux</strong> pour le côté naturel et authentique</li><li>Ce contraste met en valeur le nom comme axe central de l'identité</li><li>Une typographie impactante, lisible même sur un tampon</li></ul>",
+      "<p>La texture comme fil conducteur visuel — dans chaque proposition, dans chaque support.</p>",
+
+      "<h2>Étape 3 — Du premier jet au logo final</h2>",
+      "<p>La première proposition était déjà dans le bon univers : un pot coupé en deux, symbole du geste du céramiste qui vérifie la qualité de son travail. Quand on coupe le pot en deux, on vérifie l'épaisseur des parois, la régularité du travail. Un test de qualité — un acte invisible qui dit tout sur le soin apporté à chaque pièce.</p>",
+      "<p>Gabriel a aimé l'idée — mais au fil des échanges, on a cherché quelque chose de plus épuré.</p>",
+      "<p>C'est là qu'est venue la version finale.</p>",
+      "<p><strong>KOP</strong> — le nom de sa société — placé au centre, encadré de deux silhouettes de pot qui font office de points. Simple. Lisible. Immédiatement reconnaissable sur n'importe quel support, y compris un tampon.</p>",
+      "<p>Les pots ne sont pas un décor. Ils font partie de la typographie. Ils disent le métier sans l'expliquer.</p>",
+      "<p>C'est souvent comme ça que naissent les meilleurs logos : pas à la première proposition, mais après plusieurs allers-retours où chacun affine ce qu'il cherche vraiment.</p>",
+
+      "<h2>Étape 4 — La charte graphique et les supports</h2>",
+      "<p>Une fois le logo validé, j'ai décliné l'identité sur ses supports de lancement :</p>",
+      "<ul><li><strong>Cartes de visite</strong> — à laisser en atelier et sur les marchés</li><li><strong>Stickers</strong> — pour marquer ses emballages et ses commandes</li><li><strong>Flyers</strong> — pour présenter son activité et ses créations</li></ul>",
+      "<p>Tous les fichiers sources livrés, prêts à imprimer.</p>",
+
+      "<h2>Ce que ce projet m'a appris</h2>",
+      "<p>Travailler avec quelqu'un qui se lance, c'est particulier. Il y a une énergie, une envie de bien faire les choses depuis le début. Gabriel savait exactement qui il était — il avait juste besoin que son image le dise aussi clairement que lui.</p>",
+      "<p>C'est ça, le vrai travail d'un graphiste : traduire visuellement ce que le client sait déjà de lui-même.</p>",
+      "<p><em>Vous vous lancez à votre compte et vous voulez une image professionnelle dès le départ ? <a href=\"/contact\">Parlons-en →</a></em></p>",
+    ],
+  },
+  {
     slug: "graphiste-caen-identite-visuelle-professionnelle",
     title: "Graphiste à Caen : pourquoi confier son identité visuelle à un professionnel plutôt qu'à Canva",
     excerpt: "Vous avez lancé votre entreprise avec un logo fait sur Canva. C'était rapide, gratuit, et ça « faisait le job ». Mais maintenant que vous cherchez à attirer de vrais clients, quelque chose coince. Voici pourquoi.",

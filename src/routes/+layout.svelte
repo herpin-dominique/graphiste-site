@@ -33,14 +33,14 @@
     { href: "/", label: "Accueil" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
-    { href: "/a-propos", label: "À propos" },
-    { href: "/contact", label: "Contact" },
     { href: "/tarifs", label: "Forfaits" },
+    { href: "/a-propos", label: "À propos" },
+    { href: "/avis", label: "Avis" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const moreLinks = [
     { href: "/blog", label: "Blog" },
-    { href: "/avis", label: "Avis" },
   ];
 
   let scrolled = false;

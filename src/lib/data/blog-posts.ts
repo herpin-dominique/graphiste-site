@@ -11,6 +11,44 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "budget-identite-visuelle-lancer-entreprise-normandie",
+    title: "Quel budget prévoir pour son identité visuelle quand on lance son entreprise en Normandie ?",
+    excerpt: "C'est souvent la première question que me posent les entrepreneurs : \"C'est combien, un logo ?\" Voici une vision claire de ce qui existe, ce que ça comprend, et comment choisir selon votre situation.",
+    date: "5 mai 2026",
+    category: "Conseils & Budget",
+    categoryColor: "from-violet-500 to-indigo-500",
+    readingTime: 5,
+    content: [
+      "<p>C'est souvent la première question que me posent les entrepreneurs qui me contactent : <em>« C'est combien, un logo ? »</em></p>",
+      "<p>Répondre à cette question sans contexte, c'est impossible. Mais je peux vous donner une vision claire de ce qui existe, ce que ça comprend, et comment choisir ce qui correspond à votre situation — surtout quand on démarre et qu'on fait attention à chaque euro.</p>",
+
+      "<h2>Les 4 options qui existent (et ce qu'elles valent vraiment)</h2>",
+
+      "<p><strong>1. Le gratuit — Canva, Looka, Wix Logo Maker</strong><br/>Budget : 0 à 15 €/mois<br/>Ce que vous obtenez : un template parmi des milliers d'autres, aucun fichier source, aucune exclusivité. Votre logo peut être utilisé par une autre entreprise demain.<br/><em>Pour qui : pour tester une idée, pas pour construire une image durable.</em></p>",
+
+      "<p><strong>2. Les plateformes de freelances — Fiverr, Malt, 99designs</strong><br/>Budget : 50 à 300 €<br/>Ce que vous obtenez : très variable. Certains freelances sont excellents, d'autres livrent des templates retouchés. Difficile de savoir ce que vous allez recevoir avant de payer.<br/><em>Pour qui : si vous avez du temps pour trier, tester, recommencer.</em></p>",
+
+      "<p><strong>3. Le graphiste freelance local</strong><br/>Budget : 400 à 1 500 € pour un logo + charte graphique<br/>Ce que vous obtenez : un brief approfondi, des propositions construites pour vous, des fichiers sources complets, un interlocuteur disponible pour les ajustements futurs.<br/><em>Pour qui : les entrepreneurs qui veulent une image professionnelle dès le lancement, sans mauvaise surprise.</em></p>",
+
+      "<p><strong>4. L'agence de communication</strong><br/>Budget : 2 000 à 10 000 € et plus<br/>Ce que vous obtenez : une équipe, des processus, une facturation en conséquence.<br/><em>Pour qui : les structures établies avec des besoins complexes et un budget marketing conséquent.</em></p>",
+
+      "<h2>Ce que comprend une identité visuelle complète</h2>",
+      "<p>Quand on parle d'identité visuelle, on ne parle pas juste d'un logo. Une identité complète, c'est :</p>",
+      "<ul><li>Le logo et ses déclinaisons (couleur, noir & blanc, horizontal, vertical)</li><li>La palette de couleurs avec codes exacts</li><li>Les typographies</li><li>Les règles d'utilisation</li><li>Les applications sur vos supports (carte de visite, réseaux, en-tête de devis…)</li></ul>",
+      "<p>Sans charte graphique, votre logo ne sert à rien — vous n'aurez aucune cohérence d'un support à l'autre.</p>",
+
+      "<h2>Le bon investissement selon votre étape</h2>",
+      "<p><strong>Vous testez votre idée :</strong> commencez simple. Un logo Canva peut suffire le temps de valider votre concept. Mais prévoyez de le changer dès que vous cherchez vos premiers vrais clients.</p>",
+      "<p><strong>Vous vous lancez officiellement :</strong> c'est le bon moment pour investir. Une identité professionnelle dès le départ vous évite de recommencer dans 6 mois — et de payer deux fois.</p>",
+      "<p><strong>Vous voulez monter en gamme :</strong> si votre image actuelle ne reflète plus ce que vous faites, chaque mois qui passe vous coûte des clients. Une refonte, c'est un investissement, pas une dépense.</p>",
+
+      "<h2>Pourquoi travailler avec un graphiste en Normandie</h2>",
+      "<p>En travaillant localement, vous bénéficiez d'échanges directs, d'une connaissance du marché régional et d'un suivi dans la durée. Pas besoin d'expliquer le contexte normand à quelqu'un qui ne connaît pas la région.</p>",
+      "<p>Chez Herpin Creative Studio, je propose des forfaits adaptés aux entrepreneurs qui démarrent — avec tout ce qu'il faut pour partir sur de bonnes bases, sans payer pour ce dont vous n'avez pas besoin.</p>",
+      "<p><em>Vous voulez savoir quel budget prévoir pour votre projet spécifique ? <a href=\"/contact\">Demandez un devis gratuit →</a></em></p>",
+    ],
+  },
+  {
     slug: "identite-visuelle-ceramiste-gabriel-normandie",
     title: "De salarié à son compte : comment Gabriel le céramiste a construit son identité visuelle",
     excerpt: "Gabriel est céramiste. Il se lance à son compte et avait besoin d'une image qui le représente dès le premier jour. Voici comment on a construit ensemble l'identité visuelle de KOP.",

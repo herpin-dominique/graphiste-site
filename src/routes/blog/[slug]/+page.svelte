@@ -32,7 +32,7 @@
     <a
       href="/blog"
       class="inline-flex items-center gap-2 text-violet-300 hover:text-pink-400 transition-colors mb-8 text-sm font-semibold"
-      data-aos="fade-up"
+     
     >
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -41,7 +41,7 @@
     </a>
 
     <!-- Header article -->
-    <header class="mb-12" data-aos="fade-up">
+    <header class="mb-12">
       <div class="flex items-center gap-4 mb-6">
         <span class="bg-gradient-to-r {post.categoryColor} text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
           {post.category}
@@ -59,7 +59,7 @@
     </header>
 
     <!-- Contenu article -->
-    <div class="prose-blog space-y-6" data-aos="fade-up" data-aos-delay="100">
+    <div class="prose-blog space-y-6">
       {#each post.content as block}
         {@html block}
       {/each}
@@ -68,7 +68,7 @@
     <!-- CTA -->
     <div
       class="mt-16 bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-3xl border border-violet-700/50 p-8 md:p-12 text-center"
-      data-aos="fade-up"
+     
     >
       <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
         Un projet en tête ?

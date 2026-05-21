@@ -25,7 +25,7 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20 text-white"
 >
   <!-- Header -->
-  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-16 lg:mb-20">
     <h1
       class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8"
     >
@@ -42,14 +42,14 @@
   <!-- Grille responsive -->
   <div
     class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full max-w-[1800px] mx-auto"
-    data-aos="fade-up"
-    data-aos-delay="100"
+   
+   
   >
     <!-- Carte 1 -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="100"
+     
+     
     >
       <div
         class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-violet-500 rounded-2xl flex items-center justify-center mb-8"
@@ -84,8 +84,8 @@
     <!-- Carte 2 -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <div
         class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-8"
@@ -120,8 +120,8 @@
     <!-- Carte 3 -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="300"
+     
+     
     >
       <div
         class="w-20 h-20 lg:w-24 lg:h-24 bg-violet-600 rounded-2xl flex items-center justify-center mb-8"
@@ -156,8 +156,8 @@
     <!-- Carte 4 -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-10 md:p-12 lg:p-16 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="400"
+     
+     
     >
       <div
         class="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-8"
@@ -193,8 +193,8 @@
   <!-- CTA -->
   <div
     class="text-center mt-16 lg:mt-20"
-    data-aos="fade-up"
-    data-aos-delay="500"
+   
+   
   >
     <p
       class="text-violet-100 text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed"

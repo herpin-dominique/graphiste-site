@@ -92,7 +92,7 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20"
 >
   <!-- Header -->
-  <div class="text-center mb-10 md:mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-10 md:mb-16 lg:mb-20">
     <h1
       class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 lg:mb-8"
     >
@@ -109,7 +109,7 @@
     class="w-full max-w-[1600px] mx-auto grid md:grid-cols-2 gap-8 lg:gap-12"
   >
     <!-- Colonne gauche : Informations -->
-    <div class="space-y-6 lg:space-y-8" data-aos="fade-up" data-aos-delay="100">
+    <div class="space-y-6 lg:space-y-8">
       <!-- Card Email -->
       <div
         class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
@@ -258,8 +258,8 @@
     <!-- Colonne droite : Formulaire multi-étapes -->
     <div
       class="relative bg-gradient-to-b from-violet-800/90 to-violet-950/90 backdrop-blur-sm p-6 md:p-10 lg:p-12 rounded-3xl border-2 border-pink-500/50 hover:border-pink-400/70 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/10"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <!-- Tag -->
       <div class="absolute -top-4 left-6 md:left-8 lg:left-10">
@@ -401,8 +401,8 @@
   <!-- Note -->
   <p
     class="text-center text-violet-200 mt-12 md:mt-16 lg:mt-20 max-w-4xl mx-auto text-base md:text-xl lg:text-2xl xl:text-3xl leading-relaxed px-2"
-    data-aos="fade-up"
-    data-aos-delay="300"
+   
+   
   >
     Graphiste freelance basée à Caen, je réponds sous 24 à 48 heures.
     Disponible pour les entreprises, commerces et associations en Normandie.

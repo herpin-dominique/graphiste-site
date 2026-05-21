@@ -16,7 +16,7 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20 text-white"
 >
   <!-- Header -->
-  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-16 lg:mb-20">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
       Mentions légales
     </h1>
@@ -29,7 +29,7 @@
     <!-- 1. Éditeur du site -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">1</span>
@@ -49,8 +49,8 @@
     <!-- 2. Hébergeur -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="100"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">2</span>
@@ -67,8 +67,8 @@
     <!-- 3. Registrar -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="150"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">3</span>
@@ -84,8 +84,8 @@
     <!-- 4. Propriété intellectuelle -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">4</span>
@@ -107,8 +107,8 @@
     <!-- 5. Données personnelles / RGPD -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="250"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">5</span>
@@ -138,8 +138,8 @@
     <!-- 6. Cookies -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="300"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">6</span>
@@ -158,8 +158,8 @@
     <!-- 7. Responsabilité -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="350"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">7</span>
@@ -178,8 +178,8 @@
     <!-- 8. TVA -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="400"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">8</span>
@@ -193,8 +193,8 @@
     <!-- 9. Crédits -->
     <section
       class="bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-2xl border border-violet-700/50 p-8 md:p-10"
-      data-aos="fade-up"
-      data-aos-delay="450"
+     
+     
     >
       <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
         <span class="w-10 h-10 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg flex items-center justify-center text-lg font-bold">9</span>
@@ -209,7 +209,7 @@
   </div>
 
   <!-- Date de mise à jour -->
-  <div class="text-center mt-12 text-violet-400 text-sm" data-aos="fade-up">
+  <div class="text-center mt-12 text-violet-400 text-sm">
     <p>Dernière mise à jour : Février 2026</p>
   </div>
 </main>

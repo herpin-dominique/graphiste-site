@@ -95,14 +95,14 @@
   <div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
     <p
       class="text-white text-xl md:text-2xl lg:text-3xl mb-6 tracking-widest uppercase font-semibold"
-      data-aos="fade-down"
+     
       style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);"
     >
       Herpin Creative Studio
     </p>
     <h1
       class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-white mb-8 leading-tight"
-      data-aos="fade-up"
+     
       style="text-shadow: 0 4px 20px rgba(0,0,0,0.9);"
     >
       Faites <span
@@ -117,8 +117,8 @@
     </h1>
     <p
       class="text-2xl md:text-3xl lg:text-4xl text-white mb-12 max-w-4xl mx-auto font-medium leading-relaxed"
-      data-aos="fade-up"
-      data-aos-delay="100"
+     
+     
       style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);"
     >
       Graphiste freelance & motion designer à Caen — logos, identité visuelle et
@@ -126,8 +126,8 @@
     </p>
     <div
       class="flex flex-col sm:flex-row gap-6 justify-center"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <a
         href="/portfolio"
@@ -169,7 +169,7 @@
   <div class="w-full max-w-[1800px] mx-auto">
     <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
       <!-- Animation Lola -->
-      <div class="relative" data-aos="fade-right">
+      <div class="relative">
         <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-violet-100 to-pink-100 relative">
           <video
             src="/lola-animation-graphiste.MP4"
@@ -189,7 +189,7 @@
       </div>
 
       <!-- Texte -->
-      <div data-aos="fade-left">
+      <div>
         <h2
           class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-8"
         >
@@ -253,7 +253,7 @@
   class="relative z-0 w-full py-24 lg:py-32 px-6 md:px-8 lg:px-12 xl:px-16 bg-gray-50"
 >
   <div class="w-full max-w-[1800px] mx-auto">
-    <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+    <div class="text-center mb-16 lg:mb-20">
       <h2
         class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6"
       >
@@ -272,8 +272,8 @@
       <!-- Projet 1 -->
       <div
         class="group relative overflow-hidden rounded-3xl shadow-lg bg-white animate-float illus-hover"
-        data-aos="fade-up"
-        data-aos-delay="100"
+       
+       
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
@@ -301,8 +301,8 @@
       <div
         class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
         style="animation: float 4s ease-in-out infinite; animation-delay: 1s;"
-        data-aos="fade-up"
-        data-aos-delay="200"
+       
+       
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
@@ -326,8 +326,8 @@
       <div
         class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
         style="animation: float 4s ease-in-out infinite; animation-delay: 2s;"
-        data-aos="fade-up"
-        data-aos-delay="300"
+       
+       
       >
         <div class="aspect-[4/5] overflow-hidden">
           <img
@@ -353,8 +353,8 @@
       <div
         class="group relative overflow-hidden rounded-3xl shadow-lg bg-white illus-hover"
         style="animation: float 4s ease-in-out infinite; animation-delay: 3s;"
-        data-aos="fade-up"
-        data-aos-delay="400"
+       
+       
       >
         <div class="aspect-[4/5] overflow-hidden">
           <video
@@ -378,7 +378,7 @@
     </div>
 
     <!-- Bouton voir plus -->
-    <div class="text-center mt-16" data-aos="fade-up">
+    <div class="text-center mt-16">
       <a
         href="/portfolio"
         class="inline-flex items-center gap-3 px-10 py-5 lg:px-12 lg:py-6 bg-violet-600 text-white font-bold text-xl lg:text-2xl rounded-full hover:bg-violet-700 transition-all duration-300 hover:scale-105 shadow-xl"
@@ -405,7 +405,7 @@
 <!-- Section Blog -->
 <section class="relative z-0 w-full py-24 lg:py-32 px-6 md:px-8 lg:px-12 xl:px-16 bg-white">
   <div class="w-full max-w-[1800px] mx-auto">
-    <div class="text-center mb-16" data-aos="fade-up">
+    <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
         Derniers articles
       </h2>
@@ -419,7 +419,7 @@
         <a
           href="/blog/{post.slug}"
           class="group block bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          data-aos="fade-up"
+         
           data-aos-delay={i * 100}
         >
           <div class="h-3 bg-gradient-to-r {post.categoryColor}"></div>
@@ -447,7 +447,7 @@
       {/each}
     </div>
 
-    <div class="text-center mt-12" data-aos="fade-up">
+    <div class="text-center mt-12">
       <a
         href="/blog"
         class="inline-flex items-center gap-3 px-10 py-5 border-2 border-violet-600 text-violet-600 font-bold text-lg rounded-full hover:bg-violet-600 hover:text-white transition-all duration-300 hover:scale-105"
@@ -463,7 +463,7 @@
 
 <!-- Section Témoignage Gabriel -->
 <section class="w-full py-24 lg:py-32 px-6 md:px-8 lg:px-12 xl:px-16 bg-purple-950">
-  <div class="max-w-[900px] mx-auto text-center" data-aos="fade-up">
+  <div class="max-w-[900px] mx-auto text-center">
     <p class="text-violet-400 uppercase tracking-widest text-sm font-semibold mb-8">Ce que disent mes clients</p>
     <div class="relative">
       <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-8xl text-violet-500/30 font-serif leading-none select-none">"</span>
@@ -498,22 +498,22 @@
   <div class="relative z-10 w-full max-w-[1400px] mx-auto text-center">
     <h2
       class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white mb-8"
-      data-aos="fade-up"
+     
     >
       Prêt à créer ensemble ?
     </h2>
     <p
       class="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
-      data-aos="fade-up"
-      data-aos-delay="100"
+     
+     
     >
       Besoin d'un logo, d'une identité visuelle ou d'une vidéo motion design ?
       Votre graphiste à Caen est là pour donner vie à vos idées.
     </p>
     <div
       class="flex flex-col sm:flex-row gap-6 justify-center"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <a
         href="/contact"

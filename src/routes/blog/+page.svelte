@@ -23,7 +23,7 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20 text-white"
 >
   <!-- Header -->
-  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-16 lg:mb-20">
     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 lg:mb-8">
       Blog
     </h1>
@@ -40,7 +40,7 @@
       <a
         href="/blog/{post.slug}"
         class="group relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20 overflow-hidden flex flex-col"
-        data-aos="fade-up"
+       
         data-aos-delay={i * 100}
       >
         <!-- Image placeholder avec gradient -->
@@ -86,7 +86,7 @@
   </div>
 
   <!-- CTA -->
-  <div class="text-center mt-16 lg:mt-20" data-aos="fade-up">
+  <div class="text-center mt-16 lg:mt-20">
     <p class="text-violet-100 text-xl md:text-2xl mb-8 leading-relaxed">
       Un projet de design graphique ou de motion design ? Parlons-en !
     </p>

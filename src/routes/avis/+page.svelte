@@ -64,7 +64,7 @@
       {#each testimonials as t, i}
         <article
           class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300"
-          data-aos="fade-up"
+         
           data-aos-delay={i * 80}
         >
           <!-- Stars -->

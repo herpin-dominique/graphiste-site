@@ -25,7 +25,7 @@
   class="relative z-0 min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-violet-900 px-4 md:px-6 lg:px-8 xl:px-12 py-16 lg:py-20"
 >
   <!-- Header -->
-  <div class="text-center mb-16 lg:mb-20" data-aos="fade-up">
+  <div class="text-center mb-16 lg:mb-20">
     <h1
       class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 lg:mb-8"
     >
@@ -45,8 +45,8 @@
     <!-- Offre Essentiel -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-8 md:p-10 lg:p-12 xl:p-14 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="100"
+     
+     
     >
       <!-- Tag -->
       <div class="absolute -top-4 left-8 lg:left-12">
@@ -213,8 +213,8 @@
     <!-- Offre Professionnel (mise en avant) -->
     <div
       class="relative bg-gradient-to-b from-violet-800/90 to-violet-950/90 backdrop-blur-sm p-8 md:p-10 lg:p-12 xl:p-14 rounded-3xl border-2 border-pink-500/50 hover:border-pink-400/70 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/20 md:-mt-6 md:mb-6 lg:-mt-8 lg:mb-8"
-      data-aos="fade-up"
-      data-aos-delay="200"
+     
+     
     >
       <!-- Tag populaire -->
       <div class="absolute -top-4 left-8 lg:left-12">
@@ -423,8 +423,8 @@
     <!-- Offre Premium -->
     <div
       class="relative bg-gradient-to-b from-violet-900/80 to-violet-950/80 backdrop-blur-sm p-8 md:p-10 lg:p-12 xl:p-14 rounded-3xl border border-violet-700/50 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
-      data-aos="fade-up"
-      data-aos-delay="300"
+     
+     
     >
       <!-- Tag -->
       <div class="absolute -top-4 left-8 lg:left-12">
@@ -664,15 +664,15 @@
   <!-- Note -->
   <p
     class="text-center text-violet-200 mt-16 lg:mt-20 max-w-4xl mx-auto text-xl md:text-2xl lg:text-3xl leading-relaxed"
-    data-aos="fade-up"
-    data-aos-delay="400"
+   
+   
   >
     Chaque projet est unique. Contactez-moi pour un devis personnalisé adapté à
     vos besoins spécifiques. Exemple : un flyer seul simple ou recto-verso
   </p>
 
   <!-- FAQ -->
-  <div class="w-full max-w-[900px] mx-auto mt-24 lg:mt-32" data-aos="fade-up">
+  <div class="w-full max-w-[900px] mx-auto mt-24 lg:mt-32">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">Questions fréquentes</h2>
 
     <div class="space-y-4">
@@ -684,7 +684,7 @@
         { q: "Puis-je modifier mon logo moi-même après livraison ?", r: "Oui, vous recevez les fichiers sources. Je recommande cependant de me contacter pour toute modification importante afin de préserver la cohérence de votre identité visuelle." },
         { q: "Travaillez-vous avec des clients hors Caen ?", r: "Tout à fait. Je travaille à distance avec des clients partout en France. Les échanges se font par email, visio ou téléphone selon vos préférences." },
       ] as item, i}
-        <details class="group bg-violet-900/40 border border-violet-700/50 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay={i * 50}>
+        <details class="group bg-violet-900/40 border border-violet-700/50 rounded-2xl overflow-hidden" data-aos-delay={i * 50}>
           <summary class="flex items-center justify-between p-6 lg:p-8 cursor-pointer text-white font-semibold text-lg lg:text-xl list-none hover:bg-violet-800/30 transition-colors">
             {item.q}
             <svg class="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">

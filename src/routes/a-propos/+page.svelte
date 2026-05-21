@@ -72,7 +72,7 @@
     <div class="w-full max-w-[1400px] mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <!-- Photo -->
-      <div class="relative" data-aos="fade-right">
+      <div class="relative">
         <div class="aspect-square max-w-md mx-auto md:max-w-full rounded-3xl overflow-hidden shadow-2xl shadow-violet-900/50">
           <img
             src="/projets/lolaherpinphotosite.png"
@@ -86,7 +86,7 @@
       </div>
 
       <!-- Texte intro -->
-      <div data-aos="fade-left">
+      <div>
         <div class="inline-block mb-6">
           <span class="bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm font-bold px-5 py-2 rounded-full uppercase tracking-wider">
             À propos
@@ -124,7 +124,7 @@
   <section class="bg-white/5 backdrop-blur-sm py-20 lg:py-28 px-4 md:px-6 lg:px-8 xl:px-12">
     <div class="w-full max-w-[1400px] mx-auto">
       <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div data-aos="fade-up">
+        <div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
             Ce qui m'anime
           </h2>
@@ -142,7 +142,7 @@
         </div>
 
         <!-- Citation mise en valeur -->
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div>
           <blockquote class="relative bg-gradient-to-br from-violet-800/60 to-violet-900/60 backdrop-blur-sm p-8 lg:p-12 rounded-3xl border border-violet-600/30">
             <div class="absolute -top-5 left-8 text-7xl text-pink-400/40 font-serif leading-none select-none">"</div>
             <p class="text-white text-xl md:text-2xl font-medium leading-relaxed pt-4">
@@ -161,7 +161,7 @@
   <!-- Mes valeurs -->
   <section class="py-20 lg:py-28 px-4 md:px-6 lg:px-8 xl:px-12">
     <div class="w-full max-w-[1400px] mx-auto">
-      <div class="text-center mb-14" data-aos="fade-up">
+      <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Mes valeurs</h2>
         <p class="text-violet-300 text-lg max-w-xl mx-auto">Ce qui guide chaque projet que j'accompagne.</p>
       </div>
@@ -169,7 +169,7 @@
         {#each values as v, i}
           <div
             class="relative bg-gradient-to-b from-violet-800/50 to-violet-900/50 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-violet-700/40 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10"
-            data-aos="fade-up"
+           
             data-aos-delay={i * 100}
           >
             <div class="w-14 h-14 bg-gradient-to-r {v.gradient} rounded-2xl flex items-center justify-center text-2xl mb-6">
@@ -186,7 +186,7 @@
   <!-- Comment je travaille -->
   <section class="bg-white/5 backdrop-blur-sm py-20 lg:py-28 px-4 md:px-6 lg:px-8 xl:px-12">
     <div class="w-full max-w-[1400px] mx-auto">
-      <div class="text-center mb-14" data-aos="fade-up">
+      <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Comment ça se passe</h2>
         <p class="text-violet-300 text-lg max-w-xl mx-auto">Un process simple et transparent, de la première prise de contact à la livraison.</p>
       </div>
@@ -194,7 +194,7 @@
         {#each steps as s, i}
           <div
             class="relative p-8 rounded-3xl bg-gradient-to-b from-violet-800/40 to-violet-900/40 border border-violet-700/40"
-            data-aos="fade-up"
+           
             data-aos-delay={i * 80}
           >
             <!-- Numéro -->
@@ -214,7 +214,7 @@
   </section>
 
   <!-- CTA final -->
-  <section class="py-20 lg:py-28 px-4 md:px-6 lg:px-8 xl:px-12 text-center" data-aos="fade-up">
+  <section class="py-20 lg:py-28 px-4 md:px-6 lg:px-8 xl:px-12 text-center">
     <div class="max-w-2xl mx-auto">
       <p class="text-violet-300 text-lg mb-4">Vous aussi vous démarrez quelque chose ?</p>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">

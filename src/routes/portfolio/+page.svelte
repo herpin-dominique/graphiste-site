@@ -1,6 +1,10 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { cubicOut } from "svelte/easing";
+  import AOS from "aos";
   import type { PageData } from "./$types";
+
+  onMount(() => { AOS.init({ duration: 600, once: true }); });
 
   export let data: PageData;
   $: projects = data.projects;

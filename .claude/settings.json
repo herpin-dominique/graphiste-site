@@ -24,7 +24,12 @@
       "Bash(echo \".playwright-mcp/\")",
       "Bash(rm -rf .playwright-mcp/)",
       "Bash(git rm *)",
-      "Bash(sort -k5 -rh)"
+      "Bash(sort -k5 -rh)",
+      "Bash(echo \"Services: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:4174/services\\)\")",
+      "Bash(echo \"Tarifs: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:4174/tarifs\\)\")",
+      "Bash(echo \"Contact: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:4174/contact\\)\")",
+      "Bash(echo \"Blog: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:4174/blog\\)\")",
+      "Bash(echo \"Portfolio: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:4174/portfolio\\)\")"
     ]
   }
 }

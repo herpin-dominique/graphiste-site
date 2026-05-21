@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import { cubicOut } from "svelte/easing";
-  import AOS from "aos";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -12,10 +10,6 @@
   $: filteredProjects = activeFilter === "Tous"
     ? projects
     : projects.filter((p) => p.tag === activeFilter);
-
-  onMount(() => {
-    AOS.init({ duration: 600, once: true });
-  });
 
   function isVideo(url: string): boolean {
     return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');

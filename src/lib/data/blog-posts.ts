@@ -11,6 +11,43 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "communication-visuelle-ete-entreprises-normandie",
+    title: "Préparer sa communication visuelle pour l'été : ce que les entreprises normandes oublient",
+    excerpt: "L'été arrive. Les terrasses se remplissent, les marchés s'animent. C'est la période la plus chargée — et pourtant beaucoup d'entreprises arrivent sans être prêtes visuellement. Voici ce qu'il faut anticiper.",
+    date: "21 mai 2026",
+    category: "Conseils",
+    categoryColor: "from-orange-400 to-yellow-400",
+    readingTime: 4,
+    content: [
+      "<p>L'été arrive. Les terrasses se remplissent, les marchés s'animent, les touristes débarquent en Normandie. C'est souvent la période la plus chargée de l'année pour les commerçants, artisans et indépendants de la région.</p>",
+      "<p>Et pourtant, c'est aussi la période où beaucoup arrivent sans être prêts visuellement. Pas d'affiche pour la vitrine, pas de visuel pour les réseaux, pas de flyer pour l'événement du mois. On improvise. Et ça se voit.</p>",
+      "<p>Voici ce qu'il faut anticiper — et comment.</p>",
+
+      "<h2>1. Mettre à jour ses visuels réseaux sociaux</h2>",
+      "<p>Votre photo de couverture Facebook date de 2021 ? Votre bio Instagram ne mentionne pas vos horaires d'été ? Les touristes qui vous découvrent en ligne forment une opinion en quelques secondes.</p>",
+      "<p>Un simple rafraîchissement de vos visuels — bannière, photo de profil, stories épinglées — peut faire toute la différence pour quelqu'un qui ne vous connaît pas encore.</p>",
+
+      "<h2>2. Préparer ses supports imprimés à l'avance</h2>",
+      "<p>Les imprimeurs sont débordés en juin. Si vous avez besoin de flyers, d'affiches ou de menus pour juillet, il faut commander maintenant.</p>",
+      "<p>Et avant de commander, il faut avoir les fichiers. Des fichiers bien faits, aux bonnes dimensions, avec les bonnes marges. Pas un screenshot de Canva envoyé en JPEG.</p>",
+
+      "<h2>3. Anticiper les événements locaux</h2>",
+      "<p>Fête de la musique, marchés estivaux, braderies, festivals normands — l'agenda de l'été est chargé. Si vous participez à l'un de ces événements, votre communication visuelle doit être prête 3 semaines avant, pas la veille.</p>",
+      "<p>Une affiche bien conçue, un roll-up professionnel, des cartes de visite à distribuer — ce sont des outils qui travaillent pour vous même quand vous avez le dos tourné.</p>",
+
+      "<h2>4. Penser à la signalétique temporaire</h2>",
+      "<p>Vous ouvrez le dimanche en juillet ? Vous proposez un menu spécial estival ? Vous avez des horaires exceptionnels ? Dites-le visuellement.</p>",
+      "<p>Une pancarte faite à la main, ça donne une impression de bric-à-brac. Un visuel cohérent avec votre identité, ça rassure et ça professionnalise.</p>",
+
+      "<h2>5. Créer du contenu pour les semaines où vous serez occupé</h2>",
+      "<p>L'été, on n'a pas le temps de faire des posts. Alors on ne poste plus. Et quand septembre arrive, on a perdu en visibilité.</p>",
+      "<p>La solution : préparer maintenant 4 à 6 visuels Instagram programmés pour juillet-août. Des visuels qui présentent votre activité, vos produits, votre univers. Planifiés à l'avance, publiés automatiquement.</p>",
+
+      "<p>La communication visuelle de l'été se prépare en mai. Pas en juillet.</p>",
+      "<p><em>Vous voulez être prêt avant l'été ? <a href=\"/contact\">Contactez-moi pour en parler →</a></em></p>",
+    ],
+  },
+  {
     slug: "budget-identite-visuelle-lancer-entreprise-normandie",
     title: "Quel budget prévoir pour son identité visuelle quand on lance son entreprise en Normandie ?",
     excerpt: "C'est souvent la première question que me posent les entrepreneurs : \"C'est combien, un logo ?\" Voici une vision claire de ce qui existe, ce que ça comprend, et comment choisir selon votre situation.",

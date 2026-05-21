@@ -20,7 +20,10 @@
       "WebFetch(domain:charlotte-bondue.fr)",
       "WebFetch(domain:www.spark.do)",
       "WebFetch(domain:7h34.fr)",
-      "WebFetch(domain:tympanus.net)"
+      "WebFetch(domain:tympanus.net)",
+      "Bash(echo \".playwright-mcp/\")",
+      "Bash(rm -rf .playwright-mcp/)",
+      "Bash(git rm *)"
     ]
   }
 }

@@ -1,7 +1,0 @@
-[    1104ms] [WARNING] Placing %sveltekit.body% directly inside <body> is not recommended, as your app may break for users who have certain browser extensions installed.
-
-Consider wrapping it in an element:
-
-<div style="display: contents">
-  %sveltekit.body%
-</div> @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=47bd1b0c:3137

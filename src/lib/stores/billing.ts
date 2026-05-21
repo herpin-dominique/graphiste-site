@@ -28,23 +28,21 @@ export interface Invoice {
   notes?: string;
 }
 
-// Adapte la réponse DB (snake_case Drizzle) vers l'interface Invoice
-function fromDb(row: Record<string, unknown>): Invoice {
-  return {
-    id: row.id as string,
-    type: row.type as Invoice['type'],
-    invoice_number: (row.invoiceNumber ?? row.invoice_number) as string,
-    client_name: (row.clientName ?? row.client_name) as string,
-    client_email: (row.clientEmail ?? row.client_email) as string,
-    client_address: (row.clientAddress ?? row.client_address) as string,
-    items: (row.items ?? []) as InvoiceItem[],
-    total: Number(row.total),
-    status: row.status as Invoice['status'],
-    created_at: (row.createdAt ?? row.created_at) as string,
-    due_date: (row.dueDate ?? row.due_date) as string | undefined,
-    send_history: (row.sendHistory ?? row.send_history ?? []) as SendEvent[],
-    notes: row.notes as string | undefined,
-  };
+const STORAGE_KEY = 'herpin_invoices';
+
+function loadFromStorage(): Invoice[] {
+  if (typeof localStorage === 'undefined') return [];
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveToStorage(invoices: Invoice[]) {
+  if (typeof localStorage === 'undefined') return;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(invoices));
 }
 
 function createBillingStore() {
@@ -53,32 +51,26 @@ function createBillingStore() {
   return {
     subscribe,
 
-    reload: async () => {
-      const res = await fetch('/api/invoices');
-      if (res.ok) {
-        const rows = await res.json();
-        set(rows.map(fromDb));
-      }
+    reload: () => {
+      set(loadFromStorage());
     },
 
-    add: async (invoiceData: Omit<Invoice, 'id' | 'created_at' | 'send_history'>): Promise<Invoice> => {
-      const newInvoice = {
+    add: (invoiceData: Omit<Invoice, 'id' | 'created_at' | 'send_history'>): Invoice => {
+      const newInvoice: Invoice = {
         ...invoiceData,
         id: generateId(),
         created_at: new Date().toISOString(),
         send_history: [{ date: new Date().toISOString(), type: 'created', note: 'Document créé' }],
       };
-      const res = await fetch('/api/invoices', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newInvoice),
+      update(inv => {
+        const updated = [...inv, newInvoice];
+        saveToStorage(updated);
+        return updated;
       });
-      const created = fromDb(await res.json());
-      update(inv => [...inv, created]);
-      return created;
+      return newInvoice;
     },
 
-    update: async (id: string, invoiceData: Partial<Invoice>) => {
+    update: (id: string, invoiceData: Partial<Invoice>) => {
       const current = get({ subscribe });
       const existing = current.find(inv => inv.id === id);
       if (!existing) return;
@@ -91,20 +83,22 @@ function createBillingStore() {
           : existing.send_history,
       };
 
-      await fetch(`/api/invoices/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updated),
+      update(inv => {
+        const result = inv.map(i => i.id === id ? updated : i);
+        saveToStorage(result);
+        return result;
       });
-      update(inv => inv.map(i => i.id === id ? updated : i));
     },
 
-    delete: async (id: string) => {
-      await fetch(`/api/invoices/${id}`, { method: 'DELETE' });
-      update(inv => inv.filter(i => i.id !== id));
+    delete: (id: string) => {
+      update(inv => {
+        const result = inv.filter(i => i.id !== id);
+        saveToStorage(result);
+        return result;
+      });
     },
 
-    updateStatus: async (id: string, status: Invoice['status']) => {
+    updateStatus: (id: string, status: Invoice['status']) => {
       const current = get({ subscribe });
       const existing = current.find(inv => inv.id === id);
       if (!existing) return;
@@ -115,54 +109,50 @@ function createBillingStore() {
         { date: new Date().toISOString(), type: eventType as SendEvent['type'], note: `Statut changé en "${getStatusLabel(status)}"` },
       ];
 
-      await fetch(`/api/invoices/${id}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status, send_history }),
+      update(inv => {
+        const result = inv.map(i => i.id === id ? { ...i, status, send_history } as Invoice : i);
+        saveToStorage(result);
+        return result;
       });
-      update(inv => inv.map(i => i.id === id ? { ...i, status, send_history } : i));
     },
 
-    addSendEvent: async (id: string, type: SendEvent['type'], note?: string) => {
+    addSendEvent: (id: string, type: SendEvent['type'], note?: string) => {
       const current = get({ subscribe });
       const existing = current.find(inv => inv.id === id);
       if (!existing) return;
 
       const send_history = [...existing.send_history, { date: new Date().toISOString(), type, note }];
-      await fetch(`/api/invoices/${id}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status: existing.status, send_history }),
+      update(inv => {
+        const result = inv.map(i => i.id === id ? { ...i, send_history } : i);
+        saveToStorage(result);
+        return result;
       });
-      update(inv => inv.map(i => i.id === id ? { ...i, send_history } : i));
     },
 
-    markAsSent: async (id: string, note?: string) => {
+    markAsSent: (id: string, note?: string) => {
       const current = get({ subscribe });
       const existing = current.find(inv => inv.id === id);
       if (!existing) return;
 
       const send_history = [...existing.send_history, { date: new Date().toISOString(), type: 'sent' as const, note: note || 'Document envoyé au client' }];
-      await fetch(`/api/invoices/${id}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status: 'sent', send_history }),
+      update(inv => {
+        const result = inv.map(i => i.id === id ? { ...i, status: 'sent' as const, send_history } : i);
+        saveToStorage(result);
+        return result;
       });
-      update(inv => inv.map(i => i.id === id ? { ...i, status: 'sent', send_history } : i));
     },
 
-    addReminder: async (id: string, note?: string) => {
+    addReminder: (id: string, note?: string) => {
       const current = get({ subscribe });
       const existing = current.find(inv => inv.id === id);
       if (!existing) return;
 
       const send_history = [...existing.send_history, { date: new Date().toISOString(), type: 'reminder' as const, note: note || 'Relance envoyée' }];
-      await fetch(`/api/invoices/${id}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status: existing.status, send_history }),
+      update(inv => {
+        const result = inv.map(i => i.id === id ? { ...i, send_history } : i);
+        saveToStorage(result);
+        return result;
       });
-      update(inv => inv.map(i => i.id === id ? { ...i, send_history } : i));
     },
 
     getById: (id: string): Invoice | undefined => {

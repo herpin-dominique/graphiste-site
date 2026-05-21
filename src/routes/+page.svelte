@@ -74,11 +74,11 @@
   <img
     src="/BANNIERE.png"
     alt="Bannière"
-    class="absolute inset-0 w-full h-full object-cover object-[60%_20%] md:object-center"
+    class="absolute inset-0 w-full h-full object-cover object-[60%_20%] md:object-center pointer-events-none"
   />
   <!-- Overlay pour la lisibilité -->
   <div
-    class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+    class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 pointer-events-none"
   ></div>
 
   <!-- Formes décoratives animées -->

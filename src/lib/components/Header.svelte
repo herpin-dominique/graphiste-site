@@ -103,7 +103,7 @@
       type="button"
       class="md:hidden relative z-50 w-12 h-12 flex flex-col items-center justify-center gap-1.5 rounded-xl bg-violet-600/20 hover:bg-violet-600/40 transition-colors touch-manipulation"
       aria-label="Menu"
-      on:click|preventDefault|stopPropagation={() => (isOpen = !isOpen)}
+      on:click={() => (isOpen = !isOpen)}
     >
       <span
         class="w-5 h-0.5 bg-white rounded-full transition-all duration-300 origin-center {isOpen ? 'rotate-45 translate-y-2' : ''}"

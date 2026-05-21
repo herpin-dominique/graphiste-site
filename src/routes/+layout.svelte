@@ -35,14 +35,12 @@
     { href: "/portfolio", label: "Portfolio" },
     { href: "/services", label: "Services" },
     { href: "/tarifs", label: "Forfaits" },
-    { href: "/a-propos", label: "À propos" },
+    { href: "/blog", label: "Blog" },
     { href: "/avis", label: "Avis" },
     { href: "/contact", label: "Contact" },
   ];
 
-  const moreLinks = [
-    { href: "/blog", label: "Blog" },
-  ];
+  const moreLinks: { href: string; label: string }[] = [];
 
   let scrolled = false;
   let threshold = 24; // px de scroll avant que le header devienne opaque

@@ -100,7 +100,7 @@
 
     <!-- Bouton menu mobile -->
     <button
-      class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-xl bg-violet-600/20 hover:bg-violet-600/40 transition-colors"
+      class="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-xl bg-violet-600/20 hover:bg-violet-600/40 transition-colors"
       aria-label="Menu"
       on:click={() => (isOpen = !isOpen)}
     >

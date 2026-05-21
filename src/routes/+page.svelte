@@ -1,14 +1,7 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import AOS from "aos";
-  import "aos/dist/aos.css";
   import { blogPosts } from "$lib/data/blog-posts";
 
   const recentPosts = blogPosts.slice(0, 3);
-
-  onMount(() => {
-    AOS.init({ duration: 800, once: true });
-  });
 </script>
 
 <svelte:head>

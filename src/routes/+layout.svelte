@@ -21,13 +21,8 @@
   afterNavigate(() => {
     window.scrollTo(0, 0);
     setTimeout(() => {
-      AOS.init({
-        duration: 800,
-        once: false,
-        offset: -200,
-      });
       AOS.refreshHard();
-    }, 300);
+    }, 100);
   });
 
   const navLinks = [

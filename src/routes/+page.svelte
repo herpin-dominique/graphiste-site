@@ -282,6 +282,7 @@
             src="/projets/Emballage parfumé et couleurs vibrantes.png"
             alt="Projet de branding"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
         </div>
         <div
@@ -310,6 +311,7 @@
             src="/projets/Affiche-luc-et-lea.png"
             alt="Illustration éditoriale"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
         </div>
         <div
@@ -334,6 +336,7 @@
             src="/projets/canadrance.jpg"
             alt="Packaging design"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
         </div>
         <div

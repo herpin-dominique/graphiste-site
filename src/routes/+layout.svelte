@@ -18,15 +18,16 @@
     });
   });
 
-  // Réinitialiser AOS après chaque navigation pour que les animations fonctionnent
   afterNavigate(() => {
-    // Scroller en haut de page
     window.scrollTo(0, 0);
-
-    // Réinitialiser AOS
     setTimeout(() => {
+      AOS.init({
+        duration: 800,
+        once: false,
+        offset: -200,
+      });
       AOS.refreshHard();
-    }, 100);
+    }, 300);
   });
 
   const navLinks = [

@@ -31,6 +31,7 @@
     { href: "/services", label: "Services" },
     { href: "/tarifs", label: "Forfaits" },
     { href: "/blog", label: "Blog" },
+    { href: "/goodies", label: "Goodies" },
     { href: "/avis", label: "Avis" },
     { href: "/contact", label: "Contact" },
   ];

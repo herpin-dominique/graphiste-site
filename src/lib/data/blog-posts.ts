@@ -11,6 +11,48 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "motion-design-communication-video-animation-entreprise",
+    title: "Motion design : pourquoi votre communication vidéo ne peut plus se passer d'animation",
+    excerpt: "Une vidéo statique ou un simple diaporama, ça ne retient plus l'attention. Le motion design n'est plus réservé aux grandes marques — voici pourquoi les PME et indépendants normands ont tout à gagner à l'adopter.",
+    date: "3 juin 2026",
+    category: "Motion Design",
+    categoryColor: "from-violet-500 to-pink-500",
+    readingTime: 5,
+    content: [
+      "<p>Faites le test. Ouvrez votre fil Instagram ou LinkedIn. Qu'est-ce qui arrête votre pouce ?</p>",
+      "<p>Pas les photos statiques. Pas les visuels fixes. Ce qui capte l'œil, c'est le mouvement. Un texte qui apparaît, un logo qui s'anime, un chiffre qui défile. En quelques secondes, l'animation dit ce qu'une image fixe ne peut pas dire.</p>",
+      "<p>C'est exactement ce que fait le motion design — et c'est pourquoi il est devenu incontournable pour les entreprises qui veulent être vues.</p>",
+
+      "<h2>Ce qu'est vraiment le motion design</h2>",
+      "<p>Le motion design, c'est l'art de mettre le graphisme en mouvement. Ce n'est pas de la vidéo au sens classique du terme — pas de caméra, pas de tournage, pas d'acteurs. C'est votre identité visuelle qui prend vie : votre logo qui s'anime, vos chiffres clés qui apparaissent en rythme, vos messages qui se déroulent de façon fluide et mémorable.</p>",
+      "<p>Une vidéo de présentation d'entreprise. Un générique de début pour vos réels. Une animation de votre logo pour vos stories. Tout ça, c'est du motion design.</p>",
+
+      "<h2>Pourquoi les vidéos statiques ne suffisent plus</h2>",
+      "<p>En 2025, la concurrence visuelle est totale. Chaque marque, chaque entrepreneur, chaque artisan publie du contenu tous les jours. Dans ce bruit, une image fixe ne tient pas la route face à une animation bien construite.</p>",
+      "<p>Les chiffres parlent d'eux-mêmes : une publication animée génère en moyenne <strong>3 fois plus d'engagement</strong> qu'une image statique sur les réseaux sociaux. L'œil humain est câblé pour détecter le mouvement — c'est un réflexe primitif que le motion design exploite intelligemment.</p>",
+      "<p>Et sur LinkedIn, plateforme sur laquelle les entreprises normandes sont de plus en plus actives, les vidéos courtes animées font partie des formats les plus poussés par l'algorithme.</p>",
+
+      "<h2>Les cas d'usage concrets pour une PME ou un indépendant</h2>",
+      "<p>Le motion design n'est pas réservé aux grandes marques. Voici ce que je réalise concrètement :</p>",
+      "<ul><li><strong>Animation de logo</strong> — Pour les introductions de vidéos, les stories Instagram, les signatures d'emails. 3 secondes qui ancrent votre identité.</li><li><strong>Vidéo de présentation</strong> — Une animation de 30 à 90 secondes qui explique votre activité, vos valeurs, votre offre. Parfait pour votre page d'accueil.</li><li><strong>Contenu réseaux sociaux animé</strong> — Des visuels qui bougent pour vos promotions, événements, actualités.</li><li><strong>Générique et habillage</strong> — Pour les podcasts, interviews filmées, vidéos YouTube. Ça professionnalise instantanément votre contenu.</li></ul>",
+
+      "<h2>Le motion design renforce votre identité visuelle</h2>",
+      "<p>Ce qui me plaît dans cette discipline, c'est qu'elle n'existe pas en dehors de votre identité graphique. Elle la prolonge, elle l'anime, elle lui donne une dimension supplémentaire.</p>",
+      "<p>Un logo que j'ai conçu pour un client peut ensuite s'animer avec fluidité parce que j'en connais chaque courbe, chaque intention. La cohérence entre les supports statiques et les animations est totale — ce n'est pas toujours le cas quand on fait appel à des prestataires différents pour le graphisme et la vidéo.</p>",
+      "<p>C'est l'un des avantages de travailler avec quelqu'un qui maîtrise les deux : votre communication gagne en cohérence, et votre image y gagne en professionnalisme.</p>",
+
+      "<h2>\"C'est trop cher pour moi\" — vraiment ?</h2>",
+      "<p>C'est la réponse que j'entends souvent. Et je comprends l'idée reçue : le motion design a longtemps été associé aux productions télévisées ou aux grandes campagnes publicitaires.</p>",
+      "<p>Mais la réalité a changé. Une animation de logo courte peut être réalisée pour quelques centaines d'euros. Une vidéo de présentation bien construite, pour moins de mille euros. Ce sont des investissements qui durent — une animation que vous payez une fois, vous l'utilisez pendant des années sur tous vos supports.</p>",
+
+      "<h2>Par où commencer ?</h2>",
+      "<p>Si vous n'avez jamais eu recours au motion design, le meilleur point d'entrée est l'<strong>animation de logo</strong>. C'est rapide à produire, immédiatement utilisable sur tous vos supports digitaux, et l'impact est visible dès les premières publications.</p>",
+      "<p>Ensuite, selon vos besoins et votre communication, on peut aller plus loin : vidéo de présentation, contenu réseaux, habillage de vos prises de parole en ligne.</p>",
+      "<p>Le mouvement n'est plus un luxe dans la communication visuelle. C'est devenu une attente de base pour quiconque veut être perçu comme professionnel en 2025.</p>",
+      "<p><em>Vous voulez explorer ce que le motion design peut apporter à votre communication ? <a href=\"/contact\">Parlons-en →</a></em></p>",
+    ],
+  },
+  {
     slug: "communication-visuelle-ete-entreprises-normandie",
     title: "Préparer sa communication visuelle pour l'été : ce que les entreprises normandes oublient",
     excerpt: "L'été arrive. Les terrasses se remplissent, les marchés s'animent. C'est la période la plus chargée — et pourtant beaucoup d'entreprises arrivent sans être prêtes visuellement. Voici ce qu'il faut anticiper.",

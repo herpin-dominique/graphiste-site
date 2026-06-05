@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { blogPosts } from "$lib/data/blog-posts";
 </script>
 
@@ -10,13 +10,13 @@
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Blog - Herpin Creative Studio" />
   <meta property="og:description" content="Conseils en design graphique, tendances créatives et astuces branding par votre graphiste à Caen." />
-  <meta property="og:url" content="https://herpin-creative-studio.fr/blog" />
-  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:url" content="https://www.herpin-creative-studio.fr/blog" />
+  <meta property="og:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Blog graphisme - Herpin Creative Studio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta name="twitter:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
 </svelte:head>
 
 <main

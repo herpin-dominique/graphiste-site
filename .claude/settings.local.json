@@ -23,7 +23,13 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat\\(seo\\): add sitemap.xml for search engine indexing\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit:*)",
       "Bash(git merge:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(Get-ChildItem -Path . -Recurse -Include \"*.svelte\", \"*.ts\", \"*.json\", \"*.xml\", \"*.txt\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\dherp\\\\Documents\\\\graphiste-site\\\\src\\\\routes\" -Directory)",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\dherp\\\\Documents\\\\graphiste-site\\\\static\\\\sitemap.xml\"\\) -replace 'https://herpin-creative-studio\\\\.fr', 'https://www.herpin-creative-studio.fr' | Set-Content \"c:\\\\Users\\\\dherp\\\\Documents\\\\graphiste-site\\\\static\\\\sitemap.xml\" -Encoding utf8)"
     ],
     "additionalDirectories": [
       "C:\\Users\\dherp\\Documents\\graphiste-site\\src\\routes"

@@ -1,12 +1,12 @@
-<svelte:head>
+﻿<svelte:head>
   <title>Mentions légales | Herpin Creative Studio</title>
   <meta name="description" content="Mentions légales du site herpin-creative-studio.fr - EI Lola Herpin, graphiste et motion designer à Caen." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Herpin Creative Studio" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Mentions légales - Herpin Creative Studio" />
-  <meta property="og:url" content="https://herpin-creative-studio.fr/mentions-legales" />
-  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:url" content="https://www.herpin-creative-studio.fr/mentions-legales" />
+  <meta property="og:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Mentions légales - Herpin Creative Studio" />

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from "svelte";
   import AOS from "aos";
   import "aos/dist/aos.css";
@@ -17,23 +17,23 @@
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Herpin Creative Studio — Graphiste & Illustratrice à Caen" />
   <meta property="og:description" content="Logos, identité visuelle, illustration éditoriale et motion design à Caen, Normandie." />
-  <meta property="og:url" content="https://herpin-creative-studio.fr" />
-  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:url" content="https://www.herpin-creative-studio.fr" />
+  <meta property="og:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
   <meta name="twitter:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
-  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta name="twitter:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Herpin Creative Studio",
     "description": "Graphiste freelance et motion designer à Caen, Normandie. Création de logos, identité visuelle, supports de communication et motion design.",
-    "url": "https://herpin-creative-studio.fr",
-    "logo": "https://herpin-creative-studio.fr/LOGO HERPIN CREATIVE STUDIOb_4.svg",
-    "image": "https://herpin-creative-studio.fr/BANNIERE.png",
+    "url": "https://www.herpin-creative-studio.fr",
+    "logo": "https://www.herpin-creative-studio.fr/LOGO HERPIN CREATIVE STUDIOb_4.svg",
+    "image": "https://www.herpin-creative-studio.fr/BANNIERE.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "17 rue de la Montagne",

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from "svelte";
   import AOS from "aos";
   onMount(() => { AOS.init({ duration: 600, once: true }); });
@@ -79,13 +79,13 @@
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:title" content="Contactez votre graphiste à Caen | Herpin Creative Studio" />
   <meta property="og:description" content="Demandez un devis gratuit pour votre projet de design graphique ou motion design à Caen, Normandie." />
-  <meta property="og:url" content="https://herpin-creative-studio.fr/contact" />
-  <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta property="og:url" content="https://www.herpin-creative-studio.fr/contact" />
+  <meta property="og:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Contact graphiste Caen - Herpin Creative Studio" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  <meta name="twitter:image" content="https://www.herpin-creative-studio.fr/og-image.png" />
 </svelte:head>
 
 <main

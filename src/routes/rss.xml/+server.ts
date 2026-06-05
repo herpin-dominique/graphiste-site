@@ -1,4 +1,4 @@
-import { blogPosts } from "$lib/data/blog-posts";
+﻿import { blogPosts } from "$lib/data/blog-posts";
 import type { RequestHandler } from "./$types";
 
 const FR_MONTHS: Record<string, string> = {
@@ -17,7 +17,7 @@ function parseFrenchDate(dateStr: string): string {
 }
 
 export const GET: RequestHandler = () => {
-  const site = "https://herpin-creative-studio.fr";
+  const site = "https://www.herpin-creative-studio.fr";
 
   const items = blogPosts
     .map(

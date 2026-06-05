@@ -11,6 +11,42 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "illustratrice-caen-illustration-editoriale-normandie",
+    title: "Illustratrice à Caen : ce que l'illustration éditoriale peut apporter à votre communication",
+    excerpt: "L'illustration éditoriale n'est pas réservée aux livres et aux magazines. Pour les entreprises et indépendants en Normandie, c'est un outil de différenciation puissant — et souvent sous-estimé.",
+    date: "5 juin 2026",
+    category: "Illustration",
+    categoryColor: "from-pink-500 to-orange-400",
+    readingTime: 5,
+    content: [
+      "<p>Quand on cherche une illustratrice à Caen, on imagine souvent des livres jeunesse ou des couvertures de magazine. C'est une vision restrictive. L'illustration éditoriale est aujourd'hui l'un des outils visuels les plus efficaces pour les entreprises qui veulent se démarquer — et l'une des disciplines les plus demandées en communication visuelle.</p>",
+
+      "<h2>Qu'est-ce que l'illustration éditoriale ?</h2>",
+      "<p>L'illustration éditoriale, c'est l'art de raconter une idée, un message ou une émotion par le dessin. Contrairement à la photographie qui capture le réel, l'illustration le réinterprète — avec un style, une intention, une personnalité propres à votre marque.</p>",
+      "<p>En Normandie comme partout, les entreprises qui intègrent l'illustration dans leur communication créent une identité visuelle immédiatement reconnaissable. C'est ce qui fait la différence entre une marque qu'on oublie et une marque dont on se souvient.</p>",
+
+      "<h2>Les usages concrets pour une entreprise</h2>",
+      "<p>L'illustration éditoriale s'adapte à une grande variété de supports :</p>",
+      "<ul><li><strong>Packaging et étiquettes</strong> — Une illustration sur un produit attire l'œil en rayon, raconte l'histoire de la marque et justifie un positionnement premium.</li><li><strong>Supports de communication imprimés</strong> — Flyers, brochures, affiches événementielles. Une illustration sur-mesure remplace avantageusement une photo stock générique.</li><li><strong>Réseaux sociaux</strong> — Des visuels illustrés créent une cohérence de fil et un univers reconnaissable en quelques secondes.</li><li><strong>Site web et newsletters</strong> — Illustrations de sections, icônes personnalisées, headers. Le site gagne en caractère et en chaleur.</li><li><strong>Rapports annuels et supports internes</strong> — L'illustration humanise des données et rend un document austère agréable à lire.</li></ul>",
+
+      "<h2>Pourquoi faire appel à une illustratrice locale à Caen ?</h2>",
+      "<p>Travailler avec une illustratrice basée en Normandie, c'est plusieurs avantages concrets.</p>",
+      "<p><strong>La proximité.</strong> On peut se rencontrer, discuter du projet, visiter votre espace ou découvrir vos produits. Cette connaissance directe se retrouve dans l'illustration — elle colle à votre réalité, pas à une idée générique.</p>",
+      "<p><strong>La cohérence avec votre identité visuelle.</strong> Chez Herpin Creative Studio, l'illustration fait partie d'une approche globale : si je crée votre logo et votre charte, les illustrations qui en découlent sont cohérentes avec tout votre univers. Pas de rupture de style entre vos supports.</p>",
+      "<p><strong>La connaissance du tissu local.</strong> Les références culturelles normandes, les codes visuels qui parlent à votre clientèle régionale — une illustratrice ancrée dans le territoire les comprend intuitivement.</p>",
+
+      "<h2>Illustration éditoriale vs photographie : quand choisir ?</h2>",
+      "<p>La photographie est irremplaçable pour montrer un produit réel, une équipe, un espace. L'illustration est plus forte quand il s'agit de :</p>",
+      "<ul><li>Représenter une idée abstraite (un service immatériel, une valeur, un processus)</li><li>Créer un univers de marque distinctif et non duplicable</li><li>S'affranchir des contraintes de production photo (budget, logistique, droits)</li><li>Donner une chaleur et une personnalité que la photo de stock ne peut pas offrir</li></ul>",
+
+      "<h2>Mon approche de l'illustration</h2>",
+      "<p>Chaque illustration que je crée part d'un brief précis : qui est votre client, quelle émotion voulez-vous déclencher, sur quel support l'illustration sera-t-elle utilisée ? Cette rigueur de départ garantit un résultat qui sert votre communication, pas seulement votre esthétique.</p>",
+      "<p>Mon style oscille entre le graphisme épuré et l'illustration organique — des traits nets, des palettes travaillées, des compositions qui respirent. Adaptable à votre univers, qu'il soit artisanal, institutionnel, créatif ou commercial.</p>",
+
+      "<p><em>Vous cherchez une illustratrice à Caen pour votre prochain projet ? <a href=\"/contact\">Parlons-en →</a></em></p>",
+    ],
+  },
+  {
     slug: "motion-design-communication-video-animation-entreprise",
     title: "Motion design : pourquoi votre communication vidéo ne peut plus se passer d'animation",
     excerpt: "Une vidéo statique ou un simple diaporama, ça ne retient plus l'attention. Le motion design n'est plus réservé aux grandes marques — voici pourquoi les PME et indépendants normands ont tout à gagner à l'adopter.",

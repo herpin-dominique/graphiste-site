@@ -10,13 +10,13 @@
 </script>
 
 <svelte:head>
-  <title>Graphiste Caen & Motion Designer Normandie | Herpin Creative Studio</title>
-  <meta name="description" content="Besoin de booster votre image de marque ? Herpin Creative Studio accompagne les entreprises à Caen et en Normandie dans leur communication visuelle : logo, identité visuelle et motion design." />
+  <title>Graphiste & Illustratrice Caen | Motion Designer Normandie | Herpin Creative Studio</title>
+  <meta name="description" content="Lola Herpin, graphiste freelance et illustratrice à Caen — logos, identité visuelle, illustration éditoriale et motion design pour les entreprises et indépendants en Normandie." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Herpin Creative Studio" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Herpin Creative Studio - Graphiste & Motion Designer à Caen" />
-  <meta property="og:description" content="Création de logos, identité visuelle, motion design et supports de communication à Caen, Normandie." />
+  <meta property="og:title" content="Herpin Creative Studio — Graphiste & Illustratrice à Caen" />
+  <meta property="og:description" content="Logos, identité visuelle, illustration éditoriale et motion design à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr" />
   <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />

@@ -3,6 +3,61 @@
 
   export let data: PageData;
   $: post = data.post;
+
+  function parseFrenchDate(dateStr: string): string {
+    const months: Record<string, string> = {
+      janvier: '01', février: '02', mars: '03', avril: '04',
+      mai: '05', juin: '06', juillet: '07', août: '08',
+      septembre: '09', octobre: '10', novembre: '11', décembre: '12'
+    };
+    const parts = dateStr.split(' ');
+    if (parts.length === 3) {
+      const day = parts[0].padStart(2, '0');
+      const month = months[parts[1].toLowerCase()] ?? '01';
+      const year = parts[2];
+      return `${year}-${month}-${day}`;
+    }
+    return dateStr;
+  }
+
+  $: isoDate = parseFrenchDate(post.date);
+
+  $: jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    url: `https://herpin-creative-studio.fr/blog/${post.slug}`,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    inLanguage: 'fr-FR',
+    keywords: post.category,
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://herpin-creative-studio.fr/og-image.png',
+      width: 1200,
+      height: 630
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Lola Herpin',
+      jobTitle: 'Graphiste & Motion Designer',
+      url: 'https://herpin-creative-studio.fr/a-propos'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Herpin Creative Studio',
+      url: 'https://herpin-creative-studio.fr',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://herpin-creative-studio.fr/LOGO%20HERPIN%20CREATIVE%20STUDIOb_4.svg'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://herpin-creative-studio.fr/blog/${post.slug}`
+    }
+  });
 </script>
 
 <svelte:head>
@@ -22,6 +77,7 @@
   <meta name="twitter:title" content="{post.title} - Herpin Creative Studio" />
   <meta name="twitter:description" content={post.excerpt} />
   <meta name="twitter:image" content="https://herpin-creative-studio.fr/og-image.png" />
+  {@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
 <main

@@ -31,42 +31,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://herpin-creative-studio.fr/blog</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://herpin-creative-studio.fr/blog/comment-choisir-logo-entreprise</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://herpin-creative-studio.fr/blog/tendances-graphiques-2026</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://herpin-creative-studio.fr/blog/pourquoi-graphiste-freelance-caen</loc>
-    <lastmod>2026-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://herpin-creative-studio.fr/blog/canva-vs-graphiste-logo-professionnel</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://herpin-creative-studio.fr/blog/motion-design-reseaux-sociaux</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://herpin-creative-studio.fr/a-propos</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -75,6 +39,72 @@
   <url>
     <loc>https://herpin-creative-studio.fr/avis</loc>
     <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/goodies</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/illustratrice-caen-illustration-editoriale-normandie</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/motion-design-communication-video-animation-entreprise</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/communication-visuelle-ete-entreprises-normandie</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/budget-identite-visuelle-lancer-entreprise-normandie</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/identite-visuelle-ceramiste-gabriel-normandie</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/graphiste-caen-identite-visuelle-professionnelle</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/visuels-instagram-ne-convertissent-pas</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/jai-laisse-canva-choisir-mon-logo</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/comment-preparer-brief-creatif-graphiste</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -93,6 +123,36 @@
   <url>
     <loc>https://herpin-creative-studio.fr/blog/combien-coute-identite-visuelle-entreprise</loc>
     <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/canva-vs-graphiste-logo-professionnel</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/motion-design-reseaux-sociaux</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/comment-choisir-logo-entreprise</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/tendances-graphiques-2026</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://herpin-creative-studio.fr/blog/pourquoi-graphiste-freelance-caen</loc>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

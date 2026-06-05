@@ -104,13 +104,13 @@
 </script>
 
 <svelte:head>
-  <title>Portfolio graphiste Caen - Réalisations design & motion | Herpin Creative Studio</title>
-  <meta name="description" content="Portfolio de Lola Herpin, graphiste freelance à Caen. Projets de branding, identité visuelle, édition, packaging et motion design réalisés en Normandie." />
+  <title>Portfolio graphiste & illustratrice Caen — Design éditorial, illustration & motion | Herpin Creative Studio</title>
+  <meta name="description" content="Découvrez les réalisations de Lola Herpin, graphiste freelance et illustratrice à Caen : illustration éditoriale, branding, identité visuelle, packaging et motion design en Normandie." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Herpin Creative Studio" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Portfolio - Graphiste freelance Caen | Herpin Creative Studio" />
-  <meta property="og:description" content="Découvrez mes réalisations : logos, identités visuelles, édition et motion design. Graphiste à Caen, Normandie." />
+  <meta property="og:title" content="Portfolio — Graphiste & Illustratrice à Caen | Herpin Creative Studio" />
+  <meta property="og:description" content="Illustration éditoriale, logos, identités visuelles et motion design. Graphiste freelance et illustratrice à Caen, Normandie." />
   <meta property="og:url" content="https://herpin-creative-studio.fr/portfolio" />
   <meta property="og:image" content="https://herpin-creative-studio.fr/og-image.png" />
   <meta property="og:image:width" content="1200" />

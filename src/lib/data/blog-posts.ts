@@ -11,6 +11,49 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "instagram-artisans-normandie-coherence-visuelle",
+    title: "Instagram pour les artisans normands : créer une cohérence visuelle sans y passer sa journée",
+    excerpt: "Vous postez sur Instagram mais votre fil ressemble à un patchwork ? Le problème n'est pas votre contenu — c'est l'absence de cohérence visuelle. Voici comment la construire une bonne fois pour toutes.",
+    date: "16 juin 2026",
+    category: "Conseils",
+    categoryColor: "from-pink-500 to-orange-400",
+    readingTime: 5,
+    content: [
+      "<p>Vous avez ouvert un compte Instagram pour votre activité. Vous postez quand vous avez le temps. Des photos de vos créations, parfois un petit texte, rarement une story.</p>",
+      "<p>Et pourtant, vous avez l'impression que ça ne « rend » pas bien. Que votre fil ressemble à un patchwork. Que des concurrents avec moins de talent que vous ont l'air plus professionnels en ligne.</p>",
+      "<p>Le problème, ce n'est pas votre contenu. C'est l'absence de cohérence visuelle.</p>",
+
+      "<h2>Ce que voit vraiment un visiteur sur votre profil</h2>",
+      "<p>Quand quelqu'un clique sur votre profil Instagram pour la première fois, il ne lit pas. Il scanne. En 3 secondes, il a une impression — positive ou négative — avant même d'avoir regardé une seule photo en détail.</p>",
+      "<p>Cette impression vient de la cohérence globale de votre grille : les couleurs dominantes, le style des visuels, la typographie si vous en utilisez, la lumière de vos photos. Si tout ça est harmonieux, l'œil s'y pose et le pouce s'arrête. Si c'est disparate, il passe.</p>",
+
+      "<h2>Pourquoi les artisans sont particulièrement concernés</h2>",
+      "<p>Un artisan a deux problèmes spécifiques sur Instagram.</p>",
+      "<p>Le premier : il produit avec ses mains, pas derrière un écran. Passer du temps sur des visuels, c'est du temps en moins à créer. C'est un vrai arbitrage.</p>",
+      "<p>Le second : son produit est souvent magnifique en vrai, mais difficile à photographier. Une pièce en céramique, une broderie, un meuble en bois — la texture, le toucher, les détails fins ne se rendent pas toujours bien avec un téléphone.</p>",
+      "<p>La bonne nouvelle : la cohérence visuelle, ça se construit une fois. Et ensuite ça tourne presque tout seul.</p>",
+
+      "<h2>Les 4 piliers d'un profil Instagram cohérent</h2>",
+      "<p><strong>1. Une palette de 3 couleurs maximum</strong><br/>Choisissez 2 à 3 couleurs qui correspondent à votre univers. Elles doivent apparaître dans chacune de vos publications — dans les fonds, les textes, les encadrés. Pas besoin que ce soit parfait, juste constant.</p>",
+      "<p>Si vous avez une charte graphique, vos couleurs sont déjà définies. Si vous n'en avez pas, choisissez des couleurs qui reflètent votre matière de travail : tons chauds pour la céramique et le bois, tons neutres pour la broderie et le lin, tons vifs pour les créations colorées.</p>",
+      "<p><strong>2. Une lumière cohérente dans vos photos</strong><br/>La lumière est responsable de 80% de la qualité perçue d'une photo de produit. Trouvez un endroit chez vous avec une belle lumière naturelle (près d'une fenêtre, sans soleil direct), et photographiez toujours vos pièces au même endroit, au même moment de la journée.</p>",
+      "<p>Ce n'est pas parfait mais c'est cohérent — et cohérent vaut mieux que « parfait une fois sur cinq ».</p>",
+      "<p><strong>3. Des templates pour vos textes</strong><br/>Quand vous voulez partager une information, une promotion ou une actualité, créez un template une fois sur Canva. Un fond à votre couleur principale, votre logo, une police fixe. Vous n'avez plus qu'à changer le texte.</p>",
+      "<p>Résultat : chaque post informatif ressemble aux autres, et votre grille est homogène même quand vous mélangez photos de produits et textes.</p>",
+      "<p><strong>4. Une bio et une photo de profil qui convertissent</strong><br/>Votre photo de profil, c'est votre logo — pas une photo de vous au restaurant. Votre bio doit dire en une ligne ce que vous faites et où vous êtes. « Céramiste à Caen — pièces uniques au tour » est infiniment plus efficace que « Passionnée par mon métier ✨ ».</p>",
+
+      "<h2>Combien de temps ça prend vraiment ?</h2>",
+      "<p>Mettre en place cette cohérence : 2 à 3 heures une fois, en travaillant avec un graphiste ou en configurant soigneusement vos templates.</p>",
+      "<p>Maintenir cette cohérence au quotidien : 15 à 20 minutes par post, pas plus. Vous prenez votre photo, vous l'appliquez dans votre template si besoin, vous écrivez votre légende.</p>",
+      "<p>Le mythe du « je dois passer des heures sur Instagram » vient de l'absence de système. Avec un système en place, publier devient mécanique.</p>",
+
+      "<h2>Et si vous n'avez pas d'identité visuelle ?</h2>",
+      "<p>Alors c'est par là qu'il faut commencer. Pas pour Instagram — pour tout. Un logo, une palette, une typographie : c'est ce qui transforme une belle activité artisanale en vraie marque reconnaissable.</p>",
+      "<p>Sans ça, vous pouvez passer autant de temps que vous voulez sur vos visuels — le résultat restera fragile.</p>",
+      "<p><em>Vous voulez construire une identité visuelle qui rende enfin justice à votre travail ? <a href=\"/contact\">Parlons-en →</a></em></p>",
+    ],
+  },
+  {
     slug: "illustratrice-caen-illustration-editoriale-normandie",
     title: "Illustratrice à Caen : ce que l'illustration éditoriale peut apporter à votre communication",
     excerpt: "L'illustration éditoriale n'est pas réservée aux livres et aux magazines. Pour les entreprises et indépendants en Normandie, c'est un outil de différenciation puissant — et souvent sous-estimé.",

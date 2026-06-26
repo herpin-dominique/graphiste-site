@@ -11,6 +11,33 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "collection-saisons-goodies-illustres-caen",
+    title: "La collection Saisons : quand mes illustrations quittent l'écran pour devenir des objets",
+    excerpt: "Après des mois à illustrer des marques pour mes clients, j'avais envie d'un projet à moi. Voici Saisons : quatre illustrations, un mug, un tote bag, une carte — et beaucoup de plaisir à les dessiner.",
+    date: "26 juin 2026",
+    category: "Coulisses",
+    categoryColor: "from-pink-500 to-violet-500",
+    readingTime: 3,
+    content: [
+      "<p>Je crée des identités visuelles pour mes clients depuis plusieurs années. Des logos, des chartes, des illustrations sur-mesure — toujours au service d'une marque qui n'est pas la mienne. C'est un métier que j'adore, mais il me manquait un espace où dessiner sans brief, sans cahier des charges, juste pour le plaisir de raconter quelque chose qui vient de moi.</p>",
+      "<p>C'est de là qu'est née <strong>Saisons</strong>.</p>",
+
+      "<h2>Le point de départ : quatre saisons, quatre ambiances</h2>",
+      "<p>L'idée était simple au départ : illustrer les quatre saisons à ma façon, avec une palette et une lumière propres à chacune. Spring dans l'herbe, Summer au bord de l'eau, Autumn dans une lumière tamisée, Winter dans des tons froids et apaisés.</p>",
+      "<p>Ce qui a changé en cours de route, c'est l'envie de ne pas laisser ces illustrations dormir dans un dossier. Je voulais qu'elles existent quelque part, qu'on puisse les avoir entre les mains — un mug le matin, un tote bag pour aller au marché, une carte à envoyer ou à accrocher.</p>",
+
+      "<h2>Ce que contient la collection</h2>",
+      "<p>Pour cette première série, j'ai choisi des objets simples et utiles, pensés pour s'intégrer dans le quotidien plutôt que pour rester dans un placard :</p>",
+      "<ul><li><strong>Quatre mugs</strong> — un par saison, chacun avec sa propre ambiance lumineuse</li><li><strong>Un tote bag</strong> — motif Summer, en toile de coton</li><li><strong>Une carte A5</strong> — motif Summer, pour offrir ou encadrer</li></ul>",
+      "<p>D'autres déclinaisons suivront selon l'accueil de cette première collection — c'est aussi pour ça que je préfère avancer pas à pas plutôt que de tout sortir d'un coup.</p>",
+
+      "<h2>Pourquoi \"bientôt\" et pas \"maintenant\"</h2>",
+      "<p>La page <a href=\"/goodies\">Goodies</a> est en ligne, les visuels sont là, mais la boutique n'ouvre pas encore. Je préfère prendre le temps de choisir les bons partenaires de fabrication et d'impression — la qualité de la matière compte autant que celle du dessin pour ce genre d'objets.</p>",
+      "<p>En attendant, vous pouvez déjà découvrir l'ensemble de la collection et laisser votre contact pour être prévenu(e) dès l'ouverture.</p>",
+      "<p><em>Curieux/se de voir la collection en détail ? <a href=\"/goodies\">Découvrez Saisons →</a></em></p>",
+    ],
+  },
+  {
     slug: "instagram-artisans-normandie-coherence-visuelle",
     title: "Instagram pour les artisans normands : créer une cohérence visuelle sans y passer sa journée",
     excerpt: "Vous postez sur Instagram mais votre fil ressemble à un patchwork ? Le problème n'est pas votre contenu — c'est l'absence de cohérence visuelle. Voici comment la construire une bonne fois pour toutes.",

@@ -44,15 +44,21 @@
   </url>
   <url>
     <loc>https://www.herpin-creative-studio.fr/goodies</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.herpin-creative-studio.fr/blog</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.herpin-creative-studio.fr/blog/collection-saisons-goodies-illustres-caen</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.herpin-creative-studio.fr/blog/illustratrice-caen-illustration-editoriale-normandie</loc>

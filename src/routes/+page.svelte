@@ -71,11 +71,18 @@
   class="relative z-0 w-full min-h-screen flex items-center justify-center overflow-hidden"
 >
   <!-- Image de fond -->
-  <img
-    src="/BANNIERE.png"
-    alt="Bannière"
-    class="absolute inset-0 w-full h-full object-cover object-[60%_20%] md:object-center pointer-events-none"
-  />
+  <picture>
+    <source srcset="/BANNIERE.avif" type="image/avif" />
+    <source srcset="/BANNIERE.webp" type="image/webp" />
+    <img
+      src="/BANNIERE.png"
+      alt="Bannière"
+      width="4000"
+      height="2000"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover object-[60%_20%] md:object-center pointer-events-none"
+    />
+  </picture>
   <!-- Overlay pour la lisibilité -->
   <div
     class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 pointer-events-none"

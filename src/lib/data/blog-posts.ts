@@ -11,6 +11,83 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lisbonne-cascais-sintra-vacances-inspiration-couleurs",
+    title: "Lisbonne, Cascais, Sintra : ce que mes vacances au Portugal m'apprennent sur la couleur",
+    excerpt: "Je vous écris depuis la côte portugaise, entre les azulejos de Lisbonne et les façades pastel de Cascais et Estoril. Le studio est en pause, mais mes yeux ne le sont jamais vraiment. Retour dès août.",
+    date: "30 juillet 2026",
+    category: "Coulisses",
+    categoryColor: "from-pink-500 to-violet-500",
+    readingTime: 3,
+    content: [
+      "<p>Je vous écris depuis le Portugal. Le studio est fermé, ma boîte mail attend sagement, et pourtant je n'ai jamais vraiment arrêté de travailler — parce que pour une illustratrice, regarder <em>est</em> le travail.</p>",
+      "<p>Depuis quelques jours, je marche entre Lisbonne, Cascais, Estoril et Sintra. Et si vous me suivez un peu, vous savez déjà ce qui m'arrête à chaque coin de rue : la couleur.</p>",
+
+      "<h2>Lisbonne, ou la couleur comme façade</h2>",
+      "<p>À Lisbonne, chaque immeuble est un exercice de palette. Les azulejos — ces carreaux de faïence peints qui recouvrent les façades — juxtaposent des bleus profonds, des jaunes safran, des verts d'eau, parfois sur un seul et même mur. Rien n'est assorti au sens classique du terme, et pourtant tout fonctionne. C'est une leçon que j'essaie sans cesse de retranscrire dans mes identités visuelles : une palette n'a pas besoin d'être sage pour être cohérente — elle a besoin d'une logique.</p>",
+
+      "<h2>Cascais et Estoril : le pastel version bord de mer</h2>",
+      "<p>Changement de registre sur la côte. À Cascais et Estoril, les couleurs se calment — ocres délavés, roses poudrés, bleus ciel qui se fondent presque dans l'Atlantique. C'est une palette que je retrouve souvent dans mes propres illustrations (la collection <a href=\"/goodies\">Saisons</a> n'est pas si loin de ces tons), et la revoir en vrai, sur des façades réelles et pas sur mon écran, ça change la façon dont on la comprend.</p>",
+
+      "<h2>Sintra, le grand écart chromatique</h2>",
+      "<p>Et puis il y a Sintra. Le Palais de Pena, avec son jaune vif et son rouge presque criard, posé au milieu d'une forêt verte et humide — une combinaison que je n'aurais jamais osé proposer à un client sans preuve à l'appui. Et pourtant, ça fonctionne, parce que le contexte rend cette audace évidente. Un rappel utile : une couleur n'est jamais bonne ou mauvaise en soi, elle est juste plus ou moins bien placée.</p>",
+
+      "<h2>Des vacances, mais pas vraiment une pause pour les yeux</h2>",
+      "<p>Je ne prends pas de notes, je ne fais pas de moodboard sur le moment — ce n'est pas le but de ces vacances. Mais je sais déjà que dans quelques semaines, en travaillant sur une identité visuelle ou une illustration, une association de couleurs vue sur un mur à Lisbonne ou une façade à Cascais va ressurgir sans prévenir. C'est comme ça que fonctionne la créativité : elle se nourrit de ce qu'on regarde vraiment, même — surtout — quand on n'est pas censé travailler.</p>",
+
+      "<h2>Le studio reste en pause, pas inquiet</h2>",
+      "<p>Concrètement pour vous : le studio est actuellement en pause, et je réponds aux messages avec un peu de retard. Je suis de nouveau pleinement disponible dès août, pour vos projets d'identité visuelle, d'illustration ou de motion design.</p>",
+
+      "<p><em>Une envie de projet à la rentrée ? <a href=\"/contact\">Parlons-en dès mon retour →</a></em></p>",
+    ],
+  },
+  {
+    slug: "packaging-design-artisans-normandie",
+    title: "Votre emballage se vend mieux que vous — ou il vous sabote",
+    excerpt: "Avant même que votre client ouvre la boîte, il s'est déjà forgé une opinion. Pour les artisans et créateurs normands qui soignent leur produit, l'emballage est souvent le maillon manquant. Voici pourquoi — et comment y remédier.",
+    date: "6 juillet 2026",
+    category: "Branding",
+    categoryColor: "from-pink-500 to-violet-500",
+    readingTime: 5,
+    content: [
+      "<p>Vous fabriquez quelque chose de beau. Un savon artisanal, une confiture maison, une bougie, une pièce en céramique. Vous soignez votre produit dans les moindres détails. Et pourtant, ce produit arrive dans un sachet kraft avec une étiquette imprimée sur votre imprimante de bureau.</p>",
+      "<p>Ce n'est pas un détail. C'est un problème.</p>",
+      "<p>Parce qu'avant même que votre client ouvre la boîte, sente l'odeur ou goûte votre confiture — il s'est déjà forgé une opinion. Et cette opinion, c'est votre emballage qui la construit.</p>",
+
+      "<h2>Le premier contact physique avec votre marque</h2>",
+      "<p>Sur Instagram, on peut retoucher une photo, choisir la lumière, recadrer. En boutique, en marché, sur une table de vente directe — votre emballage est là, brut, dans les mains de quelqu'un qui ne vous connaît pas encore.</p>",
+      "<p>En 3 secondes, cet inconnu a répondu à trois questions sans même s'en rendre compte : <em>Est-ce que c'est sérieux ? Est-ce que c'est pour moi ? Est-ce que ça vaut son prix ?</em></p>",
+      "<p>Si votre emballage répond « non » à l'une de ces trois questions, vous pouvez avoir le meilleur produit du monde — la vente ne se fera pas. Ou elle se fera à un prix inférieur à ce que vous méritez.</p>",
+
+      "<h2>Les 3 erreurs les plus courantes chez les artisans</h2>",
+      "<p><strong>1. L'étiquette imprimée à la maison</strong><br/>Le problème n'est pas le papier — c'est la résolution, les marges, les couleurs qui tirent au jaune sous l'imprimante de bureau. Une étiquette floue ou délavée dit une chose à votre client : <em>ce n'est pas un vrai produit professionnel.</em> Même si c'est faux. Même si c'est injuste.</p>",
+      "<p><strong>2. La police choisie parce qu'elle est « jolie »</strong><br/>Une police script très fine est magnifique à l'écran. Imprimée en 8pt sur une étiquette de 6 cm, elle devient illisible. Et une étiquette qu'on ne peut pas lire, c'est une information perdue — votre nom, vos ingrédients, votre story. Ce sont ces mots qui créent l'attachement.</p>",
+      "<p><strong>3. Les couleurs qui ne parlent pas à votre cible</strong><br/>Beaucoup d'artisans choisissent des couleurs qu'ils aiment, pas des couleurs qui parlent à leurs clients. Une savonnerie artisanale haut de gamme avec des tons criards envoie un signal de grande surface. Une confiture de grand-mère dans un packaging all-black risque de dérouter. La couleur raconte votre positionnement avant que votre texte ne soit lu.</p>",
+
+      "<h2>Ce qu'un packaging réussi fait en 3 secondes</h2>",
+      "<p>Un bon emballage répond à trois choses instantanément :</p>",
+      "<ul><li><strong>Le positionnement prix</strong> — La qualité perçue de votre emballage autorise (ou non) le prix que vous demandez. Un packaging soigné justifie un tarif premium. Un packaging approximatif tire votre prix vers le bas, même si votre produit est exceptionnel.</li><li><strong>L'univers de marque</strong> — En un coup d'œil, le client comprend qui vous êtes : artisanal, luxueux, naturel, ludique, local. Cet univers doit être cohérent avec tout le reste : votre Instagram, votre site, vos cartes de visite.</li><li><strong>La cible</strong> — Votre emballage parle à quelqu'un. Les choix typographiques, les illustrations, le ton — tout désigne un profil de client. Si votre emballage ne ressemble pas à ce que vos clients idéaux s'offrent à eux-mêmes, ils passent.</li></ul>",
+
+      "<h2>Avant / après : l'impact d'une étiquette cohérente</h2>",
+      "<p>J'ai travaillé sur l'identité visuelle d'une productrice de miels artisanaux en Normandie. Elle vendait depuis trois ans sur les marchés locaux, avec une étiquette Word en Times New Roman sur fond blanc — texte centré, logo clipart.</p>",
+      "<p>Son miel était excellent. Ses ventes plafonnaient.</p>",
+      "<p>On a refait l'étiquette : typographie serif élégante, illustration de ruche dessinée à la main, palette miel-ambre-écru, format arrondi en haut pour évoquer la forme des alvéoles. Même produit. Même prix (légèrement remonté). Même marché.</p>",
+      "<p>Le premier samedi après le changement : stock épuisé à 11h30.</p>",
+      "<p>Ce n'est pas de la magie. C'est de la cohérence.</p>",
+
+      "<h2>Par où commencer quand on a un petit budget</h2>",
+      "<p>Tout refaire d'un coup n'est pas toujours possible. Voici l'ordre de priorité si vous devez choisir :</p>",
+      "<p><strong>1. L'étiquette d'abord.</strong> C'est le support le plus vu, le plus touché, le plus photographié. C'est votre carte de visite collée sur votre produit. Si vous ne pouvez investir que sur un seul élément, c'est celui-là.</p>",
+      "<p><strong>2. Le sticker ou le tampon de fermeture.</strong> Un sticker à votre logo sur un sachet kraft standard change immédiatement la perception. Simple, peu coûteux, très efficace sur les marchés et la vente directe.</p>",
+      "<p><strong>3. L'emballage externe en dernier.</strong> Boîte, pochette, papier de soie — c'est visible, mais c'est ce qui disparaît en premier lors de l'ouverture. Commencez par ce qui reste avec le produit.</p>",
+
+      "<h2>Le lien avec votre identité visuelle</h2>",
+      "<p>Un emballage ne s'invente pas dans le vide. Il doit être le prolongement cohérent de votre identité visuelle : mêmes couleurs, mêmes typographies, même univers graphique. Si votre logo a été conçu sérieusement, décliner l'étiquette est rapide. Si votre logo vient d'un générateur en ligne, l'étiquette sera aussi fragile que lui.</p>",
+      "<p>C'est pour ça que je commence toujours par l'identité visuelle globale avant de passer aux supports. Parce qu'un emballage construit sur une base solide dure des années — et se décline facilement sur tous vos produits sans recommencer à zéro à chaque fois.</p>",
+
+      "<p><em>Vous avez un produit qui mérite un emballage à sa hauteur ? <a href=\"/contact\">Parlons-en →</a></em></p>",
+    ],
+  },
+  {
     slug: "collection-saisons-goodies-illustres-caen",
     title: "La collection Saisons : quand mes illustrations quittent l'écran pour devenir des objets",
     excerpt: "Après des mois à illustrer des marques pour mes clients, j'avais envie d'un projet à moi. Voici Saisons : quatre illustrations, un mug, un tote bag, une carte — et beaucoup de plaisir à les dessiner.",
